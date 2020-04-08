@@ -1,4 +1,3 @@
 [build]
-base = "feministcovidresponse/"
-publish = "feministcovidresponse/build/"
+publish = "build/"
 command = "yarn build"
