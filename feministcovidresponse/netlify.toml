@@ -1,0 +1,4 @@
+[build]
+base = "feministcovidresponse/"
+publish = "feministcovidresponse/build/"
+command = "yarn build"
