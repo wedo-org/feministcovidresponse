@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+button{
+  border: 1px black solid;
+}
+
+.hamburger {
+  display: inline-block;
+  margin-right: -80vw;
+  width: 10%;
+}
+
+li{
+  list-style-type: none
+}
