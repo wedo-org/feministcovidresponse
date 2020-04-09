@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { ContentfulClient, ContentfulProvider } from 'react-contentful';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const contentfulClient = new ContentfulClient({
+  accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
+  space: process.env.REACT_APP_CONTENTFUL_SPACE,
+});
+
 const routing = (
-  <BrowserRouter>
-        <Route component={App} />
-  </BrowserRouter>
+  <ContentfulProvider client={contentfulClient}>
+    <BrowserRouter>
+          <Route component={App} />
+    </BrowserRouter>
+  </ContentfulProvider>
 )
 
 ReactDOM.render(routing, document.getElementById('root')

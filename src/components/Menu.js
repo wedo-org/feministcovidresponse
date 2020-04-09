@@ -1,7 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { withContentful } from 'react-contentful';
 
-export default function Menu() {
+function Menu({ contentful }) {
+    
+    const { client, locale, renderPromises } = contentful;
+    // console.log(client);
+    // console.log(client.getEntries().then(o => console.log(o)));
+    // console.log(locale);
+    // console.log(renderPromises);
+    // console.log(client.getContentTypes().then(objects => console.log(objects.items)));
+    
     return (
         <>
         <nav>
@@ -17,3 +26,5 @@ export default function Menu() {
         </>
     )
 }
+
+export default withContentful(Menu);

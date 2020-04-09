@@ -1,8 +1,9 @@
 import React from 'react'
 import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
+import { withContentful } from 'react-contentful';
 
-export default function ItemsContainer({location:{pathname}}) {
+function ItemsContainer({location:{pathname}, contentful}) {
 
     const sectionTitle = () => {
         let title;
@@ -35,3 +36,5 @@ export default function ItemsContainer({location:{pathname}}) {
         </>
     )
 }
+
+export default withContentful(ItemsContainer);

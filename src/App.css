@@ -11,3 +11,7 @@ button{
   margin-right: -80vw;
   width: 10%;
 }
+
+li{
+  list-style-type: none
+}
