@@ -6,10 +6,10 @@ import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 
 function App(props) {
-  
+
   return (
     <div className="App">
-        { props.location.pathname === "/menu" 
+        { props.location.pathname === "/menu"
         ?
         <Switch>
                 <Route exact path="/menu" component={Menu} />
@@ -20,6 +20,11 @@ function App(props) {
         <MainContainer/>
         </>
         }
+        <footer>
+          <span>EN </span>
+          <span> / ES </span>
+          <span> / FR </span>
+        </footer>
     </div>
   );
 }

@@ -1,17 +1,115 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+}
+
+html{
+  height: 100vh;
+  background-image: url('./assets/images/Background2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: Roboto;
+}
+
+.App > footer {
+  position: absolute;
+  font-weight: bold;
+  color: white;
+  right: 1rem;
+  padding: 5px;
+}
+
 .App {
-  text-align: center;
+  margin: 1rem;
 }
 
 button{
   border: 1px black solid;
 }
 
-.hamburger {
-  display: inline-block;
-  margin-right: -80vw;
-  width: 10%;
-}
-
 li{
   list-style-type: none
 }
+
+h1 {
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  padding-right: 1rem;
+}
+
+
+/* --MAIN CONTAINER-- */
+.main-container {
+  padding: .5rem;
+  overflow: scroll;
+  height: 77vh;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+
+/* --NAV BAR-- */
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(230,150,83, .5);
+}
+
+.nav-bar > a {
+  width: 3.5rem;
+}
+
+.nav-bar > h2 {
+  width: 7rem;
+  font-size: 2vh;
+}
+
+.hamburger-menu {
+  width: 100%;
+}
+
+/* --menu-list-- */
+
+.menu-list {
+  height: 90vh;
+  background-color: black;
+  color: white;
+  font-size: 4vh;
+  line-height: 9vh;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav > ul {
+  padding: 4rem 0;
+}
+
+.menu-list > footer {
+  font-size: 3vh;
+  text-align: center;
+  line-height: 2vh;
+  bottom: 1.8rem;
+  position: fixed;
+  width: 90%;
+  padding-bottom: 1rem;
+}
+
+
+
+
+/* -------- RESPONSIVE TO TABLET --------- */

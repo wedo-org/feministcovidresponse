@@ -6,9 +6,9 @@ import NotFound from '../components/NotFound'
 import Principles from '../components/Principles'
 
 export default function MainContainer() {
-    
+
     return (
-        <main>
+        <main className='main-container'>
             <Switch>
                 <Route exact path="/" component={About} />
                 <Route path="/about" component={About} />
