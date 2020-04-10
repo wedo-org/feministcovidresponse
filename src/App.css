@@ -134,6 +134,7 @@ nav > ul {
   .main-container {
     height: 73vh;
     padding: 5%;
+    margin-bottom: 0;
   }
 
   .main-content > p {
