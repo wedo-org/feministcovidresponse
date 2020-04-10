@@ -15,11 +15,12 @@ function App(props) {
                 <Route exact path="/menu" component={Menu} />
         </Switch>
         :
-        <>
-        <NavBar />
-        <MainContainer/>
-        </>
+        <section className='navbar-maincontainer'>
+          <NavBar />
+          <MainContainer/>
+        </section>
         }
+
         <footer>
           <span>EN </span>
           <span> / ES </span>
