@@ -6,9 +6,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 const contentfulClient = new ContentfulClient({
   accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
-  space: process.env.REACT_APP_CONTENTFUL_SPACE,
+  space: process.env.REACT_APP_CONTENTFUL_SPACE
 });
 
 const routing = (

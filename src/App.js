@@ -6,20 +6,26 @@ import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 
 function App(props) {
-  
+
   return (
     <div className="App">
-        { props.location.pathname === "/menu" 
+        { props.location.pathname === "/menu"
         ?
         <Switch>
                 <Route exact path="/menu" component={Menu} />
         </Switch>
         :
-        <>
-        <NavBar />
-        <MainContainer/>
-        </>
+        <section className='navbar-maincontainer'>
+          <NavBar />
+          <MainContainer/>
+        </section>
         }
+
+        <footer>
+          <span>EN </span>
+          <span> / ES </span>
+          <span> / FR </span>
+        </footer>
     </div>
   );
 }
