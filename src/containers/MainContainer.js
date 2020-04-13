@@ -21,13 +21,17 @@ export default function MainContainer() {
         return entries.filter((e) => e.sys.contentType.sys.id === "resource")
     }
 
+    let data = selectResources()
+
+    console.log(data);
+
     return (
         <main className='main-container'>
             <Switch>
                 <Route exact path="/" component={About} />
                 <Route path="/about" component={About} />
                 <Route path="/principles" component={Principles} />
-                <Route path="/(resources|events|policy-tracker)/" component={ItemsContainer} items={selectResources()}/>
+                <Route path="/(resources|events|policy-tracker)/" component={(props) => <ItemsContainer {...props} items={data}/>}  />
                 <Route component={NotFound} />
             </Switch>
         </main>

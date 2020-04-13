@@ -6,7 +6,8 @@ export default function ItemCard({item}) {
 
     return (
         <>
-            hello from the item
+            <h4>{item.fields.title}</h4>
+            <p>{item.fields.description}</p>
         </>
     )
 }

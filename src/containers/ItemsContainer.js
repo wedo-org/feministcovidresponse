@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { withRouter } from 'react'
 import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
 import { withContentful } from 'react-contentful';
 
-function ItemsContainer({location:{pathname}, items}) {
+function ItemsContainer(props) {
 
     const sectionTitle = () => {
         let title;
-        switch (pathname) {
+        switch (props.location.pathname) {
             case "/policy-tracker":
                 title = "Policy Tracker"
                 break
@@ -31,7 +31,7 @@ function ItemsContainer({location:{pathname}, items}) {
             <ButtonsContainer/>
             <ul>
                 {
-                    items.map((item)=> <li><ItemCard item={item}/></li>)
+                    props.items.map((item)=> <li><ItemCard item={item}/></li>)
                 }
             </ul>
         </section>
