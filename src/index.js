@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { ContentfulClient, ContentfulProvider } from 'react-contentful';
+import { ContentfulProvider } from 'react-contentful';
 import './index.css';
+import { getEntries, contentfulClient, getContentType } from './utils.js'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
-const contentfulClient = new ContentfulClient({
-  accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
-  space: process.env.REACT_APP_CONTENTFUL_SPACE
-});
+// these are here only so I can see what response I'm getting
+// getEntries()
+// getContentType()
 
 const routing = (
   <ContentfulProvider client={contentfulClient}>

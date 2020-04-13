@@ -20,7 +20,7 @@ function Menu({ contentful }) {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/principles">Principles</Link></li>
               <li><Link to="/#">Resources</Link></li>
-              <li><Link to="/#">Policy Tracker</Link></li>
+              <li><Link to="/policy-tracker">Policy Tracker</Link></li>
               <li><Link to="/#">Events</Link></li>
               </ul>
           </nav>

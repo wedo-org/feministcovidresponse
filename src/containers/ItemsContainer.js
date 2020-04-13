@@ -3,7 +3,7 @@ import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
 import { withContentful } from 'react-contentful';
 
-function ItemsContainer({location:{pathname}, contentful}) {
+function ItemsContainer({location:{pathname}, items}) {
 
     const sectionTitle = () => {
         let title;
@@ -30,7 +30,9 @@ function ItemsContainer({location:{pathname}, contentful}) {
 
             <ButtonsContainer/>
             <ul>
-                <li><ItemCard /></li>
+                {
+                    items.map((item)=> <li><ItemCard item={item}/></li>)
+                }
             </ul>
         </section>
         </>
