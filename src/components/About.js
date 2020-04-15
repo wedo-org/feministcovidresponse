@@ -8,10 +8,10 @@ const About = (props) => (
     >
 
     {({data, error, fetched, loading}) => {
-        console.log("DATA", data);
-        console.log("FETCHING", fetched);
-        console.log("LOADING", loading);
-        console.log("ERROR", error);
+        // console.log("DATA", data);
+        // console.log("FETCHING", fetched);
+        // console.log("LOADING", loading);
+        // console.log("ERROR", error);
 
       if (loading || !fetched) {
         return null;

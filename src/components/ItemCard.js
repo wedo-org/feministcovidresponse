@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function ItemCard() {
+export default function ItemCard({item}) {
+
+    console.log("ITEM", item);
+
     return (
         <>
-            hello from the item
+            <h4>{item.fields.title}</h4>
+            <p>{item.fields.description}</p>
         </>
     )
 }
