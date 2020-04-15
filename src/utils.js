@@ -15,16 +15,16 @@ const getEntries = async () => {
 }
 
 // gets all resources (i.e. not countries, not themes, not types)
-const getAllResources = () => {
-    return getEntries().filter((entry) => entry.sys.contentType.sys.id === "resource")
+const getAllResources = async () => {
+    let entries = await getEntries()
+   return entries.filter((entry) => entry.sys.contentType.sys.id === "resource")
 }
 
-console.log(getAllResources());
-
+// (async () => console.log(await getAllResources()))()
 
 // returns resources for each page -- it accepts an argument of a string that's the name of the page
 const getResourcesForThePage = (str) => {
-    return getAllResources().filter((entry) => entry.fields.category.fields.name === str)
+    return getEntries().filter((entry) => entry.fields.category.fields.name === str)
 }
 // console.log(getResourcesForThePage("Tools"))
 // console.log(getResourcesForThePage("Policy"))

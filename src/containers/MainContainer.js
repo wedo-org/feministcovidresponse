@@ -8,10 +8,6 @@ import Principles from '../components/Principles'
 
 export default function MainContainer() {
 
-    const [entries, updateEntries] = useState([])
-
-
-
     return (
         <main className='main-container'>
             <Switch>
