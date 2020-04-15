@@ -9,15 +9,18 @@ function ItemsContainer(props) {
 
     const sectionTitle = () => {
         let title;
+        let requestTitle;
         switch (props.location.pathname) {
             case "/policy-tracker":
                 title = "Policy Tracker"
+                requestTitle = "Policy"
                 break
             case "/events":
                 title = "Events"
                 break
             case "/resources":
                 title = "Resources"
+                requestTitle = "Tools"
                 break
             default:
                 title = ""
