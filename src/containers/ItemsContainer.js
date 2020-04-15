@@ -2,20 +2,27 @@ import React, { withRouter, useState, useEffect } from 'react'
 import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
 import { withContentful } from 'react-contentful';
-import {getAllResources } from '../utils.js'
+import { getResourcesForThePage } from '../utils.js'
 
 function ItemsContainer(props) {
 
     // Sylwia: IN THE BELOW FUNCTION WE ALSO NEED TO MAKE A CALL TO AN APPROPRIATE SELECT FUNCTION, e.g. selectResourcesForThePage("Policy") -- let's keep in mind that the sectionTitle is different than what these entries' categories are called on the backend, sadly
 
     const [entries, updateEntries ] = useState([])
+    const [title, displayTitle ] = useState('')
 
     useEffect( () => {
-        updateEntries((async () => await getAllResources())())
+      sectionTitle()
     }, [])
 
-    console.log(entries);
-    
+    const getEntries = async (location) => {
+      console.log(location);
+      const items = await getResourcesForThePage(location);
+      console.log(items);
+      updateEntries(items)
+      return items;
+    }
+
 
     const sectionTitle = () => {
         let title;
@@ -24,6 +31,7 @@ function ItemsContainer(props) {
             case "/policy-tracker":
                 title = "Policy Tracker"
                 requestTitle = "Policy"
+
                 break
             case "/events":
                 title = "Events"
@@ -35,12 +43,15 @@ function ItemsContainer(props) {
             default:
                 title = ""
         }
-        return title
+        
+        displayTitle(title)
+        getEntries(requestTitle || title)
+        return title;
     }
 
     return (
         <>
-        <h1> {sectionTitle()} </h1>
+        <h1> {title} </h1>
         <section>
 
             <ButtonsContainer/>

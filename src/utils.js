@@ -23,8 +23,9 @@ const getAllResources = async () => {
 // (async () => console.log(await getAllResources()))()
 
 // returns resources for each page -- it accepts an argument of a string that's the name of the page
-const getResourcesForThePage = (str) => {
-    return getEntries().filter((entry) => entry.fields.category.fields.name === str)
+const getResourcesForThePage = async (str) => {
+  let entries = await getAllResources()
+    return entries.filter((entry) => entry.fields.category.fields.name === str)
 }
 // console.log(getResourcesForThePage("Tools"))
 // console.log(getResourcesForThePage("Policy"))
