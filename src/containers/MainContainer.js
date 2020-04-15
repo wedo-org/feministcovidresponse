@@ -12,7 +12,6 @@ export default function MainContainer() {
 
     contentfulClient.getEntries()
     .then((response) => {
-        // console.log("ENTRIES", response.items);
         updateEntries(response.items)
     })
     .catch(console.error)
@@ -34,13 +33,13 @@ export default function MainContainer() {
         return entries.filter((entry) => entry.sys.contentType.sys.id === "country").map((c) => c.fields.name)
     }
     // console.log(selectCountries());
-    
+
     /////////////// RETURNS ALL AVAILABLE THEMES
     const selectThemes = () => {
         return entries.filter((entry) => entry.sys.contentType.sys.id === "name").map((c) => c.fields.name)
     }
-    // console.log(selectThemes()) 
-    
+    // console.log(selectThemes())
+
 
     return (
         <main className='main-container'>
