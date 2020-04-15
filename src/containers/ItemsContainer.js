@@ -5,6 +5,8 @@ import { withContentful } from 'react-contentful';
 
 function ItemsContainer(props) {
 
+    // Sylwia: IN THE BELOW FUNCTION WE ALSO NEED TO MAKE A CALL TO AN APPROPRIATE SELECT FUNCTION, e.g. selectResourcesForThePage("Policy") -- let's keep in mind that the sectionTitle is different than what these entries' categories are called on the backend, sadly
+
     const sectionTitle = () => {
         let title;
         switch (props.location.pathname) {
