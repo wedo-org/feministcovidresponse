@@ -14,16 +14,33 @@ const getEntries = async () => {
   }
 }
 
-
-const getContentType = async () => {
-  try {
-    let response = await contentfulClient.getContentType('resource')
-    return response
-  } catch(e){
-    console.error(e.message);
-  }
+// gets all resources (i.e. not countries, not themes, not types)
+const getAllResources = () => {
+    return getEntries().filter((entry) => entry.sys.contentType.sys.id === "resource")
 }
 
+console.log(getAllResources());
 
 
-export { getEntries, contentfulClient, getContentType }
+// returns resources for each page -- it accepts an argument of a string that's the name of the page
+const getResourcesForThePage = (str) => {
+    return getAllResources().filter((entry) => entry.fields.category.fields.name === str)
+}
+// console.log(getResourcesForThePage("Tools"))
+// console.log(getResourcesForThePage("Policy"))
+
+/////////////// RETURNS ALL AVAILABLE COUNTRIES
+const getCountries = () => {
+    return getEntries().filter((entry) => entry.sys.contentType.sys.id === "country").map((c) => c.fields.name)
+}
+// console.log(getCountries());
+
+/////////////// RETURNS ALL AVAILABLE THEMES
+const getThemes = () => {
+    return getEntries().filter((entry) => entry.sys.contentType.sys.id === "name").map((c) => c.fields.name)
+}
+// console.log(getThemes())
+
+
+
+export { getEntries, contentfulClient, getAllResources, getThemes, getCountries, getResourcesForThePage }
