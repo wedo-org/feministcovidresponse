@@ -3,13 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { ContentfulProvider } from 'react-contentful';
 import './index.css';
-import { getEntries, contentfulClient, getContentType } from './utils.js'
+import { contentfulClient } from './utils.js'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-// these are here only so I can see what response I'm getting
-// getEntries()
-// getContentType()
 
 const routing = (
   <ContentfulProvider client={contentfulClient}>
