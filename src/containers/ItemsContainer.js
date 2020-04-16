@@ -38,33 +38,38 @@ function ItemsContainer(props) {
     }    
 
     const getCountries = async () => {
-        const countries = await fetchCountries();
+        let countries = await fetchCountries();
         updateCountries(countries)
+        countries = countries.sort((a,b) => a.localeCompare(b))
         return countries
     }
 
     const getThemes = async () => {
-        const themes = await fetchThemes()
+        let themes = await fetchThemes()
         updateThemes(themes)
+        themes = themes.sort((a,b) => a.localeCompare(b))
         return themes
     }
 
-    console.log(entries);
-
     // now it only filters by country
-    const filterEntries = () => {
+    const filterEntriesByCountry = () => {
+        let filteredEntries;
         if (chosenCountry !== "All"){
-            return entries.filter(entry => {
+            filteredEntries =  entries.filter(entry => {
                 return entry.fields.country.some(country => country.fields.name === chosenCountry)
             })
         } else {
-            return entries
+            filteredEntries = entries
         }
+        return filteredEntries
     }
 
-    console.log("FILTERED", filterEntries());
-    
+    const filterEntriesByCategory = (entries) => {
 
+    }
+
+    console.log("ALL ENTRIES", entries);
+    console.log("FILTERED", filterEntriesByCountry());
 
     // Sylwia: IN THE BELOW FUNCTION WE ALSO NEED TO MAKE A CALL TO AN APPROPRIATE SELECT FUNCTION, e.g. selectResourcesForThePage("Policy") -- let's keep in mind that the sectionTitle is different than what these entries' categories are called on the backend, sadly
 
@@ -105,7 +110,7 @@ function ItemsContainer(props) {
             />
             <ul>
                 {
-                    filterEntries().map((item)=> 
+                    filterEntriesByCountry().map((item)=> 
                     <li key={item.sys.id}>
                         <ItemCard item={item}/>
                     </li>)
