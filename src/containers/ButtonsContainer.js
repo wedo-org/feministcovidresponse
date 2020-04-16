@@ -1,11 +1,21 @@
 import React from 'react'
 import Button from '../components/Button'
 
-export default function ButtonsContainer() {
+export default function ButtonsContainer({countries, themes, updateChosenCountry, updateChosenTheme}) {
+    
     return (
-        <div>
-            <Button text={"country"}/>
-            <Button text={"category"}/>
-        </div>
+        <>
+            <label>See </label>
+            <Button 
+                text={"country"}
+                items={countries}
+                updateChoice ={updateChosenCountry}
+            />
+            <Button 
+                text={"category"}
+                items={themes}
+                updateChoice ={updateChosenTheme}
+            />
+        </>
     )
 }

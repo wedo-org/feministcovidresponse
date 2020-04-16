@@ -13,9 +13,12 @@ function ItemsContainer(props) {
     const [ title, updateTitle ] = useState('')
     const [ countries, updateCountries ] = useState([])
     const [ themes, updateThemes ] = useState([])
-    const [ chosenCountry, updateChosenCountry ] = useState('')
-    const [ chosenCategory, updateChosenCategory ] = useState('')
-
+    const [ chosenCountry, updateChosenCountry ] = useState('All')
+    const [ chosenTheme, updateChosenTheme ] = useState('All')
+        
+    // console.log("chosenCountry", chosenCountry);
+    // console.log("chosenTheme", chosenTheme);    
+    
     useEffect( () => {
       sectionTitle()
     }, [])
@@ -32,7 +35,7 @@ function ItemsContainer(props) {
       const items = await fetchResourcesForThePage(location);
       updateEntries(items)
       return items;
-    }
+    }    
 
     const getCountries = async () => {
         const countries = await fetchCountries();
@@ -45,6 +48,22 @@ function ItemsContainer(props) {
         updateThemes(themes)
         return themes
     }
+
+    console.log(entries);
+
+    // now it only filters by country
+    const filterEntries = () => {
+        if (chosenCountry !== "All"){
+            return entries.filter(entry => {
+                return entry.fields.country.some(country => country.fields.name === chosenCountry)
+            })
+        } else {
+            return entries
+        }
+    }
+
+    console.log("FILTERED", filterEntries());
+    
 
 
     // Sylwia: IN THE BELOW FUNCTION WE ALSO NEED TO MAKE A CALL TO AN APPROPRIATE SELECT FUNCTION, e.g. selectResourcesForThePage("Policy") -- let's keep in mind that the sectionTitle is different than what these entries' categories are called on the backend, sadly
@@ -78,11 +97,15 @@ function ItemsContainer(props) {
         <>
         <h1> {title} </h1>
         <section>
-
-            <ButtonsContainer/>
+            <ButtonsContainer 
+                countries={ countries } 
+                themes={ themes }
+                updateChosenCountry ={ updateChosenCountry }
+                updateChosenTheme={ updateChosenTheme }
+            />
             <ul>
                 {
-                    entries.map((item)=> 
+                    filterEntries().map((item)=> 
                     <li key={item.sys.id}>
                         <ItemCard item={item}/>
                     </li>)
