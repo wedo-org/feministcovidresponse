@@ -11,11 +11,11 @@ export default function ButtonsContainer({countries, themes, updateChosenCountry
                 items={countries}
                 updateChoice ={updateChosenCountry}
             />
-            {/* <Button 
+            <Button 
                 text={"category"}
                 items={themes}
                 updateChoice ={updateChosenTheme}
-            /> */}
+            />
         </>
     )
 }

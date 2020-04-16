@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import NavBar from './components/NavBar';
 import Menu from './components/Menu';
-import { getEntries, contentfulClient, getContentType } from './utils.js'
 
 function App(props) {
 

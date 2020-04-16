@@ -1,4 +1,4 @@
-import React, { withRouter, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
 import { withContentful } from 'react-contentful';
@@ -6,18 +6,12 @@ import { fetchResourcesForThePage, fetchCountries, fetchThemes } from '../utils.
 
 function ItemsContainer(props) {
 
-    // clicking on the button selects a country or theme, and that filters entries;
-    // pass down as props updateChosenCountry and updateChosenCategory to the ButtonCont
-
     const [ entries, updateEntries ] = useState([])
     const [ title, updateTitle ] = useState('')
     const [ countries, updateCountries ] = useState([])
     const [ themes, updateThemes ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenTheme, updateChosenTheme ] = useState('All')
-        
-    // console.log("chosenCountry", chosenCountry);
-    // console.log("chosenTheme", chosenTheme);    
     
     useEffect( () => {
       sectionTitle()
@@ -65,22 +59,21 @@ function ItemsContainer(props) {
     }
 
     const filterEntriesByTheme = (filteredEntries) => {
-        console.log("FINISHED", filteredEntries);
-
         let finishedFilteredArr;
         if (chosenTheme !== "All"){
             finishedFilteredArr =  filteredEntries.filter(entry => {
+                // just in case some entry doesn't have a theme
+                if (entry.fields.theme) {
                 return entry.fields.theme.some(theme => theme.fields.name === chosenTheme)
+                } else {
+                return null
+                }
             })
         } else {
             finishedFilteredArr = filteredEntries
         }
         return finishedFilteredArr
     }
-
-    console.log("ALL ENTRIES", entries);
-
-    // Sylwia: IN THE BELOW FUNCTION WE ALSO NEED TO MAKE A CALL TO AN APPROPRIATE SELECT FUNCTION, e.g. selectResourcesForThePage("Policy") -- let's keep in mind that the sectionTitle is different than what these entries' categories are called on the backend, sadly
 
     const sectionTitle = () => {
         let title;
