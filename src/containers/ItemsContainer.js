@@ -61,15 +61,24 @@ function ItemsContainer(props) {
         } else {
             filteredEntries = entries
         }
-        return filteredEntries
+            return filteredEntries
     }
 
-    const filterEntriesByCategory = (entries) => {
+    const filterEntriesByTheme = (filteredEntries) => {
+        console.log("FINISHED", filteredEntries);
 
+        let finishedFilteredArr;
+        if (chosenTheme !== "All"){
+            finishedFilteredArr =  filteredEntries.filter(entry => {
+                return entry.fields.theme.some(theme => theme.fields.name === chosenTheme)
+            })
+        } else {
+            finishedFilteredArr = filteredEntries
+        }
+        return finishedFilteredArr
     }
 
     console.log("ALL ENTRIES", entries);
-    console.log("FILTERED", filterEntriesByCountry());
 
     // Sylwia: IN THE BELOW FUNCTION WE ALSO NEED TO MAKE A CALL TO AN APPROPRIATE SELECT FUNCTION, e.g. selectResourcesForThePage("Policy") -- let's keep in mind that the sectionTitle is different than what these entries' categories are called on the backend, sadly
 
@@ -110,7 +119,7 @@ function ItemsContainer(props) {
             />
             <ul>
                 {
-                    filterEntriesByCountry().map((item)=> 
+                    filterEntriesByTheme(filterEntriesByCountry()).map((item)=> 
                     <li key={item.sys.id}>
                         <ItemCard item={item}/>
                     </li>)
