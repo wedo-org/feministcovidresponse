@@ -5,7 +5,7 @@ import { withContentful } from 'react-contentful';
 import { fetchResourcesForThePage, fetchCountries, fetchThemes } from '../utils.js'
 
 function ItemsContainer(props) {
-  console.log(props);
+
     const [ entries, updateEntries ] = useState([])
     const [ title, updateTitle ] = useState('')
     const [ countries, updateCountries ] = useState([])
@@ -13,7 +13,7 @@ function ItemsContainer(props) {
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenTheme, updateChosenTheme ] = useState('All')
 
-    console.log(entries);
+    // console.log(entries);
 
     useEffect( () => {
       sectionTitle()
