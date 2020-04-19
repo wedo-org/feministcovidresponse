@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import hamburger from '../assets/images/hamburger.png'
 import Menu from './Menu';
-const isBrowser = document.documentElement.clientWidth > 1775;
 
 export default function NavBar() {
+  const isBrowser = document.documentElement.clientWidth > 1775;
     return (
         <nav className='nav-bar'>
             <h2> Feminist Response to COVID-19</h2>

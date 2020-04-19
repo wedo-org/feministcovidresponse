@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { withContentful } from 'react-contentful';
-const isBrowser = window.screen.availWidth > 1775;
 
 
 function Menu() {
   console.log(document.documentElement.clientWidth);
   console.log(window.screen.availWidth);
+  const isBrowser = window.screen.availWidth > 1775;
+  
   return (
         <section className='menu-list'>
           <nav>
