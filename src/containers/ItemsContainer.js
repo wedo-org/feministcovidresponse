@@ -5,7 +5,7 @@ import { withContentful } from 'react-contentful';
 import { fetchResourcesForThePage, fetchCountries, fetchThemes } from '../utils.js'
 
 function ItemsContainer(props) {
-
+  console.log(props);
     const [ entries, updateEntries ] = useState([])
     const [ title, updateTitle ] = useState('')
     const [ countries, updateCountries ] = useState([])
