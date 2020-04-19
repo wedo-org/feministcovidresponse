@@ -11,7 +11,7 @@ function ItemsContainer(props) {
     const [ countries, updateCountries ] = useState([])
     const [ themes, updateThemes ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
-    const [ chosenTheme, updateChosenTheme ] = useState('All')
+    const [ chosenTheme, updateChosenTheme ] = useState('All')    
     
     useEffect( () => {
       sectionTitle()
@@ -72,7 +72,8 @@ function ItemsContainer(props) {
         } else {
             finishedFilteredArr = filteredEntries
         }
-        return finishedFilteredArr
+        let sorted = finishedFilteredArr.sort((a,b) => a.sys.createdBy - b.sys.createdBy)        
+        return sorted
     }
 
     const sectionTitle = () => {
