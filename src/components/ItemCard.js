@@ -1,11 +1,11 @@
 import React from 'react'
 
 export default function ItemCard({item}) {
-    
+
     return (
-        <>
-            <h4>{item.fields.title}</h4>
+        <section className='item' >
+            <h4 className='item-title'>{item.fields.title}</h4>
             <p>{item.fields.description}</p>
-        </>
+        </section>
     )
 }

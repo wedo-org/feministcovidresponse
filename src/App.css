@@ -69,7 +69,7 @@ span {
 }
 
 .main-content > p {
-  font-family: Amiko;
+  font-family: 'Amiko', sans-serif;
 }
 
 /* --NAV BAR-- */
@@ -123,15 +123,19 @@ nav > ul {
 
 /* -----------POLICY TRACKER----------- */
 .main-title {
-  background-color: white;
+  /* z-index: -1; */
+  /* background-color: white;
   position: fixed;
-  width: 86vw;
+  width: 86vw; */
 }
+/* .buttons-container {
+  padding-bottom: 18px;
+} */
 
 #policy-content {
-  background-color: white;
-  padding-top: 15rem;
+
 }
+
 .policyButtons {
   display: flex;
   flex-direction: row;
@@ -182,6 +186,10 @@ nav > ul {
   .policyButtons {
     justify-content: center;
   }
+
+  #policy-content {
+    font-size: 3vh;
+  }
 }
 
 
@@ -189,7 +197,7 @@ nav > ul {
 /* -------- RESPONSIVE TO BROWSER --------- */
 
 
-@media screen and (min-width: 1775px) {
+@media screen and (min-width: 1774px) {
 
   a:focus {
     text-decoration: underline solid white;
@@ -254,10 +262,11 @@ nav > ul {
   .main-container {
     width: 75%;
     max-height: 75.5vh;
+    padding: 6vh;
   }
 
-  .main-content > h1 {
-    font-size: 3.75rem;
+  .main-content > h1, .main-title > section > h1 {
+    font-size: 5.75rem;
     margin: 0;
     text-align: left;
     font-weight: 800;
@@ -268,5 +277,59 @@ nav > ul {
     font-size: 30px;
     color:rgb(32,68,81)!important;
     margin-left: 5%;
+  }
+
+  #policy-content {
+    padding: 3vh 1vh;
+    text-align: justify;
+    border-right: 5px solid rgb(32,68,81);
+  }
+
+  .buttons-and-items {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .policyButtons > p {
+    /* justify-content: flex-start; */
+    display: none;
+  }
+
+  .policyOption {
+    background-color: rgb(230,150,83);
+    padding: 5%;
+    font-size: 30px;
+    text-transform: uppercase;
+    width: 22rem;
+    text-align: center;
+    margin: 3rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  .policyOption:nth-of-type(2){
+    background-color: rgb(187,117,28);
+  }
+
+  .item {
+    width: 85%;
+    padding-bottom: 2rem;
+  }
+
+  .item > p {
+    font-size: 1.5vw;
+    font-family: 'Amiko', sans-serif;
+    color: rgb(115,115,115)
+  }
+
+  .item-title {
+    text-transform: uppercase;
+    color: rgb(230,153,89);
+    font-size: 1.5vw;
+    letter-spacing: 5px;
+    font-weight: 800;
+    word-spacing: -2px;
+    font-family: 'Anton', sans-serif;
   }
 }

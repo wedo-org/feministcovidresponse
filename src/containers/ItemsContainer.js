@@ -101,28 +101,33 @@ function ItemsContainer(props) {
     }
 
     return (
-        <section>
+        <section className='ItemsContainer'>
           <section className='main-title'>
-            <h1> {title} </h1>
-          <aside>
-            <ButtonsContainer
-                countries={ countries }
-                themes={ themes }
-                updateChosenCountry ={ updateChosenCountry }
-                updateChosenTheme={ updateChosenTheme }
-            />
-          </aside>
-          </section>
+            <section>
+              <h1> {title} </h1>
+            </section>
+            <section className='buttons-and-items'>
+              <aside className='buttons-container'>
+                <ButtonsContainer
+                    countries={ countries }
+                    themes={ themes }
+                    updateChosenCountry ={ updateChosenCountry }
+                    updateChosenTheme={ updateChosenTheme }
+                />
+              </aside>
 
-          <section id='policy-content'>
-            <ul>
-                {
-                    filterEntriesByTheme(filterEntriesByCountry()).map((item)=>
-                    <li key={item.sys.id}>
-                        <ItemCard item={item}/>
-                    </li>)
-                }
-            </ul>
+              <section id='policy-content'>
+                <ul>
+                    {
+                        filterEntriesByTheme(filterEntriesByCountry()).map((item)=>
+                        <li key={item.sys.id}>
+                            <ItemCard item={item}/>
+                        </li>)
+                    }
+                </ul>
+              </section>
+            </section>
+
           </section>
         </section>
     )
