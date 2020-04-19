@@ -12,7 +12,7 @@ function ItemsContainer(props) {
     const [ themes, updateThemes ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenTheme, updateChosenTheme ] = useState('All')
-    
+
     useEffect( () => {
       sectionTitle()
     }, [])
@@ -29,7 +29,7 @@ function ItemsContainer(props) {
       const items = await fetchResourcesForThePage(location);
       updateEntries(items)
       return items;
-    }    
+    }
 
     const getCountries = async () => {
         let countries = await fetchCountries();
@@ -94,32 +94,37 @@ function ItemsContainer(props) {
             default:
                 title = ""
         }
-        
+
         updateTitle(title)
         getEntries(requestTitle || title)
         return title;
     }
 
     return (
-        <>
-        <h1> {title} </h1>
         <section>
-            <ButtonsContainer 
-                countries={ countries } 
+          <section className='main-title'>
+            <h1> {title} </h1>
+          <aside>
+            <ButtonsContainer
+                countries={ countries }
                 themes={ themes }
                 updateChosenCountry ={ updateChosenCountry }
                 updateChosenTheme={ updateChosenTheme }
             />
+          </aside>
+          </section>
+
+          <section id='policy-content'>
             <ul>
                 {
-                    filterEntriesByTheme(filterEntriesByCountry()).map((item)=> 
+                    filterEntriesByTheme(filterEntriesByCountry()).map((item)=>
                     <li key={item.sys.id}>
                         <ItemCard item={item}/>
                     </li>)
                 }
             </ul>
+          </section>
         </section>
-        </>
     )
 }
 

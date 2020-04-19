@@ -60,7 +60,7 @@ span {
 
 /* --MAIN CONTAINER-- */
 .main-container {
-  padding: .5rem;
+  padding: 0 .5rem;
   overflow: scroll;
   height: 75.5vh;
   min-height: 75.5vh;
@@ -120,6 +120,28 @@ nav > ul {
   padding-bottom: 1rem;
 }
 
+
+/* -----------POLICY TRACKER----------- */
+.main-title {
+  background-color: white;
+  position: fixed;
+  width: 85vw;
+}
+
+#policy-content {
+  background-color: white;
+  padding-top: 14rem;
+}
+.policyButtons {
+  display: flex;
+  flex-direction: row;
+  font-size: 3vh;
+}
+
+.policyOption {
+  font-size: 2.9vh;
+  text-align: center;
+}
 
 
 
