@@ -13,6 +13,8 @@ function ItemsContainer(props) {
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenTheme, updateChosenTheme ] = useState('All')
 
+    console.log(entries);
+
     useEffect( () => {
       sectionTitle()
     }, [])
@@ -71,6 +73,11 @@ function ItemsContainer(props) {
             })
         } else {
             finishedFilteredArr = filteredEntries
+        }
+        if (props.location.pathname !== "Events"){
+            finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.sys.createdBy - b.sys.createdBy)
+        } else {
+            finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.fields.date - b.fields.date)
         }
         return finishedFilteredArr
     }

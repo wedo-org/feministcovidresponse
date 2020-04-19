@@ -135,6 +135,9 @@ nav > ul {
 #policy-content {
 
 }
+.main-title > section > h1 {
+  margin-bottom: 1rem;
+}
 
 .policyButtons {
   display: flex;
@@ -148,6 +151,28 @@ nav > ul {
 .policyOption {
   font-size: 20px;
   text-align: center;
+}
+
+.policyButtons > p {
+  /* justify-content: flex-start; */
+  display: none;
+}
+
+.policyOption {
+  background-color: rgb(230,150,83);
+  padding: 2%;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 15rem;
+  text-align: center;
+  margin: 1rem;
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.policyOption:nth-of-type(2){
+  background-color: rgb(187,117,28);
 }
 
 
