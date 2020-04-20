@@ -187,7 +187,7 @@ nav > ul {
 
 /* -------- RESPONSIVE TO TABLET --------- */
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1023px){
   .nav-bar > h2 {
     width: 18rem;
     font-size: 3.5vh;
@@ -230,7 +230,7 @@ nav > ul {
 /* -------- RESPONSIVE TO BROWSER --------- */
 
 
-@media (min-width: 1775px) {
+@media (min-width: 1024px) {
 
   a:focus {
     text-decoration: underline solid white;
@@ -258,26 +258,28 @@ nav > ul {
     padding: 0;
     font-size: 5vw;
     text-align: left!important;
+    width: 24vw;
   }
 
   li > a {
     text-transform: uppercase;
-    font-size: 2.8vh;
+    font-size: 2.3vw;
     color:rgb(32,68,81);
     line-height: 1px;
     text-shadow: 0 0 2px;
   }
 
   .nav-bar > h2 {
-    font-size: 4.5vh;
-    width: 23rem;
+    font-size: 3.5vh;
+    width: 20rem;
     margin: 0;
+    width:17rem;
   }
 
 
   .navbar-maincontainer {
     display:flex;
-    margin: 5%;
+    margin: 2%;
     margin-bottom: 0;
     justify-content: space-around;
   }
@@ -293,13 +295,15 @@ nav > ul {
   }
 
   .main-container {
-    width: 75%;
-    max-height: 75.5vh;
-    padding: 6vh;
+    width: 72%;
+    max-height: 78vh;
+    padding: 4vh;
+    height: 80vw;
+    margin-top: 100px;
   }
 
   .main-content > h1, .main-title > section > h1 {
-    font-size: 5.75rem;
+    font-size: 5vw;
     margin: 0;
     text-align: left;
     font-weight: 800;
@@ -307,7 +311,7 @@ nav > ul {
 
   footer {
     position:inherit!important;
-    font-size: 30px;
+    font-size: 2vh;
     color:rgb(32,68,81)!important;
     margin-left: 5%;
   }
@@ -316,6 +320,10 @@ nav > ul {
     padding: 3vh 1vh;
     text-align: justify;
     border-right: 5px solid rgb(32,68,81);
+  }
+
+  #policy-content > ul {
+    padding: 0;
   }
 
   .buttons-and-items {
@@ -331,11 +339,11 @@ nav > ul {
   .policyOption {
     background-color: rgb(230,150,83);
     padding: 5%;
-    font-size: 30px;
+    font-size: 1.5vw;
     text-transform: uppercase;
-    width: 22rem;
+    width: 17.5vw;
     text-align: center;
-    margin: 3rem;
+    margin: 3rem 1rem;
     font-family: 'Anton', sans-serif;
     font-weight: bold;
     color: white;
@@ -351,7 +359,7 @@ nav > ul {
   }
 
   .item > p {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     font-family: 'Amiko', sans-serif;
     color: rgb(115,115,115)
   }
@@ -359,7 +367,7 @@ nav > ul {
   .item-title {
     text-transform: uppercase;
     color: rgb(230,153,89);
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     letter-spacing: 5px;
     font-weight: 800;
     word-spacing: -2px;
