@@ -11,10 +11,8 @@ function ItemsContainer(props) {
     const [ countries, updateCountries ] = useState([])
     const [ themes, updateThemes ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
-    const [ chosenTheme, updateChosenTheme ] = useState('All')
-
-    // console.log(entries);
-
+    const [ chosenTheme, updateChosenTheme ] = useState('All')    
+        
     useEffect( () => {
       sectionTitle()
     }, [])
