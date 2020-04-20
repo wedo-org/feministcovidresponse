@@ -2,9 +2,6 @@ import React from 'react'
 
 export default function ItemCard({item}) {
 
-    console.log(item);
-    debugger
-
     const makeDate = () => {
         const date = new Date(item.fields.date)
         const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date)
@@ -12,22 +9,12 @@ export default function ItemCard({item}) {
         const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date)
         return `${day} ${month} ${year}`
     }
-    
+
 
     return (
         <section className='item' >
             <h4 className='item-title'>{item.fields.title}</h4>
-            { 
-                item.fields.type 
-                ?
-                <>
-                    <strong> Types: </strong>
-                    {item.fields.type.map((type) => <span key={type.sys.id}>{type.fields.name}</span>)}
-                </>
-                :
-                null
-            }
-            { 
+            {
                 item.fields.category.fields.name === "Events"
                 ?
                 <>
@@ -38,6 +25,18 @@ export default function ItemCard({item}) {
                 null
             }
             <p>{item.fields.description}</p>
+
+            {
+                item.fields.type
+                ?
+                <section className='type-section'>
+                    <p> Types:
+                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
+                    </p>
+                </section>
+                :
+                null
+            }
         </section>
     )
 }

@@ -4,7 +4,6 @@ import hamburger from '../assets/images/hamburger.png'
 import Menu from './Menu';
 
 export default function NavBar() {
-  const isBrowser = document.documentElement.clientWidth > 1775;
     return (
         <nav className='nav-bar'>
             <h2> Feminist Response to COVID-19</h2>

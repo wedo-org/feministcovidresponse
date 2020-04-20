@@ -11,19 +11,13 @@ function ItemsContainer(props) {
     const [ countries, updateCountries ] = useState([])
     const [ themes, updateThemes ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
-    const [ chosenTheme, updateChosenTheme ] = useState('All')    
-        
+    const [ chosenTheme, updateChosenTheme ] = useState('All')
+
     useEffect( () => {
       sectionTitle()
+      getCountries()
+      getThemes()
     }, [])
-
-    useEffect( () => {
-        getCountries()
-      }, [])
-
-      useEffect( () => {
-        getThemes()
-      }, [])
 
     const getEntries = async (location) => {
       const items = await fetchResourcesForThePage(location);

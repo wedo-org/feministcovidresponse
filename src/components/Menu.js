@@ -4,9 +4,6 @@ import { withContentful } from 'react-contentful';
 
 
 function Menu() {
-  console.log(document.documentElement.clientWidth);
-  console.log(window.screen.availWidth);
-  const isBrowser = window.screen.availWidth > 1775;
 
   return (
         <section className='menu-list'>
