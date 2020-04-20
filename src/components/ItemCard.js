@@ -15,6 +15,17 @@ export default function ItemCard({item}) {
         <section className='item' >
             <h4 className='item-title'>{item.fields.title}</h4>
             {
+                item.fields.type
+                ?
+                <section className='type-section'>
+                    <p> Types:
+                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
+                    </p>
+                </section>
+                :
+                null
+            }
+            {
                 item.fields.category.fields.name === "Events"
                 ?
                 <>
@@ -26,17 +37,6 @@ export default function ItemCard({item}) {
             }
             <p>{item.fields.description}</p>
 
-            {
-                item.fields.type
-                ?
-                <section className='type-section'>
-                    <p> Types:
-                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
-                    </p>
-                </section>
-                :
-                null
-            }
         </section>
     )
 }

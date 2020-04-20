@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import hamburger from '../assets/images/hamburger.png'
+import logo from '../assets/images/logo.png'
 import Menu from './Menu';
 
 export default function NavBar() {
     return (
         <nav className='nav-bar'>
-            <h2> Feminist Response to COVID-19</h2>
+        
+            <img id='logo' src={logo} alt='logo'/>
             <section id='isBrowser'>
               <Menu/>
             </section>
