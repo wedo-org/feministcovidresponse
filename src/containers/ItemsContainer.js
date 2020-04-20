@@ -47,7 +47,6 @@ function ItemsContainer(props) {
         return themes
     }
 
-    // now it only filters by country
     const filterEntriesByCountry = () => {
         let filteredEntries;
         if (chosenCountry !== "All"){
