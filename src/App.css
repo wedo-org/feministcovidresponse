@@ -120,6 +120,14 @@ nav > ul {
   padding-bottom: 1rem;
 }
 
+#isNotBrowser > a > img {
+  width: 9.5vh;
+}
+
+#isBrowser {
+  display:none;
+}
+
 
 /* -----------POLICY TRACKER----------- */
 .main-title {
@@ -356,5 +364,14 @@ nav > ul {
     font-weight: 800;
     word-spacing: -2px;
     font-family: 'Anton', sans-serif;
+  }
+
+  #isBrowser {
+    display: block;
+    height: 100%;
+  }
+
+  #isNotBrowser, #footerBrowser {
+    display: none;
   }
 }

@@ -7,7 +7,7 @@ function Menu() {
   console.log(document.documentElement.clientWidth);
   console.log(window.screen.availWidth);
   const isBrowser = window.screen.availWidth > 1775;
-  
+
   return (
         <section className='menu-list'>
           <nav>
@@ -20,16 +20,10 @@ function Menu() {
               <li><Link to="/events">Events</Link></li>
               </ul>
           </nav>
-          {
-            isBrowser
-            ?
-            false
-            :
-            <footer>
-              <p>created by xyz </p>
-              <p>thanks to xyz </p>
-            </footer>
-          }
+          <footer id='footerBrowser'>
+            <p>created by xyz </p>
+            <p>thanks to xyz </p>
+          </footer>
         </section>
     )
 }

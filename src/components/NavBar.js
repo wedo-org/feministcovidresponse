@@ -8,15 +8,15 @@ export default function NavBar() {
     return (
         <nav className='nav-bar'>
             <h2> Feminist Response to COVID-19</h2>
-            {
-              isBrowser
-              ?
+            <section id='isBrowser'>
               <Menu/>
-              :
+            </section>
+
+            <section id='isNotBrowser'>
               <Link to="/menu">
                 <img src={hamburger} className="hamburger-menu" alt="menu"  tabIndex="0"/>
               </Link>
-            }
+            </section>
         </nav>
     )
 }
