@@ -187,7 +187,7 @@ nav > ul {
 
 /* -------- RESPONSIVE TO TABLET --------- */
 
-@media screen and (min-width: 768px) and (max-width: 1774px) {
+@media (min-width: 768px) and (max-width: 1774px) {
   .nav-bar > h2 {
     width: 18rem;
     font-size: 3.5vh;
@@ -230,7 +230,7 @@ nav > ul {
 /* -------- RESPONSIVE TO BROWSER --------- */
 
 
-@media screen and (min-width: 1774px) {
+@media (min-width: 1774px) {
 
   a:focus {
     text-decoration: underline solid white;
