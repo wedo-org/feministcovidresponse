@@ -152,11 +152,6 @@ nav > ul {
   padding: 0;
 }
 
-.policyOption {
-  font-size: 20px;
-  text-align: center;
-}
-
 .policyButtons > p {
   /* justify-content: flex-start; */
   display: none;
@@ -164,7 +159,7 @@ nav > ul {
 
 .policyOption {
   background-color: rgb(230,150,83);
-  padding: 2%;
+  padding: 4%;
   font-size: 12px;
   text-transform: uppercase;
   width: 15rem;
@@ -172,10 +167,13 @@ nav > ul {
   font-family: 'Anton', sans-serif;
   font-weight: bold;
   color: white;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .policyOption:nth-of-type(2){
   background-color: rgb(187,117,28);
+  margin-top: 3%;
 }
 
 .type-section > p {
@@ -378,7 +376,7 @@ nav > ul {
 
   .policyOption {
     background-color: rgb(230,150,83);
-    padding: 5%;
+    /* padding: 5%; */
     font-size: 1.5vh;
     width: 18vh;
     text-transform: uppercase;
@@ -387,6 +385,8 @@ nav > ul {
     font-family: 'Anton', sans-serif;
     font-weight: bold;
     color: white;
+    word-break: break-word;
+    white-space: pre-wrap;
   }
 
   .policyOption:nth-of-type(2){
@@ -410,10 +410,12 @@ nav > ul {
   .item-title {
     color: rgb(230,153,89);
     font-size: 2.2vh;
-    /* letter-spacing: 5px;  */
+    letter-spacing: 1px; 
     font-weight: 800;
     word-spacing: -2px;
     font-family: 'Anton', sans-serif;
+    word-break: break-word;
+    white-space: pre-wrap;
   }
 
   #isBrowser {
