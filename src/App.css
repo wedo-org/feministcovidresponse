@@ -196,6 +196,7 @@ nav > ul {
 .item > p {
   font-size: large;
   font-family: 'Amiko', sans-serif;
+  line-height: 1.7;
 }
 
 .item-title {
@@ -406,6 +407,7 @@ nav > ul {
     color: rgb(115,115,115);
     border-bottom: 3px solid rgba(115,115,115, .6);
     padding-bottom: 25px;
+    line-height: 1.7;
   }
 
   .item-title {
