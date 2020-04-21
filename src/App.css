@@ -4,7 +4,6 @@
 
 body {
   padding: 0;
-  /* font-family: 'Anton', sans-serif; */
   font-family: 'Oswald', sans-serif;
 }
 
@@ -22,6 +21,8 @@ html {
   color: white;
   right: 1rem;
   padding: 5px;
+  font-family: 'Anton', sans-serif;
+
 }
 
 .App {
@@ -335,7 +336,7 @@ nav > ul {
     max-height: 78vh;
     padding: 4vh;
     height: 80vw;
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
   .main-content > h1, .main-title > section > h1 {
@@ -426,8 +427,9 @@ nav > ul {
   }
 
   .App > footer {
-    padding-bottom: 95px;
-    font-size: 35px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight:normal;
   }
 }
 
