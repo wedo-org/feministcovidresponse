@@ -355,9 +355,8 @@ nav > ul {
   footer {
     font-size: 2vh;
     color:rgb(32,68,81)!important;
-    margin-left: 5%;
-    padding: 5px;
-    bottom: 30px;
+    margin-left: 4%;
+    bottom: 0;
     position: absolute;
     left: 0;
   }
@@ -440,7 +439,7 @@ nav > ul {
   }
 
   .App > footer {
-    padding-bottom: 95px;
+    padding-bottom: 3.5vh;
     font-size: 35px;
   }
 }
