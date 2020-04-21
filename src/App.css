@@ -194,14 +194,15 @@ nav > ul {
 }
 
 .item > p {
-  font-size: 2vh;
+  font-size: large;
   font-family: 'Amiko', sans-serif;
 }
 
 .item-title {
   text-transform: uppercase;
-  color: rgb(230,153,89);
-  font-size: 5vw;
+  /* color: rgb(230,153,89); */
+  color: #214451;
+  font-size: larger;
   word-spacing: 6px;
   font-family: 'Anton', sans-serif;
 }
@@ -400,7 +401,7 @@ nav > ul {
   }
 
   .item > p {
-    font-size: 2vw;
+    font-size: large;
     font-family: 'Amiko', sans-serif;
     color: rgb(115,115,115);
     border-bottom: 3px solid rgba(115,115,115, .6);
@@ -408,8 +409,9 @@ nav > ul {
   }
 
   .item-title {
-    color: rgb(230,153,89);
-    font-size: 2.2vh;
+    /* color: rgb(230,153,89); */
+    color: #214451;
+    font-size: larger;
     letter-spacing: 1px; 
     font-weight: 800;
     word-spacing: -2px;
