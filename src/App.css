@@ -206,6 +206,8 @@ nav > ul {
   font-size: larger;
   word-spacing: 6px;
   font-family: 'Anton', sans-serif;
+  text-align: left;
+  line-height: 1.4;
 }
 
 
@@ -420,6 +422,8 @@ nav > ul {
     font-family: 'Anton', sans-serif;
     word-break: break-word;
     white-space: pre-wrap;
+    text-align: left;
+    line-height: 1.4;
   }
 
   #isBrowser {
