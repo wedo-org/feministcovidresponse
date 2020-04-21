@@ -70,7 +70,6 @@ span {
 /* --MAIN CONTAINER-- */
 .main-container {
   padding: 0 .5rem;
-  overflow: scroll;
   height: 75.5vh;
   min-height: 75.5vh;
   background-color: white;
@@ -191,6 +190,11 @@ nav > ul {
 
 #policy-content > ul {
   padding-left: 20px;
+}
+
+#policy-content {
+  overflow-y: scroll;
+  height: 70vh;
 }
 
 .item > p {
