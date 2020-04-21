@@ -281,12 +281,12 @@ nav > ul {
   }
 
   .menu-list {
+    margin-top: 52%;
     background-color: inherit;
-    height: 100%;
-    line-height: 5rem;
+    height: 70%;
+    line-height: 2.5rem;
     font-weight: 600;
     font-size: 8rem;
-    padding-top: 1rem;
   }
 
   nav > ul {
