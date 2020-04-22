@@ -403,6 +403,7 @@ nav > ul {
     text-align: justify;
     border-right: 5px solid rgb(32,68,81);
     height: 70vh;
+    min-width: 30vw;
   }
 
   #policy-content > ul {
