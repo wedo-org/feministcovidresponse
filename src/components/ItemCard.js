@@ -28,6 +28,17 @@ export default function ItemCard({item}) {
                 {markProgressive()}{item.fields.title}
             </h4>
             {
+                item.fields.type
+                ?
+                <section className='type-section'>
+                    <p> Types:
+                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
+                    </p>
+                </section>
+                :
+                null
+            }
+            {
                 item.fields.category.fields.name === "Events"
                 ?
                 <>
@@ -41,18 +52,6 @@ export default function ItemCard({item}) {
             <br/><br/>
                 <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><p id='read-more'>Read more in a new tab</p></a>
             </p>
-
-            {
-                item.fields.type
-                ?
-                <section className='type-section'>
-                    <p> Types:
-                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
-                    </p>
-                </section>
-                :
-                null
-            }
 
         </section>
     )
