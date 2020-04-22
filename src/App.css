@@ -73,7 +73,7 @@ span {
 }
 
 #logo {
-  width: 18vh;
+  width: 6rem;
 }
 
 
@@ -404,6 +404,7 @@ nav > ul {
   .buttons-and-items {
     display: flex;
     flex-direction: row-reverse;
+    width: fit-content;
   }
 
   .policyButtons > p {
