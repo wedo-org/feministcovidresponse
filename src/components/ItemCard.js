@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function ItemCard({item}) {
-
     const makeDate = () => {
         const date = new Date(item.fields.date)
         const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date)
@@ -15,13 +14,13 @@ export default function ItemCard({item}) {
             return "⬆️"
         } else if (typeof(item.fields.progressive) === "undefined"){
             return null
-        } else {   
+        } else {
             return "⬇️ "
         }
-    }    
+    }
 
     console.log(item);
-    
+
 
     return (
         <section className='item' >
@@ -51,7 +50,7 @@ export default function ItemCard({item}) {
             }
             <p>{item.fields.description}
             <br/><br/>
-                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><strong>Read more in a new tab</strong></a>
+                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><p id='read-more'>Read more in a new tab</p></a>
             </p>
 
         </section>

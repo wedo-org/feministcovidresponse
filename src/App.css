@@ -215,7 +215,6 @@ nav > ul {
 }
 
 .item-title {
-  text-transform: uppercase;
   color: #214451;
   word-spacing: 6px;
   font-family: 'Anton', sans-serif;
@@ -307,15 +306,17 @@ nav > ul {
   }
 
   #logo {
-    width: 13vw;
-    height: 13.5vw;
+    width: 11rem;
+    height: 10rem;
   }
 
   .menu-list {
-    margin-top: 52%;
+    /* margin-top: 4rem; */
+    margin-bottom: 9rem;
     background-color: inherit;
-    height: 70%;
-    line-height: 3.5rem;
+    /* height: 70%; */
+    min-height: 25rem;
+    /* line-height: 3.5rem; */
     font-weight: 600;
     font-size: 8rem;
   }
@@ -349,7 +350,8 @@ nav > ul {
     display:flex;
     margin: 50px;
     margin-bottom: 0;
-    justify-content: space-around;
+    flex-direction: row;
+    /* justify-content: space-around; */
   }
 
   .main-content {
@@ -373,6 +375,7 @@ nav > ul {
     padding: 3vh;
     height: 90vw;
     margin-top: 1%;
+    margin-left: 3rem;
   }
 
   .main-content > h1, .main-title > section > h1 {
@@ -380,7 +383,10 @@ nav > ul {
     margin: 0;
     text-align: left;
     font-weight: 800;
-    text-transform: uppercase;
+    text-transform: capitalize!important;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
   }
 
   footer {
@@ -417,9 +423,9 @@ nav > ul {
   .policyOption {
     background-color: rgb(230,150,83);
     /* padding: 5%; */
-    font-size: 1.3vh;
+    font-size: 1.8vh;
     width: 24vh;
-    text-transform: uppercase;
+    text-transform: lowercase;
     height: 80px;
     margin-left: 3vw;
     font-family: 'Anton', sans-serif;
@@ -445,7 +451,7 @@ nav > ul {
     color: rgb(115,115,115);
     border-bottom: 3px solid rgba(115,115,115, .6);
     padding-bottom: 25px;
-    line-height: 1.7;
+    line-height: 1.4;
   }
 
   .item-title {
@@ -468,7 +474,7 @@ nav > ul {
 
   #isBrowser {
     display: block;
-    height: 100%;
+    height: fit-content;
   }
 
   #isNotBrowser, #footerBrowser {
@@ -478,6 +484,11 @@ nav > ul {
   .App > footer {
     padding-bottom: 3.5vh;
     font-size: 20px;
+  }
+
+  #read-more {
+    text-transform: uppercase;
+    font-weight: bolder;
   }
 }
 
