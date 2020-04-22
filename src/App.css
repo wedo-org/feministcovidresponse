@@ -73,7 +73,7 @@ span {
 }
 
 #logo {
-  width: 6rem;
+  width: 100px;
 }
 
 
@@ -282,6 +282,10 @@ nav > ul {
 
   .policyOption {
     font-size: 12px;
+  }
+
+  #logo {
+    width: 6rem;
   }
 }
 
