@@ -15,6 +15,15 @@ html {
   background-size: cover;
 }
 
+select {
+  appearance: none;
+  border-radius: 1px;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  text-align-last:center;
+}
+
 .App > footer {
   position: absolute;
   font-weight: bold;
@@ -33,7 +42,7 @@ button {
   border: 1px black solid;
 }
 
-li{
+li {
   list-style-type: none
 }
 
@@ -71,11 +80,11 @@ span {
 /* --MAIN CONTAINER-- */
 .main-container {
   padding: 0 .5rem;
-  overflow: scroll;
   height: 75.5vh;
   min-height: 75.5vh;
   background-color: white;
   margin-bottom: 1rem;
+  overflow: scroll;
 }
 
 .main-content > p {
@@ -153,11 +162,6 @@ nav > ul {
   padding: 0;
 }
 
-.policyOption {
-  font-size: 20px;
-  text-align: center;
-}
-
 .policyButtons > p {
   /* justify-content: flex-start; */
   display: none;
@@ -165,7 +169,7 @@ nav > ul {
 
 .policyOption {
   background-color: rgb(230,150,83);
-  padding: 2%;
+  padding: 4%;
   font-size: 12px;
   text-transform: uppercase;
   width: 15rem;
@@ -173,10 +177,13 @@ nav > ul {
   font-family: 'Anton', sans-serif;
   font-weight: bold;
   color: white;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .policyOption:nth-of-type(2){
   background-color: rgb(187,117,28);
+  margin-top: 3%;
 }
 
 .type-section > p {
@@ -196,17 +203,21 @@ nav > ul {
   padding-left: 20px;
 }
 
+#policy-content {
+  overflow-y: scroll;
+  height: 40vh;
+}
+
 .item > p {
-  font-size: 2vh;
   font-family: 'Amiko', sans-serif;
 }
 
 .item-title {
   text-transform: uppercase;
-  color: rgb(230,153,89);
-  font-size: 5vw;
+  color: #214451;
   word-spacing: 6px;
   font-family: 'Anton', sans-serif;
+  text-align: left;
 }
 
 
@@ -217,6 +228,18 @@ nav > ul {
   .nav-bar > h2 {
     width: 18rem;
     font-size: 3.5vh;
+  }
+
+  .main-title > section > h1 {
+    font-size: 3rem;
+  }
+
+  .item-title {
+    font-size: 1.7rem;
+  }
+
+  .type-section > p {
+    font-size: 1.5rem;
   }
 
   .main-container {
@@ -246,8 +269,16 @@ nav > ul {
     justify-content: center;
   }
 
+  .policyOption:nth-of-type(2){
+    margin-left: 2rem;
+  }
+
   #policy-content {
     font-size: 3vh;
+  }
+
+  .policyOption {
+    font-size: 15px;
   }
 }
 
@@ -276,12 +307,12 @@ nav > ul {
   }
 
   .menu-list {
+    margin-top: 52%;
     background-color: inherit;
-    height: 100%;
-    line-height: 5rem;
+    height: 70%;
+    line-height: 3.5rem;
     font-weight: 600;
     font-size: 8rem;
-    padding-top: 1rem;
   }
 
   nav > ul {
@@ -319,7 +350,7 @@ nav > ul {
   .main-content {
     height: 80vh;
     font-size: 3vh;
-    padding: 6vh;
+    /* padding: 6vh; */
   }
 
   .type-section > p {
@@ -333,10 +364,10 @@ nav > ul {
 
   .main-container {
     width: 75%;
-    max-height: 78vh;
-    padding: 4vh;
-    height: 80vw;
-    margin-top: 90px;
+    max-height: 88vh;
+    padding: 3vh;
+    height: 90vw;
+    margin-top: 1%;
   }
 
   .main-content > h1, .main-title > section > h1 {
@@ -350,9 +381,8 @@ nav > ul {
   footer {
     font-size: 2vh;
     color:rgb(32,68,81)!important;
-    margin-left: 5%;
-    padding: 5px;
-    bottom: 30px;
+    margin-left: 4%;
+    bottom: 0;
     position: absolute;
     left: 0;
   }
@@ -361,6 +391,7 @@ nav > ul {
     padding: 3vh 1vh;
     text-align: justify;
     border-right: 5px solid rgb(32,68,81);
+    height: 70vh;
   }
 
   #policy-content > ul {
@@ -379,7 +410,7 @@ nav > ul {
 
   .policyOption {
     background-color: rgb(230,150,83);
-    padding: 5%;
+    /* padding: 5%; */
     font-size: 1.5vh;
     width: 18vh;
     text-transform: uppercase;
@@ -388,6 +419,8 @@ nav > ul {
     font-family: 'Anton', sans-serif;
     font-weight: bold;
     color: white;
+    word-break: break-word;
+    white-space: pre-wrap;
   }
 
   .policyOption:nth-of-type(2){
@@ -401,20 +434,26 @@ nav > ul {
   }
 
   .item > p {
-    font-size: 2vw;
+    font-size: large;
     font-family: 'Amiko', sans-serif;
     color: rgb(115,115,115);
     border-bottom: 3px solid rgba(115,115,115, .6);
     padding-bottom: 25px;
+    line-height: 1.7;
   }
 
   .item-title {
-    color: rgb(230,153,89);
-    font-size: 2.2vh;
-    /* letter-spacing: 5px;  */
+    /* color: rgb(230,153,89); */
+    color: #214451;
+    font-size: larger;
+    letter-spacing: 1px;
     font-weight: 800;
     word-spacing: -2px;
     font-family: 'Anton', sans-serif;
+    word-break: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 1.4;
   }
 
   #isBrowser {
@@ -427,9 +466,8 @@ nav > ul {
   }
 
   .App > footer {
-    padding-bottom: 10px;
-    font-size: 25px;
-    font-weight:normal;
+    padding-bottom: 3.5vh;
+    font-size: 35px;
   }
 }
 
