@@ -10,10 +10,21 @@ export default function ItemCard({item}) {
         return `${day} ${month} ${year}`
     }
 
+    const markProgressive = () => {
+        if (item.fields.progressive) {
+            return "⬆️"
+        } else if (typeof(item.fields.progressive) === "undefined"){
+            return null
+        } else {   
+            return "⬇️ "
+        }
+    }    
 
     return (
         <section className='item' >
-            <h4 className='item-title'>{item.fields.title}</h4>
+            <h4 className='item-title'>
+                {markProgressive()}{item.fields.title}
+            </h4>
             {
                 item.fields.type
                 ?
