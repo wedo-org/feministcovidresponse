@@ -47,7 +47,7 @@ export default function ItemCard({item}) {
             }
             <p>{item.fields.description}
             <br/><br/>
-                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more in a new tab</span></a>
+                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more &nbsp; <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
 
         </section>
