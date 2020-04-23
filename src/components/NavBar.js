@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         <nav className='nav-bar'>
         
-            <img id='logo' src={logo} alt='logo'/>
+            <a href="/about"> <img id='logo' src={logo} alt='logo'/></a>
             <section id='isBrowser'>
               <Menu/>
             </section>
