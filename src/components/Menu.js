@@ -16,10 +16,17 @@ function Menu() {
               <li><NavLink to="/response-tracker" className="Nav_link" activeClassName="activeRoute">Response Tracker</NavLink></li>
               </ul>
           </nav>
+          <section className="languages">
+            <span>EN </span>
+            <span> / ES </span>
+            <span> / FR </span>
+        </section>
+        
           <footer id='footerBrowser'>
             <p>created by xyz </p>
             <p>thanks to xyz </p>
           </footer>
+
         </section>
     )
 }

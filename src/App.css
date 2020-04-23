@@ -169,14 +169,14 @@ nav > ul {
   padding: 4rem 0;
 }
 
-.menu-list > footer {
+.menu-list > .languages {
+  color:rgb(32,68,81); 
   font-size: 3vh;
   text-align: center;
   line-height: 2vh;
   bottom: 1.8rem;
-  position: fixed;
-  width: 90%;
   padding-bottom: 1rem;
+  margin-top: 8rem;
 }
 
 #isNotBrowser > a > img {

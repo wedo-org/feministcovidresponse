@@ -20,12 +20,6 @@ function App(props) {
           <MainContainer/>
         </section>
         }
-
-        <footer>
-          <span>EN </span>
-          <span> / ES </span>
-          <span> / FR </span>
-        </footer>
     </div>
   );
 }
