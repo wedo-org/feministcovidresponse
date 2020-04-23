@@ -13,10 +13,6 @@ function ItemsContainer(props) {
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenTheme, updateChosenTheme ] = useState('All')
 
-    console.log("COUNTRY", chosenCountry);
-    console.log("Theme", chosenTheme);
-    
-
     useEffect( () => {
       sectionTitle()
       getCountries()
@@ -108,6 +104,36 @@ function ItemsContainer(props) {
             <section>
               <h1> {title} </h1>
             </section>
+            {
+                chosenCountry !== "All" || chosenTheme !== "All"
+                ?
+                <p> filters applied:&nbsp;
+                    <span className="filter"
+                        onClick={() => updateChosenCountry("All")}
+                    > 
+                        {chosenCountry !== "All" 
+                        ? 
+                            <>
+                            {chosenCountry} &nbsp;
+                            <i className="gg-close-r"></i>
+                            </> 
+                        : null} 
+                    </span>
+                    <span className="filter"
+                        onClick={() => updateChosenTheme("All")}
+                    > 
+                        {chosenTheme !== "All" 
+                        ? 
+                            <>
+                            {chosenTheme} &nbsp;
+                            <i className="gg-close-r"></i>
+                            </> 
+                        : null}
+                    </span>
+                </p>
+                :
+                null
+            }
             <section className='buttons-and-items'>
               <aside className='buttons-container'>
                 <ButtonsContainer
@@ -123,7 +149,7 @@ function ItemsContainer(props) {
                     {
                         filterEntriesByTheme(filterEntriesByCountry()).map((item)=>
                         <li key={item.sys.id}>
-                            <ItemCard item={item}/>
+                            <ItemCard item={item} />
                         </li>)
                     }
                 </ul>
