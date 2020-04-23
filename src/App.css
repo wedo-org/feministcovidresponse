@@ -408,26 +408,6 @@ nav > ul {
     color: rgb(115,115,115);
   }
 
-  .main-container {
-    width: 90%;
-    max-height: 88vh;
-    padding: 3vh;
-    height: 90vw;
-    margin-top: 1%;
-    margin-left: 3rem;
-  }
-
-  .main-content > h1, .main-title > section > h1 {
-    font-size: 4vh;
-    margin: 0;
-    text-align: left;
-    font-weight: 800;
-    text-transform: capitalize!important;
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-  }
-
   footer {
     font-size: 2vh;
     color:rgb(32,68,81)!important;
@@ -447,7 +427,46 @@ nav > ul {
     margin-top: 6rem;
   }
 
+
+  .main-container {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    "title"
+    "content";
+    width: 90%;
+    height: 88vh;
+    max-height: 88vh;
+    padding: 3vh;
+    margin-top: 1%;
+    margin-left: 3rem;
+  }
+
+  .main-content > h1, .main-title > section > h1 {
+    grid-area: title;
+    font-size: 3rem;
+    margin: 0;
+    text-align: left;
+    font-weight: 800;
+    text-transform: capitalize!important;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .buttons-and-items {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 68% 20%;
+    grid-template-areas:
+    "items buttons"
+    /* flex-direction: row-reverse;
+    width: fit-content; */
+  }
+
   #policy-content {
+    grid-area: items;
     padding: 3vh 1vh;
     text-align: justify;
     border-right: 5px solid rgb(32,68,81);
@@ -459,13 +478,8 @@ nav > ul {
     padding: 0;
   }
 
-  .buttons-and-items {
-    display: flex;
-    flex-direction: row-reverse;
-    width: fit-content;
-  }
-
   .policyButtons > p {
+    grid-area: buttons;
     /* justify-content: flex-start; */
     display: none;
   }
@@ -473,8 +487,8 @@ nav > ul {
   .policyOption {
     background-color: rgb(230,150,83);
     /* padding: 5%; */
-    font-size: 1.8vh;
-    width: 15rem;
+    font-size: 1.1rem;
+    width: 15vw;
     text-transform: lowercase;
     height: 80px;
     margin-left: 3vw;
