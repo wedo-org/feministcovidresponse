@@ -13,7 +13,7 @@ export default function MainContainer() {
                 <Route exact path="/" component={About} />
                 <Route path="/about" component={About} />
                 <Route path="/principles" component={Principles} />
-                <Route path="/(resources|events|policy-tracker)/" component={(props) => <ItemsContainer {...props} items={{/* some function or data */}}/>}  />
+                <Route path="/(resources|online-dialogues|response-tracker)/" component={(props) => <ItemsContainer {...props} items={{/* some function or data */}}/>}  />
                 <Route component={NotFound} />
             </Switch>
         </main>

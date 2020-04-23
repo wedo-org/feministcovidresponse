@@ -77,13 +77,13 @@ function ItemsContainer(props) {
         let title;
         let requestTitle;
         switch (props.location.pathname) {
-            case "/policy-tracker":
-                title = "Policy Tracker"
-                requestTitle = "Policy"
-
+            case "/response-tracker":
+                title = "Response Tracker"
+                requestTitle = "Response"
                 break
-            case "/events":
-                title = "Events"
+            case "/online-dialogues":
+                title = "Online Dialogues"
+                requestTitle = "Dialogues"
                 break
             case "/resources":
                 title = "Resources"

@@ -13,8 +13,8 @@ function Menu() {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/principles">Principles</Link></li>
               <li><Link to="/resources">Resources</Link></li>
-              <li><Link to="/policy-tracker">Policy Tracker</Link></li>
-              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/online-dialogues">Online Dialogues</Link></li>
+              <li><Link to="/response-tracker">Response Tracker</Link></li>
               </ul>
           </nav>
           <footer id='footerBrowser'>

@@ -17,7 +17,7 @@ export default function NavBar() {
               <Link to="/menu">
                 <img src={hamburger} className="hamburger-menu" alt="menu"  tabIndex="0"/>
               </Link>
-            </section>
+            </section> 
         </nav>
     )
 }
