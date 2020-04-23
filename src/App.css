@@ -190,9 +190,9 @@ nav > ul {
 
 .type-section > p {
   text-transform: uppercase;
-  color: rgb(187,117,28);
+  color: rgb(187,117,28); 
   font-weight: bold;
-  padding: 20px 5px;
+  border-bottom: 3px solid rgba(115,115,115, .6);
 }
 
 #type {
@@ -361,7 +361,7 @@ nav > ul {
   }
 
   .type-section > p {
-    padding: 0;
+    padding-bottom: 35px;
     font-size: 20px;
   }
 
@@ -450,8 +450,6 @@ nav > ul {
     font-size: large;
     font-family: 'Amiko', sans-serif;
     color: rgb(115,115,115);
-    border-bottom: 3px solid rgba(115,115,115, .6);
-    padding-bottom: 25px;
     line-height: 1.4;
   }
 
