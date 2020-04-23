@@ -86,6 +86,19 @@ span {
   height: 7rem;
 }
 
+.Nav_link:hover {
+  color: yellow;
+}
+.Nav_link:active {
+  color: teal;
+}
+
+.activeRoute {
+  background-color: yellow;
+  border-bottom: 0.4rem solid teal;
+  cursor: not-allowed;
+}
+
 
 /* --MAIN CONTAINER-- */
 .main-container {

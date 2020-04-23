@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { withContentful } from 'react-contentful';
 
 
@@ -9,11 +9,11 @@ function Menu() {
         <section className='menu-list'>
           <nav>
               <ul>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/principles">Principles</Link></li>
-              <li><Link to="/resources">Resources</Link></li>
-              <li><Link to="/online-dialogues">Online Dialogues</Link></li>
-              <li><Link to="/response-tracker">Response Tracker</Link></li>
+              <li><NavLink to="/about" className="Nav_link" activeClassName="activeRoute">About</NavLink></li>
+              <li><NavLink to="/principles" className="Nav_link" activeClassName="activeRoute">Principles</NavLink></li>
+              <li><NavLink to="/resources" className="Nav_link" activeClassName="activeRoute">Resources</NavLink></li>
+              <li><NavLink to="/online-dialogues" className="Nav_link" activeClassName="activeRoute">Online Dialogues</NavLink></li>
+              <li><NavLink to="/response-tracker" className="Nav_link" activeClassName="activeRoute">Response Tracker</NavLink></li>
               </ul>
           </nav>
           <footer id='footerBrowser'>
