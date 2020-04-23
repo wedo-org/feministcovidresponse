@@ -114,7 +114,7 @@ function ItemsContainer(props) {
                         {chosenCountry !== "All" 
                         ? 
                             <>
-                            {chosenCountry} &nbsp;
+                            {chosenCountry} 
                             <i className="gg-close-r"></i>
                             </> 
                         : null} 
@@ -125,7 +125,7 @@ function ItemsContainer(props) {
                         {chosenTheme !== "All" 
                         ? 
                             <>
-                            {chosenTheme} &nbsp;
+                            {chosenTheme} 
                             <i className="gg-close-r"></i>
                             </> 
                         : null}
@@ -139,8 +139,10 @@ function ItemsContainer(props) {
                 <ButtonsContainer
                     countries={ countries }
                     themes={ themes }
-                    updateChosenCountry ={ updateChosenCountry }
-                    updateChosenTheme={ updateChosenTheme }
+                    updateChosenCountry = { updateChosenCountry }
+                    updateChosenTheme = { updateChosenTheme }
+                    chosenCountry = { chosenCountry }
+                    chosenTheme = { chosenTheme }
                 />
               </aside>
 
