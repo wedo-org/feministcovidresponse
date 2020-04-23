@@ -21,11 +21,11 @@ function Menu() {
             <span> / ES </span>
             <span> / FR </span>
         </section>
-        
+{/*         
           <footer id='footerBrowser'>
             <p>created by xyz </p>
             <p>thanks to xyz </p>
-          </footer>
+          </footer> */}
 
         </section>
     )

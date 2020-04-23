@@ -176,7 +176,7 @@ nav > ul {
   line-height: 2vh;
   bottom: 1.8rem;
   padding-bottom: 1rem;
-  margin-top: 8rem;
+  margin-top: 3rem;
 }
 
 #isNotBrowser > a > img {
@@ -435,6 +435,16 @@ nav > ul {
     bottom: 0;
     position: absolute;
     left: 0;
+  }
+
+  .menu-list > .languages {
+    color:rgb(32,68,81); 
+    font-size: 3vh;
+    text-align: left;
+    line-height: 2vh;
+    bottom: 1.8rem;
+    padding-bottom: 1rem;
+    margin-top: 6rem;
   }
 
   #policy-content {
