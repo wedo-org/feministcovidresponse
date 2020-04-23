@@ -19,9 +19,6 @@ export default function ItemCard({item}) {
         }
     }
 
-    console.log(item);
-
-
     return (
         <section className='item' >
             <h4 className='item-title'>
@@ -50,7 +47,7 @@ export default function ItemCard({item}) {
             }
             <p>{item.fields.description}
             <br/><br/>
-                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><p id='read-more'>Read more in a new tab</p></a>
+                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more in a new tab</span></a>
             </p>
 
         </section>

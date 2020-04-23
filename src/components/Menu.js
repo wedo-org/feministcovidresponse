@@ -9,7 +9,6 @@ function Menu() {
         <section className='menu-list'>
           <nav>
               <ul>
-              {/* the <li>s below will be created by fetching the page names from contentful, this is test only */}
               <li><Link to="/about">About</Link></li>
               <li><Link to="/principles">Principles</Link></li>
               <li><Link to="/resources">Resources</Link></li>

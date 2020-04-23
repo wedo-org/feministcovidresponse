@@ -13,6 +13,10 @@ function ItemsContainer(props) {
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenTheme, updateChosenTheme ] = useState('All')
 
+    console.log("COUNTRY", chosenCountry);
+    console.log("Theme", chosenTheme);
+    
+
     useEffect( () => {
       sectionTitle()
       getCountries()
