@@ -87,7 +87,7 @@ span#read-more:hover {
 }
 
 :focus{
-  outline: 3px dashed rgb(0, 21, 255);
+  /* outline: 3px dashed rgb(0, 21, 255); */
   background-color: rgb(255, 234, 0);
 }
 
