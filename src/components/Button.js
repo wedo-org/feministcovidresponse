@@ -11,7 +11,7 @@ export default function Button({text, items, updateChoice}) {
     return (
         <>
           <select className='policyOption' onChange={(e) => handleChoice(e)}>
-            <option  value="Choose"> {`choose ${plural}`} </option>
+            <option  value="All"> {`choose ${plural}`} </option>
               {
                   items.map(item =>  <option value={item} key={item}>{item}</option>)
               }
