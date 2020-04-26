@@ -451,7 +451,7 @@ nav > ul {
     text-transform: capitalize!important;
     padding-top: 2rem;
     padding-left: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     height: 15vh;
   }
 
@@ -470,8 +470,9 @@ nav > ul {
     grid-area: items;
     padding: 3vh 1vh;
     text-align: justify;
-    border-right: 5px solid rgb(32,68,81);
-    height: 70vh;
+    border-right: 1vw solid transparent;
+    border-image: url('./assets/images/divider.png') 40 stretch;
+    height: 65vh;
     min-width: 30vw;
   }
 
