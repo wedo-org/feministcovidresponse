@@ -92,24 +92,24 @@ span#read-more:hover {
   background-color: #010101;
 }
 
-
-
 :focus{
-  /* outline: 3px dashed rgb(0, 21, 255); */
-  background-color: rgb(255, 234, 0);
+  color: #feddc5;
+  background-color: #010101;
 }
 
 .Nav_link:hover {
-  background-color: yellow;
+  background-color: #feddc5;
 }
 .Nav_link:active {
-  color: teal;
+  color: #010101;
 }
 
 .activeRoute {
-  background-color: yellow;
-  border-bottom: 0.4rem solid rgb(0, 21, 255);
+  color: #010101;
+  background-color: #feddc5;
   cursor: not-allowed;
+  border-bottom: 0.9vh solid transparent;
+  border-image: url('./assets/images/navy-highlighter.png') 40 stretch;
 }
 
 
@@ -152,11 +152,12 @@ span#read-more:hover {
 /* --menu-list-- */
 
 .menu-list {
-  height: 60vh;
+  position: sticky;
+  height: 55vh;
   background-color: black;
   color: white;
-  font-size: 4vh;
-  line-height: 9vh;
+  font-size: 4em;
+  line-height: 6vh;
   text-align: center;
   font-weight: bold;
 }
@@ -356,10 +357,6 @@ li.single-item{
 
 @media (min-width: 1024px) {
 
-  a:focus {
-    text-decoration: underline solid white;
-  }
-
   .App {
     margin: 0;
   }
@@ -375,12 +372,9 @@ li.single-item{
   }
 
   .menu-list {
-    /* margin-top: 4rem; */
     margin-bottom: 2rem;
     background-color: inherit;
-    /* height: 70%; */
     min-height: 25rem;
-    /* line-height: 3.5rem; */
     font-weight: 600;
     font-size: 8rem;
   }
@@ -394,10 +388,8 @@ li.single-item{
 
   li > a {
     text-transform: uppercase;
-    font-size: 3vh;
+    font-size: 3.5vh;
     color:rgb(32,68,81);
-    line-height: 1px;
-    /* text-shadow: 0 0 2px; */
   }
 
   select {
