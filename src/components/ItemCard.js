@@ -25,6 +25,17 @@ export default function ItemCard({item}) {
                 {markProgressive()}{item.fields.title}
             </h4>
             {
+                item.fields.type
+                ?
+                <section className='type-section'>
+                    <p> Types of response:
+                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
+                    </p>
+                </section>
+                :
+                null
+            }
+            {
                 item.fields.category.fields.name === "Events"
                 ?
                 <>
@@ -34,22 +45,10 @@ export default function ItemCard({item}) {
                 :
                 null
             }
-            <p>{item.fields.description}
+            <p className="item-description">{item.fields.description}
             <br/><br/>
                 <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
-            {
-                item.fields.type
-                ?
-                <section className='type-section'>
-                    <p> Types:
-                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
-                    </p>
-                </section>
-                :
-                null
-            }
-
         </section>
     )
 }

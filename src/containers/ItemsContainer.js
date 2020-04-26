@@ -150,7 +150,7 @@ function ItemsContainer(props) {
                 <ul>
                     {
                         filterEntriesByTheme(filterEntriesByCountry()).map((item)=>
-                        <li key={item.sys.id}>
+                        <li key={item.sys.id} className="single-item">
                             <ItemCard item={item} />
                         </li>)
                     }
