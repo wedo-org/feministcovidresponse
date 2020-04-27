@@ -2,7 +2,7 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  
+
 }
 
 body {
@@ -153,11 +153,11 @@ span#read-more:hover {
 
 .menu-list {
   position: sticky;
-  height: 55vh;
+  height: 75vh;
   background-color: black;
   color: white;
-  font-size: 4em;
-  line-height: 6vh;
+  font-size: 2em;
+  line-height: 11.5vh;
   text-align: center;
   font-weight: bold;
 }
@@ -167,7 +167,7 @@ nav > ul {
 }
 
 .menu-list > .languages {
-  color:rgb(32,68,81); 
+  color:rgb(32,68,81);
   font-size: 3vh;
   text-align: center;
   line-height: 2vh;
@@ -319,6 +319,11 @@ li.single-item{
     font-size: 3vh;
   }
 
+  .menu-list {
+    font-size: 3em;
+    line-height: 8.5rem;
+  }
+
   /* .main-content > h1 {
     font-size: 4vh;
     font-weight: 800;
@@ -357,38 +362,52 @@ li.single-item{
 
 @media (min-width: 1024px) {
 
+  html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .App {
     margin: 0;
+    /* min-width: 100vh; */
   }
 
   .nav-bar {
     flex-direction: column;
-    width: 300px;
+    min-height: 10rem;
+    max-height: 15rem;
   }
 
   #logo {
-    width: 11rem;
-    height: 10rem;
+    min-width: 13rem;
+    min-height: 12rem;
+    max-height: 13rem;
+    max-width: 14rem;
   }
 
   .menu-list {
-    margin-bottom: 2rem;
     background-color: inherit;
     min-height: 25rem;
     font-weight: 600;
-    font-size: 8rem;
+    /* line-height: max(175px, 3rem); */
+    height: auto;
+    max-height: fit-content;
+    line-height: max(60px, 3rem);
+    padding-top: 2em;
+    /* font-size: 8rem; */
   }
 
   nav > ul {
     padding: 0;
-    font-size: 5vw;
     text-align: left!important;
-    width: 24vw;
+    min-width: 26vw;
   }
 
   li > a {
     text-transform: uppercase;
-    font-size: 3.5vh;
+    /* font-size: max(30px, 2rem); */
+    font-size: max(32px, 2vw);
     color:rgb(32,68,81);
   }
 
@@ -404,7 +423,7 @@ li.single-item{
 
   .navbar-maincontainer {
     display:flex;
-    margin: 50px;
+    margin: 40px;
     margin-bottom: 0;
     flex-direction: row;
     /* justify-content: space-around; */
@@ -412,7 +431,7 @@ li.single-item{
 
   .main-content {
     height: 80vh;
-    font-size: 3vh;
+    font-size: max(29px, 1.8rem);
     /* padding: 6vh; */
   }
 
@@ -434,13 +453,14 @@ li.single-item{
   }
 
   .menu-list > .languages {
-    color:rgb(32,68,81); 
-    font-size: 3vh;
+    color:rgb(32,68,81);
+    /* font-size: max(30px, 1.5rem); */
+    font-size: max(32px, 1.5vw);
     text-align: left;
     line-height: 2vh;
     bottom: 1.8rem;
     padding-bottom: 1rem;
-    margin-top: 6rem;
+    margin-top: max(40px, 8rem);
   }
 
 
@@ -450,12 +470,15 @@ li.single-item{
     grid-template-areas:
     "title"
     "content";
-    width: 90%;
-    height: 88vh;
-    max-height: 88vh;
     padding: 3vh;
     margin-top: 1%;
     margin-left: 1.5rem;
+    /* width: 60rem; */
+    min-width: 40rem;
+    max-width: 100rem;
+    /* height: 88vh; */
+    min-height: 48rem;
+    max-height: 200rem;
   }
 
   .main-content > h1, .main-title > section > h1 {
@@ -470,7 +493,7 @@ li.single-item{
     padding-left: 2rem;
     padding-bottom: 3rem;
     margin-bottom: 1vh;
-    height: 15vh;
+    min-height: 15vh;
   }
 
 
@@ -479,7 +502,7 @@ li.single-item{
     display: grid;
     grid-template-columns: 68% 20%;
     grid-template-areas:
-    "items buttons"
+    "items buttons";
     /* flex-direction: row-reverse;
     width: fit-content; */
   }
@@ -514,7 +537,7 @@ li.single-item{
     /* padding: 5%; */
     font-size: 1.3rem;
     letter-spacing: 3px;
-    width: 18vw;
+    width: 17vw;
     text-transform: lowercase;
     height: 80px;
     margin-left: 3vw;
