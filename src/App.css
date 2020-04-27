@@ -886,7 +886,7 @@ li.principle-item {
     padding: 3vh;
     margin-top: 1%;
     margin-left: 1.5rem;
-    /* width: 60rem; */
+    width: 60rem;
     min-width: 44rem;
     max-width: 100rem;
     height: 88vh;
