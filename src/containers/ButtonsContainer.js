@@ -1,9 +1,12 @@
 import React from 'react'
 import Button from '../components/Button'
+import Legend from '../components/Legend'
 
-export default function ButtonsContainer({countries, themes, updateChosenCountry, updateChosenTheme, chosenCountry, chosenTheme}) {
 
+export default function ButtonsContainer({countries, themes, updateChosenCountry, updateChosenTheme, chosenCountry, chosenTheme, location}) {
+        
     return (
+        <>
         <aside className='policyButtons'>
             <p>See </p>
             <Button
@@ -20,5 +23,13 @@ export default function ButtonsContainer({countries, themes, updateChosenCountry
 
             />
         </aside>
+        {
+            location === "/response-tracker"
+            ?
+            <Legend />
+            :
+            null
+        }
+        </>
     )
 }

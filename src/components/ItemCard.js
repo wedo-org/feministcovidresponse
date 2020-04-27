@@ -11,16 +11,13 @@ export default function ItemCard({item}) {
 
     const markProgressive = () => {
         if (item.fields.progressive) {
-            return <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt=""/>
+            return <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
         } else if (typeof(item.fields.progressive) === "undefined"){
             return null
         } else {
-            return <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt=""/>
+            return <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt="regressive action icon"/>
         }
-    }
-
-    console.log(item);
-    
+    }     
 
     return (
         <section className='item' >

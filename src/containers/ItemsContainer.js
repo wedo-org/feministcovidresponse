@@ -139,6 +139,7 @@ function ItemsContainer(props) {
                     updateChosenTheme = { updateChosenTheme }
                     chosenCountry = { chosenCountry }
                     chosenTheme = { chosenTheme }
+                    location={props.location.pathname}
                 />
               </aside>
 
