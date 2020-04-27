@@ -581,6 +581,27 @@ li.single-item{
   }
 }
 
+/* --------------- ABOUT ------------------- */
+
+.about-section{
+  display: flex;
+}
+
+.about-intro{
+  font-size: 105%;
+  padding-left: 2rem;
+  padding-right: 2.5rem;
+  line-height: 1.3;
+  color: #737373;
+  font-family: 'Amioko', sans-serif;
+  max-width: 60%;
+}
+
+img.doodle-about{
+  display: flex;  
+  max-width: 20%;
+}
+
 /* --------------- PRINCIPLES ------------------- */
 .principles-subtitle{
   color: rgb(230,153,89);
