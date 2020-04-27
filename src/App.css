@@ -889,8 +889,8 @@ li.principle-item {
     /* width: 60rem; */
     min-width: 44rem;
     max-width: 100rem;
-    /* height: 88vh; */
-    min-height: 48rem;
+    height: 88vh;
+    /* min-height: 48rem; */
     max-height: 200rem;
   }
 
