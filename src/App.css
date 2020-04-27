@@ -579,12 +579,17 @@ li.single-item{
   #read-more {
     font-weight: bolder;
   }
+
+  img.doodle-about{
+    max-width: 32%;
+  }
 }
 
 /* --------------- ABOUT ------------------- */
 
 .about-section{
   display: flex;
+  align-items: stretch;
 }
 
 .about-intro{
@@ -598,8 +603,7 @@ li.single-item{
 }
 
 img.doodle-about{
-  display: flex;  
-  max-width: 20%;
+  max-width: 32%;
 }
 
 /* --------------- PRINCIPLES ------------------- */
