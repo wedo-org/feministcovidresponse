@@ -541,9 +541,15 @@ li.single-item{
   border-bottom: 1px solid #e5e5e5;
 }
 
-.orange-blob{
+.orange-blob, .blue-blob{
   width: 2vw;
   height: 2vw;
+}
+
+.blue-blob{
+  width: 3vw;
+  height: 3vw;
+  margin-right: 2%;
 }
 
 .accordion a:hover,
@@ -698,6 +704,21 @@ li.principle-item {
 
   .blob-principle > a, .accordion a.active {
     font-size: max(20px, 1.5vh);
+  }
+
+  .blob-resources > h4{
+    font-size: max(20px, 1.5vh);
+    color: rgb(230,153,89);
+    /* color: #214451; */
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    word-spacing: -2px;
+    font-family: 'Anton', sans-serif;
+    word-break: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 1.2;
+    margin-block-start: 0;
   }
 
   .principles-subtitle {
@@ -1031,6 +1052,23 @@ li.principle-item {
   .about-intro{
     font-size: max(27px, 2vw);
   }
+
+  .blob-resources > h4{
+    display: inline;
+    font-size: max(20px, 1.5vh);
+    color: rgb(230,153,89);
+    /* color: #214451; */
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    word-spacing: -2px;
+    font-family: 'Anton', sans-serif;
+    word-break: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 1.2;
+    margin-block-start: 0;
+  }
+
 }
 
 /* display: -webkit-inline-box; */

@@ -19,11 +19,23 @@ export default function ItemCard({item}) {
         }
     }
 
+    console.log(item);
+    
+
     return (
         <section className='item' >
-            <h4 className='item-title'>
-                {markProgressive()}{item.fields.title}
-            </h4>
+                {
+                    item.fields.category.fields.name === "Tools"
+                    ?
+                    <section className="blob-resources">
+                        <img src={require('../assets/images/blue-blob.png')} className="blue-blob" alt=""/>
+                        <h4 className="response-title">{item.fields.title}</h4>
+                    </section>
+                    :
+                    <h4 className='item-title'>
+                        {markProgressive()}{item.fields.title}
+                    </h4>
+                }
             {
                 item.fields.type
                 ?
