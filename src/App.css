@@ -394,6 +394,11 @@ li.single-item{
 }
 
 .orange-blob {
+  width: 1vw;
+  height: 1vw;
+}
+
+.tracker-doodles {
   width: 2vw;
   height: 2vw;
 }

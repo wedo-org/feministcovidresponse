@@ -11,11 +11,11 @@ export default function ItemCard({item}) {
 
     const markProgressive = () => {
         if (item.fields.progressive) {
-            return "⬆️"
+            return <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt=""/>
         } else if (typeof(item.fields.progressive) === "undefined"){
             return null
         } else {
-            return "⬇️ "
+            return <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt=""/>
         }
     }
 
@@ -41,7 +41,7 @@ export default function ItemCard({item}) {
                 ?
                 <section className='type-section'>
                     <p> Types of response:
-                      {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
+                        {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
                     </p>
                 </section>
                 :
