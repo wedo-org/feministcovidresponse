@@ -1,43 +1,15 @@
 import React from 'react';
-import { Query } from 'react-contentful';
+  
+  export default function About(props){
 
-const About = (props) => (
-
-    <Query
-        contentType="page"
-    >
-
-    {({data, error, fetched, loading}) => {
-        // console.log("DATA", data);
-        // console.log("FETCHING", fetched);
-        // console.log("LOADING", loading);
-        // console.log("ERROR", error);
-
-      if (loading || !fetched) {
-        return null;
-      }
-
-      if (error) {
-        console.error(error);
-        return null;
-      }
-
-      if (!data) {
-        return <p>Page does not exist.</p>;
-      }
-
-      // See the Contentful query response
-      console.debug(data);
     return (
-        <section className='main-content'>
-            <h1>About</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-        </section>
-    )
-}}
-</Query>
-)
+      <section className='main-content'>
+          <h1>About</h1>
+          <div className="about-section">
+            <p className="about-intro">As feminists - organizations and activists, working across global movements centered on human rights, sustainable development, and economic and social justice - we have come together in a moment of collective organizing to outline key principles for a just a resilient recovery from the ongoing global pandemic, as well as to track responses and uplift collective action of feminists around the world. </p>
+            <img className="doodle-about" src={require('../assets/images/doodle-about.png')} alt=""/>
 
-export default About;
+          </div>
+      </section>
+  )
+}

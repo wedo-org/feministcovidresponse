@@ -6,12 +6,14 @@ export default function PrincipleCard({principle}) {
 
     const toggleClass = () => {
         updateIsActive(!isActive)
-    }        
+    }
 
     return (
         <div className="accordion-item" onClick={()=>toggleClass()}>
-            <img src={require('../assets/images/orange-blob.png')} className="orange-blob" alt=""/>
-            <a className={`${isActive ? "active" : null}`}>{principle.title}</a>
+            <section className="blob-principle">
+              <img src={require('../assets/images/orange-blob.png')} className="orange-blob" alt=""/>
+              <a className={`${isActive ? "active" : null}`}>{principle.title}</a>
+            </section>
             <div className={`content ${isActive ? "active" : null}`}>
                 <p className="principle-description">{principle.description} </p>
                 <ul>
@@ -21,7 +23,7 @@ export default function PrincipleCard({principle}) {
                         )
                     }
                     </ul>
-                
+
             </div>
         </div>
     )
