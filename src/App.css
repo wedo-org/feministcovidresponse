@@ -290,7 +290,7 @@ p.filters-section {
   color: #010101;
   background-color: #e69653;
   font-size: 1rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-family: 'Anton', sans-serif;
   margin-left: 3%;
   word-break: break-word;
@@ -303,7 +303,7 @@ p.filters-section {
   color: #010101;
   border: #010101 1px solid;
   font-size: 1rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-family: 'Anton', sans-serif;
   margin-left: 1%;
   word-break: break-word;
