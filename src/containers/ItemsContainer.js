@@ -107,29 +107,25 @@ function ItemsContainer(props) {
             {
                 chosenCountry !== "All" || chosenTheme !== "All"
                 ?
-                <p> filters applied:&nbsp;
-                    <span className="filter"
-                        onClick={() => updateChosenCountry("All")}
-                    > 
+                <p className="filters-section"> filters applied:&nbsp;
                         {chosenCountry !== "All" 
                         ? 
-                            <>
+                        <span className="filter"
+                        onClick={() => updateChosenCountry("All")}
+                        > 
                             {chosenCountry} 
                             <i className="gg-close-r"></i>
-                            </> 
-                        : null} 
-                    </span>
-                    <span className="filter"
-                        onClick={() => updateChosenTheme("All")}
-                    > 
+                        </span>
+                        : null}  
                         {chosenTheme !== "All" 
                         ? 
-                            <>
+                        <span className="filter"
+                        onClick={() => updateChosenTheme("All")}
+                        >   
                             {chosenTheme} 
                             <i className="gg-close-r"></i>
-                            </> 
+                        </span>
                         : null}
-                    </span>
                 </p>
                 :
                 null

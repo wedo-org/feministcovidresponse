@@ -269,7 +269,7 @@ nav > ul {
   letter-spacing: 1px;
 }
 
-.type-section > p {
+.type-section > p, p.filters-section {
   font-family: 'Amiko', sans-serif;
   font-weight: 100;
   color: #737373;
@@ -280,6 +280,10 @@ nav > ul {
   margin-block-end: 0px;
   margin-block-start: 0px;
   padding-bottom: 0px;
+}
+
+p.filters-section {
+  margin-left: 2rem;
 }
 
 #type {
@@ -293,6 +297,24 @@ nav > ul {
   white-space: pre-wrap;
   padding-right: 0;
   padding: 0.5%;
+}
+
+.filter {
+  color: #010101;
+  border: #010101 1px solid;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: 'Anton', sans-serif;
+  margin-left: 1%;
+  word-break: break-word;
+  white-space: pre-wrap;
+  padding-right: 0;
+  padding: 0.5%;
+}
+
+.filter:hover {
+  color: #010101;
+  background-color: #e69653;
 }
 
 #policy-content > ul {
@@ -320,111 +342,6 @@ nav > ul {
 li.single-item{
   border-bottom: 5px solid #feddc5;
   margin-bottom: 10%;
-}
-
-
-/* --------------- PRINCIPLES ------------------- */
-.principles-subtitle{
-  color: rgb(230,153,89);
-  /* color: #214451; */
-  font-size: 125%;
-  letter-spacing: 2px;
-  word-spacing: -2px;
-  font-family: 'Anton', sans-serif;
-  word-break: break-word;
-  white-space: pre-wrap;
-  text-align: left;
-  line-height: 1.2;
-  margin-block-start: 5%;
-  padding-left: 2rem;
-}
-
-.principles-intro{
-  font-size: 90%;
-  padding-left: 2rem;
-  padding-right: 2.5rem;
-  line-height: 1.4;
-  color: #737373;
-  font-family: 'Amioko', sans-serif;
-}
-
-/* ----------- ICONS ----------- */
-
-/* this resizes the icon */
-.gg-external {
-  --ggs: 0.5;
-}
-
-.gg-external {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  transform: scale(var(--ggs,1));
-  width: 12px;
-  height: 12px;
-  box-shadow:
-      -2px 2px 0 0,
-      -4px -4px 0 -2px,
-      4px 4px 0 -2px;
-  margin-left: -2px;
-  margin-top: 1px
-}
-
-.gg-external::after,
-.gg-external::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  right: -4px
-}
-
-.gg-external::before {
-  background: currentColor;
-  transform: rotate(-45deg);
-  width: 12px;
-  height: 2px;
-  top: 1px
-}
-
-.gg-external::after {
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid;
-  border-top: 2px solid;
-  top: -4px
-}
-
-/* this resizes the icon */
-.gg-close-r {
-  --ggs: 0.5;
-}
-.gg-close-r {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  transform: scale(var(--ggs,1));
-  width: 22px;
-  height: 22px;
-  border: 2px solid;
-  border-radius: 4px
-}
-.gg-close-r::after,
-.gg-close-r::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 12px;
-  height: 2px;
-  background: currentColor;
-  transform: rotate(45deg);
-  border-radius: 5px;
-  top: 8px;
-  left: 3px
-}
-.gg-close-r::after {
-  transform: rotate(-45deg)
 }
 
 /* --------------- PRINCIPLES ------------------- */
@@ -592,6 +509,38 @@ li.principle-item {
   top: -4px
 }
 
+
+/* this resizes the icon */
+.gg-close-r {
+  --ggs: 0.5;
+}
+.gg-close-r {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 4px
+}
+.gg-close-r::after,
+.gg-close-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 3px
+}
+.gg-close-r::after {
+  transform: rotate(-45deg)
+}
 
 
 
