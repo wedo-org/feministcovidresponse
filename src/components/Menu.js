@@ -1,7 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { withContentful } from 'react-contentful';
-
 
 function Menu() {
 
@@ -31,4 +29,4 @@ function Menu() {
     )
 }
 
-export default withContentful(Menu);
+export default Menu;

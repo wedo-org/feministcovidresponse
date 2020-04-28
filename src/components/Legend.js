@@ -11,9 +11,9 @@ export default function Legend() {
                 <li>Law or Policy - law enacted by a Government in response to COVID.</li>
             </ul>
             <p className="legend-icons-p">ICONS:</p>
-            <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/><span>Progressive action</span><br/>
-            <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt="regressive action icon"/><span>Regressive action</span><br/>
-            <img src={require('../assets/images/neutral.png')} className="tracker-doodles" alt="neutral action icon"/><span>Neutral or "too early to tell"</span><br/>
+            <img src={require('../assets/images/progressive.png')} className="legend-tracker-doodles" alt="progressive action icon"/><span>Progressive action</span><br/>
+            <img src={require('../assets/images/regressive.png')} className="legend-tracker-doodles" alt="regressive action icon"/><span>Regressive action</span><br/>
+            <img src={require('../assets/images/neutral.png')} className="legend-tracker-doodles" alt="neutral action icon"/><span>Neutral or "too early to tell"</span><br/>
         </aside>
     )
 }

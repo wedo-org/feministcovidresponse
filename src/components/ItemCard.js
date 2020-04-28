@@ -1,51 +1,65 @@
 import React from 'react'
 
-export default function ItemCard({item}) {
+export default function ItemCard({item, location}) {
+
+    // console.log(item);
+    
     const makeDate = () => {
-        const date = new Date(item.fields.date)
-        const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date)
-        const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date)
-        const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date)
-        return `${day} ${month} ${year}`
+        // console.log("hi");
+        // let date = item.eventDate
+        // return date
+        // const date = new Date(item.date)
+        // const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date)
+        // const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date)
+        // const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date)
+        // return `${day} ${month} ${year}`
     }
 
-    const markProgressive = () => {
-        if (item.fields.progressive) {
-            return <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
-        } else if (typeof(item.fields.progressive) === "undefined"){
-            return null
-        } else {
-            return <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt="regressive action icon"/>
+    const markProgressive = () => { 
+        let img;       
+        switch (item.progressive) {
+            case "progressive":
+                img = <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
+                break
+            case "regressive":
+                img = <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt="regressive action icon"/>
+                break
+            case "neutral":
+                img = <img src={require('../assets/images/neutral.png')} className="tracker-doodles" alt="need to watch action icon"/>
+                break
+            default:
+                img = null
         }
+        return img
     }     
 
     return (
         <section className='item' >
-                {
-                    item.fields.category.fields.name === "Tools"
-                    ?
-                    <section className="blob-resources">
-                        <img src={require('../assets/images/blue-blob.png')} className="blue-blob" alt=""/>
-                        <h4 className="response-title">{item.fields.title}</h4>
-                    </section>
-                    :
-                    <h4 className='item-title'>
-                        {markProgressive()}{item.fields.title}
-                    </h4>
-                }
             {
-                item.fields.type
+                location === "/resources"
+                ?
+                <section className="blob-resources">
+                    <img src={require('../assets/images/blue-blob.png')} className="blue-blob" alt=""/>
+                    <h4 className="response-title">{item.title}</h4>
+                </section>
+                :
+                <h4 className='item-title'>
+                    {markProgressive()}{item.title}
+                </h4>
+            }
+            {
+                item.types
                 ?
                 <section className='type-section'>
                     <p> Types of response:
-                        {item.fields.type.map((type) => <span id='type' key={type.sys.id}>{type.fields.name}</span>)}
+                        {item.types.map((type) => <span id='type' key={`${type}-${item.title}`}>{type}</span>)}
                     </p>
                 </section>
                 :
                 null
             }
-            {
-                item.fields.category.fields.name === "Events"
+            {/* {
+                location === "/online-dialogues"
                 ?
                 <>
                     <strong> When: </strong>
@@ -53,10 +67,10 @@ export default function ItemCard({item}) {
                 </>
                 :
                 null
-            }
-            <p className="item-description">{item.fields.description}
+            } */}
+            <p className="item-description">{item.description}
             <br/><br/>
-                <a href={item.fields.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more <i className="gg-external" alt="external source icon"></i></span></a>
+                <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
         </section>
     )

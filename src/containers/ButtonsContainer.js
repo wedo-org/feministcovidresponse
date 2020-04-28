@@ -3,22 +3,22 @@ import Button from '../components/Button'
 import Legend from '../components/Legend'
 
 
-export default function ButtonsContainer({countries, themes, updateChosenCountry, updateChosenTheme, chosenCountry, chosenTheme, location}) {
+export default function ButtonsContainer({countries, categories, updateChosenCountry, updateChosenCategory, chosenCountry, chosenTheme, location}) {
         
     return (
         <>
         <aside className='policyButtons'>
             <p>See </p>
             <Button
-                text = { "country" }
+                text = { "countries" }
                 items = { countries }
                 updateChoice = { updateChosenCountry }
                 chosen = { chosenCountry }
             />
             <Button
-                text = { "category" }
-                items = { themes }
-                updateChoice = { updateChosenTheme }
+                text = { "categories" }
+                items = { categories }
+                updateChoice = { updateChosenCategory }
                 chosen = { chosenTheme }
 
             />

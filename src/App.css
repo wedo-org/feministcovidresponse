@@ -465,6 +465,25 @@ li.principle-item {
   transition: all 0.35s ease 0.15s;
 }
 
+/* ------------ LEGEND ---------- */
+.legend-section{
+  /* display: none; */
+  background-color: #214451;
+  color: #feddc5;
+  font-family: 'Amiko', sans-serif;
+  margin: 2vh 1vh 2vh 1vh;
+  padding: 1vh;
+}
+
+.legend-tracker-doodles{
+  width: 4vh;
+  height: 4vh;
+}
+
+.legend-ul{
+  list-style: circle;
+}
+
 
 /* @media (min-width: 2024px) {} */
 
