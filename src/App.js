@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, Suspense} from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import NavBar from './components/NavBar';
 import Menu from './components/Menu';
+import NotFound from './components/NotFound';
 
 function App(props) {
 
@@ -22,8 +23,8 @@ function App(props) {
         </Switch>
         :
         <section className='navbar-maincontainer'>
-          <NavBar handleLanguageChoice={handleLanguageChoice}/>
-          <MainContainer/>
+            <NavBar handleLanguageChoice={handleLanguageChoice}/>
+            <MainContainer/>
         </section>
         }
 
