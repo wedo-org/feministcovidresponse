@@ -17,7 +17,7 @@ export default function ItemCard({item, location}) {
 
     const markProgressive = () => {
         let img;
-        console.log(item.progressive);
+
         switch (item.progressive) {
             case "progressive":
                 img = <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
@@ -36,6 +36,8 @@ export default function ItemCard({item, location}) {
 
     return (
         <section className='item' >
+        {markProgressive()}
+          <section>
             {
                 location === "/resources"
                 ?
@@ -44,9 +46,11 @@ export default function ItemCard({item, location}) {
                     <h4 className="response-title">{item.title}</h4>
                 </section>
                 :
+                <>
                 <h4 className='item-title'>
-                    {markProgressive()}{item.title}
+                    {item.title}
                 </h4>
+                </>
             }
             {
                 item.types
@@ -73,6 +77,7 @@ export default function ItemCard({item, location}) {
             <br/><br/>
                 <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
+            </section>
         </section>
     )
 }

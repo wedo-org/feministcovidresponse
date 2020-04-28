@@ -1,10 +1,11 @@
-import React from 'react'
-import Button from '../components/Button'
-import Legend from '../components/Legend'
-
+import React, { useState } from 'react';
+import Button from '../components/Button';
+import Legend from '../components/Legend';
+import question from '../assets/images/question.png'
 
 export default function ButtonsContainer({countries, categories, updateChosenCountry, updateChosenCategory, chosenCountry, chosenTheme, location}) {
-        
+    const [legend, displayLegend] = useState(false);
+
     return (
         <>
         <aside className='policyButtons'>
@@ -22,9 +23,16 @@ export default function ButtonsContainer({countries, categories, updateChosenCou
                 chosen = { chosenTheme }
 
             />
+
+            <button
+              className='legend-menu-button'
+              onClick={ () => displayLegend(!legend) }>
+              See legend
+              <img src={question}/>
+            </button>
         </aside>
         {
-            location === "/response-tracker"
+            location === "/response-tracker" && legend
             ?
             <Legend />
             :

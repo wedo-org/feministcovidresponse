@@ -14,8 +14,8 @@ html {
   height: 100vh;
   background-image: url('./assets/images/Background2.png');
   background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: cover;
+  background-position: center;
+  /* background-size: cover; */
 }
 
 select {
@@ -74,8 +74,8 @@ span {
 }
 
 #logo {
-  width: 6rem;
-  height: 7rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 span#read-more {
@@ -131,7 +131,7 @@ img.doodle-about{
 /* --MAIN CONTAINER-- */
 .main-container {
   padding: 0 .5rem;
-  height: 75.5vh;
+  height: 86.5vh;
   min-height: 75.5vh;
   background-color: white;
   margin-bottom: 1rem;
@@ -192,7 +192,8 @@ nav > ul {
 }
 
 #isNotBrowser > a > img {
-  width: 9.5vh;
+  width: 8vh;
+  height: auto;
 }
 
 #isBrowser {
@@ -224,15 +225,16 @@ nav > ul {
 /* -----------POLICY TRACKER----------- */
 .main-title > section > h1 {
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .policyButtons {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 20px;
-  align-items: baseline;
-  justify-content: center;
+  flex-direction: column;
+flex-wrap: wrap;
+font-size: 20px;
+align-items: center;
+justify-content: center;
   padding: 0;
 }
 
@@ -325,7 +327,7 @@ p.filters-section {
 
 #policy-content {
   overflow-y: scroll;
-  height: 40vh;
+  height: 53vh;
 }
 
 .item > p {
@@ -403,6 +405,8 @@ li.single-item{
 .tracker-doodles {
   width: 2vw;
   height: 2vw;
+  margin-right: 15px;
+  margin-top: 2rem;
 }
 
 .accordion a:hover,
@@ -473,6 +477,7 @@ li.principle-item {
   font-family: 'Amiko', sans-serif;
   margin: 2vh 1vh 2vh 1vh;
   padding: 1vh;
+  width: 15rem;
 }
 
 .legend-tracker-doodles{
@@ -483,6 +488,27 @@ li.principle-item {
 .legend-ul{
   list-style: circle;
 }
+
+.legend-menu-button {
+  font-size: .8rem;
+  padding: .5rem;
+  margin: .5rem;
+  border: 1px solid lightgray;
+  align-self: flex-end;
+}
+
+.legend-menu-button > img {
+  width: .5rem;
+  height: .5rem;
+  margin-left: .6rem;
+}
+
+
+.item {
+display: flex;
+align-content: center;
+}
+
 
 
 /* @media (min-width: 2024px) {} */
@@ -637,6 +663,10 @@ li.principle-item {
     font-size: max(35px, 1.5vh);
   }
 
+  .legend-section {
+    width: 100%;
+  }
+
   .menu-list {
     font-size: 3em;
     line-height: 8.5rem;
@@ -665,6 +695,7 @@ li.principle-item {
 
   .policyButtons {
     justify-content: center;
+    flex-direction: row;
   }
 
   .policyOption:nth-of-type(2){
@@ -678,6 +709,14 @@ li.principle-item {
 
   .policyOption {
     font-size: 12px;
+    width: 13rem;
+    height: 3rem;
+    padding: 0;
+  }
+
+  .tracker-doodles {
+    min-width: 45px;
+    min-height: 45px;
   }
 
   .about-section{
@@ -726,8 +765,8 @@ li.principle-item {
   }
 
   #logo {
-    min-width: 13rem;
-    min-height: 12rem;
+    min-width: 8rem;
+    min-height: 8rem;
     max-height: 13rem;
     max-width: 14rem;
   }
@@ -753,7 +792,7 @@ li.principle-item {
   li > a {
     text-transform: uppercase;
     /* font-size: max(30px, 2rem); */
-    font-size: max(32px, 2vw);
+    font-size: max(25px, 2vw);
     color:rgb(32,68,81);
   }
 
@@ -819,7 +858,6 @@ li.principle-item {
     padding: 3vh;
     margin-top: 1%;
     margin-left: 1.5rem;
-    width: 60rem;
     min-width: 44rem;
     max-width: 100rem;
     height: 88vh;
@@ -829,7 +867,7 @@ li.principle-item {
 
   .main-content > h1, .main-title > section > h1 {
     grid-area: title;
-    font-size: 4.5rem;
+    font-size: max(4rem, 6vh);
     margin: 0;
     text-align: left;
     font-weight: 800;
@@ -879,12 +917,23 @@ li.principle-item {
     display: none;
   }
 
+  .tracker-doodles {
+    max-width: 2rem;
+    min-width: 45px;
+    min-height: 45px;
+  }
+
+  .legend-section {
+    width: 16vw;
+    margin-left: 3vw;
+  }
+
   .policyOption {
     background-color: rgb(230,150,83);
     /* padding: 5%; */
     font-size: 1.3rem;
     letter-spacing: 3px;
-    width: 17vw;
+    width: 16vw;
     text-transform: lowercase;
     height: 80px;
     margin-left: 3vw;
