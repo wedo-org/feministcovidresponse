@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import "./i18n";
 import * as serviceWorker from './serviceWorker';
 
 const routing = (

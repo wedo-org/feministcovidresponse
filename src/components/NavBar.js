@@ -4,13 +4,13 @@ import hamburger from '../assets/images/hamburger.png'
 import logo from '../assets/images/logo.png'
 import Menu from './Menu';
 
-export default function NavBar() {
+export default function NavBar({handleLanguageChoice}) {
     return (
         <nav className='nav-bar'>
         
             <a href="/about"> <img id='logo' src={logo} alt='logo'/></a>
             <section id='isBrowser'>
-              <Menu/>
+              <Menu handleLanguageChoice={handleLanguageChoice}/>
             </section>
 
             <section id='isNotBrowser'>

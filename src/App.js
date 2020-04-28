@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
@@ -6,6 +6,12 @@ import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 
 function App(props) {
+
+  const [language, updateLanguage] = useState('EN')
+
+  const handleLanguageChoice = (e) => {
+    updateLanguage(e.target.id)
+  }
 
   return (
     <div className="App">
@@ -16,10 +22,11 @@ function App(props) {
         </Switch>
         :
         <section className='navbar-maincontainer'>
-          <NavBar />
+          <NavBar handleLanguageChoice={handleLanguageChoice}/>
           <MainContainer/>
         </section>
         }
+
     </div>
   );
 }
