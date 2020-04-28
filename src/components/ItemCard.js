@@ -3,7 +3,7 @@ import React from 'react'
 export default function ItemCard({item, location}) {
 
     // console.log(item);
-    
+
     const makeDate = () => {
         // console.log("hi");
         // let date = item.eventDate
@@ -15,8 +15,9 @@ export default function ItemCard({item, location}) {
         // return `${day} ${month} ${year}`
     }
 
-    const markProgressive = () => { 
-        let img;       
+    const markProgressive = () => {
+        let img;
+        console.log(item.progressive);
         switch (item.progressive) {
             case "progressive":
                 img = <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
@@ -24,14 +25,14 @@ export default function ItemCard({item, location}) {
             case "regressive":
                 img = <img src={require('../assets/images/regressive.png')} className="tracker-doodles" alt="regressive action icon"/>
                 break
-            case "neutral":
+            case "need to watch":
                 img = <img src={require('../assets/images/neutral.png')} className="tracker-doodles" alt="need to watch action icon"/>
                 break
             default:
                 img = null
         }
         return img
-    }     
+    }
 
     return (
         <section className='item' >
