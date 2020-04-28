@@ -886,11 +886,11 @@ li.principle-item {
     padding: 3vh;
     margin-top: 1%;
     margin-left: 1.5rem;
-    /* width: 60rem; */
+    width: 60rem;
     min-width: 44rem;
     max-width: 100rem;
-    /* height: 88vh; */
-    min-height: 48rem;
+    height: 88vh;
+    /* min-height: 48rem; */
     max-height: 200rem;
   }
 
@@ -906,7 +906,8 @@ li.principle-item {
     padding-left: 2rem;
     padding-bottom: 3rem;
     margin-bottom: 1vh;
-    min-height: 9vh;
+    min-height: 15vh;
+    height: 15vh;
   }
 
 
