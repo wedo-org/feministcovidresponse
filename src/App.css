@@ -489,6 +489,9 @@ li.principle-item {
 .legend-tracker-doodles{
   width: 4vh;
   height: 4vh;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-bottom: 8px;
 }
 
 .legend-ul{
@@ -757,6 +760,7 @@ align-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
   }
 
   .App {
@@ -866,7 +870,7 @@ align-content: center;
     margin-left: 1.5rem;
     min-width: 44rem;
     max-width: 100rem;
-    height: 88vh;
+    height: 80vh;
     /* min-height: 48rem; */
     max-height: 200rem;
   }
@@ -905,7 +909,7 @@ align-content: center;
     border-right: 1.3vw solid transparent;
     border-image: url('./assets/images/divider.png') 40 stretch;
     border-image-outset: 5px;
-    height: 65vh;
+    height: 53vh;
     min-width: 30vw;
   }
 
@@ -1046,6 +1050,12 @@ align-content: center;
     margin-right: 2%;
   }
 
+}
+
+@media (min-width: 1440px){
+  .main-container {
+    min-width: 68vw;
+  }
 }
 
 /* display: -webkit-inline-box; */
