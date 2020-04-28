@@ -52,7 +52,11 @@ function ItemsContainer(props) {
         let filteredEntries;
         if (chosenCountry !== "All"){
             filteredEntries =  entries.filter(entry => {
-                return entry.countries.some(country => country === chosenCountry)
+                if(entry.countries){
+                  return entry.countries.some(country => country === chosenCountry)
+                } else {
+                  return "unsure location"
+                }
             })
         } else {
             filteredEntries = entries
