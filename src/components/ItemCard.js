@@ -37,7 +37,7 @@ export default function ItemCard({item, location}) {
     return (
         <section className='item' >
         {markProgressive()}
-          <section>
+          <section className='item-content'>
             {
                 location === "/resources"
                 ?

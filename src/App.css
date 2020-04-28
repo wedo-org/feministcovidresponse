@@ -89,16 +89,17 @@ span#read-more {
 
 span#read-more:hover {
   color: #feddc5;
-  background-color: #010101;
+  background-color: #204451;
 }
 
 :focus{
   color: #feddc5;
-  background-color: #010101;
+  background-color: #204451;
 }
 
 .Nav_link:hover {
   background-color: #feddc5;
+  color: black;
 }
 .Nav_link:active {
   color: #010101;
@@ -246,15 +247,15 @@ justify-content: center;
 .policyOption {
   background-color: rgb(230,150,83);
   padding: 4%;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 18px;
   width: 15rem;
   text-align: center;
   font-family: 'Anton', sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: white;
   word-break: break-word;
   white-space: pre-wrap;
+  letter-spacing: 2px;
 }
 
 .policyOption:nth-of-type(2){
@@ -327,7 +328,7 @@ p.filters-section {
 
 #policy-content {
   overflow-y: scroll;
-  height: 53vh;
+  height: 60vh;
 }
 
 .item > p {
@@ -341,6 +342,8 @@ p.filters-section {
   font-family: 'Anton', sans-serif;
   text-align: left;
   margin-block-end: 0.7em;
+  font-size: 1.5rem;
+
 }
 
 li.single-item{
@@ -403,8 +406,8 @@ li.single-item{
 }
 
 .tracker-doodles {
-  width: 2vw;
-  height: 2vw;
+  min-width: 2rem;
+  height: 2rem;
   margin-right: 15px;
   margin-top: 2rem;
 }
@@ -477,7 +480,10 @@ li.principle-item {
   font-family: 'Amiko', sans-serif;
   margin: 2vh 1vh 2vh 1vh;
   padding: 1vh;
-  width: 15rem;
+  width: 90%;
+  overflow: scroll;
+  height: 23vw;
+  min-height: 19rem;
 }
 
 .legend-tracker-doodles{
@@ -926,6 +932,10 @@ align-content: center;
   .legend-section {
     width: 16vw;
     margin-left: 3vw;
+  }
+
+  .legend-menu-button {
+    cursor: pointer;
   }
 
   .policyOption {

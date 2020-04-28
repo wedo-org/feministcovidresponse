@@ -23,13 +23,20 @@ export default function ButtonsContainer({countries, categories, updateChosenCou
                 chosen = { chosenTheme }
 
             />
+            {
+              location === "/response-tracker"
+              
+              ?
 
-            <button
-              className='legend-menu-button'
-              onClick={ () => displayLegend(!legend) }>
-              See legend
-              <img src={question}/>
-            </button>
+              <button
+                className='legend-menu-button'
+                onClick={ () => displayLegend(!legend) }>
+                  See legend
+                <img src={question}/>
+              </button>
+              :
+              null
+            }
         </aside>
         {
             location === "/response-tracker" && legend
