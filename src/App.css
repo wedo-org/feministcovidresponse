@@ -931,6 +931,7 @@ align-content: center;
     max-width: 2rem;
     min-width: 45px;
     min-height: 45px;
+    margin-top: 0;
   }
 
   .legend-section {
