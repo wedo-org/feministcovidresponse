@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { useTranslation } from "react-i18next";
+
 
 export default function ItemCard({item, location}) {
+    const { t } = useTranslation();
 
-    // console.log(item);
-    
     const makeDate = () => {
         // console.log("hi");
         // let date = item.eventDate
@@ -51,26 +52,16 @@ export default function ItemCard({item, location}) {
                 item.types
                 ?
                 <section className='type-section'>
-                    <p> Types of response:
-                        {item.types.map((type) => <span id='type' key={`${type}-${item.title}`}>{type}</span>)}
+                    <p> {t("Types of response")}:
+                        {item.types.map((type) => <span id='type' key={`${type}-${item.title}`}>{t(type)}</span>)}
                     </p>
                 </section>
                 :
                 null
             }
-            {/* {
-                location === "/online-dialogues"
-                ?
-                <>
-                    <strong> When: </strong>
-                    {makeDate()}
-                </>
-                :
-                null
-            } */}
             <p className="item-description">{item.description}
             <br/><br/>
-                <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more <i className="gg-external" alt="external source icon"></i></span></a>
+                <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>{t("Read more")} <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
         </section>
     )

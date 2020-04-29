@@ -1,19 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { useTranslation } from "react-i18next";
+
 
 export default function Legend() {
 
+    const { t } = useTranslation(['legend']);
+
     return (
         <aside className="legend-section">
-            <p className="legend-types-p">TYPES:</p>
+            <p className="legend-types-p">{t("TYPES")}:</p>
             <ul className="legend-ul">
-                <li>Observed response - observered responses to COVID by people and communities. </li>
-                <li>Temporary measure - measures put in place by Governments as a temporary response to COVID. </li>
-                <li>Law or Policy - law enacted by a Government in response to COVID.</li>
+                <li>{t("Observed response")} - {t("observered responses to COVID by people and communities")} </li>
+                <li>{t("Temporary measure")} - {t("measures put in place by Governments as a temporary response to COVID")} </li>
+                <li>{t("Law or Policy")} - {t("law enacted by a Government in response to COVID")}</li>
             </ul>
-            <p className="legend-icons-p">ICONS:</p>
-            <img src={require('../assets/images/progressive.png')} className="legend-tracker-doodles" alt="progressive action icon"/><span>Progressive action</span><br/>
-            <img src={require('../assets/images/regressive.png')} className="legend-tracker-doodles" alt="regressive action icon"/><span>Regressive action</span><br/>
-            <img src={require('../assets/images/neutral.png')} className="legend-tracker-doodles" alt="neutral action icon"/><span>Neutral or "too early to tell"</span><br/>
+            <p className="legend-icons-p">{t("ICONS:")}</p>
+            <img src={require('../assets/images/progressive.png')} className="legend-tracker-doodles" alt="progressive action icon"/><span>{t("Progressive action")}</span><br/>
+            <img src={require('../assets/images/regressive.png')} className="legend-tracker-doodles" alt="regressive action icon"/><span>{t("Regressive action")}</span><br/>
+            <img src={require('../assets/images/neutral.png')} className="legend-tracker-doodles" alt="neutral action icon"/><span>{t("Neutral or 'too early to tell'")}</span><br/>
         </aside>
     )
 }

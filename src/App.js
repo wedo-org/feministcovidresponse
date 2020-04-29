@@ -9,6 +9,8 @@ import NotFound from './components/NotFound';
 function App(props) {
 
   const [language, updateLanguage] = useState('EN')
+  console.log(language);
+  
 
   const handleLanguageChoice = (e) => {
     updateLanguage(e.target.id)
@@ -23,8 +25,10 @@ function App(props) {
         </Switch>
         :
         <section className='navbar-maincontainer'>
+          <Suspense fallback={NotFound()}>
             <NavBar handleLanguageChoice={handleLanguageChoice}/>
             <MainContainer/>
+          </Suspense>
         </section>
         }
 
