@@ -1,49 +1,62 @@
 import React, { useState, useEffect } from 'react'
 import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
-import { withContentful } from 'react-contentful';
-import { fetchResourcesForThePage, fetchCountries, fetchThemes } from '../utils.js'
+import { fetchPage } from '../utils.js'
 
 function ItemsContainer(props) {
 
     const [ entries, updateEntries ] = useState([])
     const [ title, updateTitle ] = useState('')
     const [ countries, updateCountries ] = useState([])
-    const [ themes, updateThemes ] = useState([])
+    const [ categories, updateCategories ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
-    const [ chosenTheme, updateChosenTheme ] = useState('All')
+    const [ chosenCategory, updateChosenCategory ] = useState('All')
 
     useEffect( () => {
       sectionTitle()
-      getCountries()
-      getThemes()
     }, [])
 
-    const getEntries = async (location) => {
-      const items = await fetchResourcesForThePage(location);
-      updateEntries(items)
-      return items;
+    const sectionTitle = () => {
+        let title;
+        switch (props.location.pathname) {
+            case "/response-tracker":
+                title = "Response Tracker"
+                break
+            case "/online-dialogues":
+                title = "Online Dialogues"
+                break
+            case "/resources":
+                title = "Resources"
+                break
+            default:
+                title = ""
+        }
+
+        updateTitle(title)
+        getEntries()
+        return title;
     }
 
-    const getCountries = async () => {
-        let countries = await fetchCountries();
+    const getEntries = async () => {
+        let location = props.location.pathname
+        const data = await fetchPage(location);
+        let entries = data.items
+        updateEntries(entries)
+        let categories = data.available_categories
+        updateCategories(categories)
+        let countries = data.available_countries
         updateCountries(countries)
-        countries = countries.sort((a,b) => a.localeCompare(b))
-        return countries
-    }
-
-    const getThemes = async () => {
-        let themes = await fetchThemes()
-        updateThemes(themes)
-        themes = themes.sort((a,b) => a.localeCompare(b))
-        return themes
     }
 
     const filterEntriesByCountry = () => {
         let filteredEntries;
         if (chosenCountry !== "All"){
             filteredEntries =  entries.filter(entry => {
-                return entry.fields.country.some(country => country.fields.name === chosenCountry)
+                if(entry.countries){
+                  return entry.countries.some(country => country === chosenCountry)
+                } else {
+                  return "unsure location"
+                }
             })
         } else {
             filteredEntries = entries
@@ -51,13 +64,12 @@ function ItemsContainer(props) {
             return filteredEntries
     }
 
-    const filterEntriesByTheme = (filteredEntries) => {
+    const filterEntriesByCategory = (filteredEntries) => {
         let finishedFilteredArr;
-        if (chosenTheme !== "All"){
-            finishedFilteredArr =  filteredEntries.filter(entry => {
-                // just in case some entry doesn't have a theme
-                if (entry.fields.theme) {
-                return entry.fields.theme.some(theme => theme.fields.name === chosenTheme)
+        if (chosenCategory !== "All"){
+            finishedFilteredArr =  filteredEntries.filter(item => {
+                if (item.categories) {
+                return item.categories.some(category => category === chosenCategory)
                 } else {
                 return null
                 }
@@ -65,37 +77,12 @@ function ItemsContainer(props) {
         } else {
             finishedFilteredArr = filteredEntries
         }
-        if (props.location.pathname !== "Events"){
-            finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.sys.createdBy - b.sys.createdBy)
-        } else {
-            finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.fields.date - b.fields.date)
-        }
+    //     if (props.location.pathname !== "Events"){
+    //         finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.sys.createdBy - b.sys.createdBy)
+    //     } else {
+    //         finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.fields.date - b.fields.date)
+    //     }
         return finishedFilteredArr
-    }
-
-    const sectionTitle = () => {
-        let title;
-        let requestTitle;
-        switch (props.location.pathname) {
-            case "/response-tracker":
-                title = "Response Tracker"
-                requestTitle = "Response"
-                break
-            case "/online-dialogues":
-                title = "Online Dialogues"
-                requestTitle = "Dialogues"
-                break
-            case "/resources":
-                title = "Resources"
-                requestTitle = "Tools"
-                break
-            default:
-                title = ""
-        }
-
-        updateTitle(title)
-        getEntries(requestTitle || title)
-        return title;
     }
 
     return (
@@ -105,31 +92,27 @@ function ItemsContainer(props) {
               <h1> {title} </h1>
             </section>
             {
-                chosenCountry !== "All" || chosenTheme !== "All"
+                chosenCountry !== "All" || chosenCategory !== "All"
                 ?
-                <p> filters applied:&nbsp;
-                    <span className="filter"
+                <p className="filters-section"> filters applied:&nbsp;
+                        {chosenCountry !== "All"
+                        ?
+                        <span className="filter"
                         onClick={() => updateChosenCountry("All")}
-                    > 
-                        {chosenCountry !== "All" 
-                        ? 
-                            <>
-                            {chosenCountry} 
+                        >
+                            {chosenCountry}
                             <i className="gg-close-r"></i>
-                            </> 
-                        : null} 
-                    </span>
-                    <span className="filter"
-                        onClick={() => updateChosenTheme("All")}
-                    > 
-                        {chosenTheme !== "All" 
-                        ? 
-                            <>
-                            {chosenTheme} 
-                            <i className="gg-close-r"></i>
-                            </> 
+                        </span>
                         : null}
-                    </span>
+                        {chosenCategory !== "All"
+                        ?
+                        <span className="filter"
+                        onClick={() => updateChosenCategory("All")}
+                        >
+                            {chosenCategory}
+                            <i className="gg-close-r"></i>
+                        </span>
+                        : null}
                 </p>
                 :
                 null
@@ -138,20 +121,24 @@ function ItemsContainer(props) {
               <aside className='buttons-container'>
                 <ButtonsContainer
                     countries={ countries }
-                    themes={ themes }
+                    categories={ categories }
                     updateChosenCountry = { updateChosenCountry }
-                    updateChosenTheme = { updateChosenTheme }
+                    updateChosenCategory = { updateChosenCategory }
                     chosenCountry = { chosenCountry }
-                    chosenTheme = { chosenTheme }
+                    chosenCategory = { chosenCategory }
+                    location={props.location.pathname}
                 />
               </aside>
 
               <section id='policy-content'>
                 <ul>
                     {
-                        filterEntriesByTheme(filterEntriesByCountry()).map((item)=>
-                        <li key={item.sys.id} className="single-item">
-                            <ItemCard item={item} />
+                        filterEntriesByCategory(filterEntriesByCountry()).map((item)=>
+                        <li key={item.title} className="single-item">
+                            <ItemCard
+                                item={item}
+                                location={props.location.pathname}
+                            />
                         </li>)
                     }
                 </ul>
@@ -163,4 +150,4 @@ function ItemsContainer(props) {
     )
 }
 
-export default withContentful(ItemsContainer);
+export default ItemsContainer;

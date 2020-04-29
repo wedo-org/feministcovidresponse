@@ -1,18 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { ContentfulProvider } from 'react-contentful';
 import './index.css';
-import { contentfulClient } from './utils.js'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-  <ContentfulProvider client={contentfulClient}>
-    <BrowserRouter>
-          <Route component={App} />
-    </BrowserRouter>
-  </ContentfulProvider>
+  <BrowserRouter>
+        <Route component={App} />
+  </BrowserRouter>
 )
 
 ReactDOM.render(routing, document.getElementById('root')
