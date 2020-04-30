@@ -87,6 +87,31 @@ span {
     margin-right: auto
 }
 
+.openFileLink {
+  color: rgb(32,68,81);
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.openFileLink > a {
+  border: 1px solid rgb(32,68,81);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content:  center;
+  padding: .5rem;
+}
+
+#openFile {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+
 span#read-more {
   font-size: 1.4rem;
   font-weight: 800;
@@ -386,6 +411,11 @@ li.single-item{
 }
 
 /* ------------- ACCORDION -------------- */
+
+.accordion {
+  margin-top: 2rem;
+}
+
 .accordion-item{
   padding-left: 1rem;
 }
