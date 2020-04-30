@@ -15,10 +15,7 @@ function ItemsContainer(props) {
     const [ countries, updateCountries ] = useState([])
     const [ categories, updateCategories ] = useState([])
     const [ chosenCountry, updateChosenCountry ] = useState('All')
-    const [ chosenCategory, updateChosenCategory ] = useState('All')
-
-    console.log("entreis", entries);
-    
+    const [ chosenCategory, updateChosenCategory ] = useState('All')    
 
     useEffect( () => {
       sectionTitle()
@@ -44,8 +41,6 @@ function ItemsContainer(props) {
             default:
                 title = ""
         }
-        // console.log("title", title);
-        // let dataVarName = title.split(" ")[0].toLowerCase()
         
         updateEntries(variable)
         updateTitle(title)
