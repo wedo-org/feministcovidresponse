@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 
-export default function ItemCard({item, location, language}) {    
-    const { t } = useTranslation();       
-    
+export default function ItemCard({item, location, language}) {
+    const { t } = useTranslation();
+
     const markProgressive = () => {
         let img;
+
         switch (item.progressive) {
             case "progressive":
                 img = <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
@@ -27,6 +28,8 @@ export default function ItemCard({item, location, language}) {
 
     return (
         <section className='item' >
+        {markProgressive()}
+          <section className='item-content'>
             {
                 location === "/resources"
                 ?
@@ -35,9 +38,11 @@ export default function ItemCard({item, location, language}) {
                     <h4 className="response-title">{item[title]}</h4>
                 </section>
                 :
+                <>
                 <h4 className='item-title'>
                     {markProgressive()}{item[title]}
                 </h4>
+                </>
             }
             {
                 item.types
@@ -54,6 +59,7 @@ export default function ItemCard({item, location, language}) {
             <br/><br/>
                 <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>{t("Read more")} <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
+            </section>
         </section>
     )
 }

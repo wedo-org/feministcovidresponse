@@ -1,5 +1,9 @@
+
 import React from 'react';
 import { useTranslation } from "react-i18next";
+import regressive from '../assets/images/mobile-regressive.png';
+import progressive from '../assets/images/mobile-progressive.png';
+import neutral from '../assets/images/mobile-neutral.png';
 
 
 export default function Legend() {
@@ -18,6 +22,7 @@ export default function Legend() {
             <img src={require('../assets/images/progressive.png')} className="legend-tracker-doodles" alt="progressive action icon"/><span>{t("Progressive action")}</span><br/>
             <img src={require('../assets/images/regressive.png')} className="legend-tracker-doodles" alt="regressive action icon"/><span>{t("Regressive action")}</span><br/>
             <img src={require('../assets/images/neutral.png')} className="legend-tracker-doodles" alt="neutral action icon"/><span>{t("Neutral or 'too early to tell'")}</span><br/>
+
         </aside>
     )
 }

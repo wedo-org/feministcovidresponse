@@ -45,7 +45,7 @@ function ItemsContainer(props) {
     const getEntries = async () => {
         let location = props.location.pathname
         const data = await fetchPage(location);
-        let entries = data.items 
+        let entries = data.items
         updateEntries(entries)
         let categories = data.available_categories
         updateCategories(categories)
@@ -57,7 +57,11 @@ function ItemsContainer(props) {
         let filteredEntries;
         if (chosenCountry !== "All"){
             filteredEntries =  entries.filter(entry => {
-                return entry.countries.some(country => country === chosenCountry)
+                if(entry.countries){
+                  return entry.countries.some(country => country === chosenCountry)
+                } else {
+                  return "unsure location"
+                }
             })
         } else {
             filteredEntries = entries
@@ -96,21 +100,21 @@ function ItemsContainer(props) {
                 chosenCountry !== "All" || chosenCategory !== "All"
                 ?
                 <p className="filters-section"> {t("filters applied")}:&nbsp;
-                        {chosenCountry !== "All" 
-                        ? 
+                        {chosenCountry !== "All"
+                        ?
                         <span className="filter"
                         onClick={() => updateChosenCountry("All")}
-                        > 
-                            {chosenCountry} 
+                        >
+                            {chosenCountry}
                             <i className="gg-close-r"></i>
                         </span>
-                        : null}  
-                        {chosenCategory !== "All" 
-                        ? 
+                        : null}
+                        {chosenCategory !== "All"
+                        ?
                         <span className="filter"
                         onClick={() => updateChosenCategory("All")}
-                        >   
-                            {chosenCategory} 
+                        >
+                            {chosenCategory}
                             <i className="gg-close-r"></i>
                         </span>
                         : null}
@@ -136,7 +140,7 @@ function ItemsContainer(props) {
                     {
                         filterEntriesByCategory(filterEntriesByCountry()).map((item)=>
                         <li key={item.title} className="single-item">
-                            <ItemCard 
+                            <ItemCard
                                 item={item}
                                 location={props.location.pathname}
                                 language={props.language}
