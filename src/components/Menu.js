@@ -22,7 +22,10 @@ function Menu({handleLanguageChoice}) {
               <li><NavLink to="/response-tracker" className="Nav_link" activeClassName="activeRoute">{t("Response Tracker")}</NavLink></li>
               </ul>
           </nav>
-          <section className="languages" onClick={(e) => changeLanguage(e.target.id)}>
+          <section className="languages" onClick={(e) => {
+            changeLanguage(e.target.id)
+            handleLanguageChoice(e.target.id)
+          }}>
             <span id="en">EN </span>
             <span id="es"> / ES </span>
             <span id="fr"> / FR </span>

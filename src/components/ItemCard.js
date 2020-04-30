@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation } from "react-i18next";
 
 
-export default function ItemCard({item, location}) {
-    const { t } = useTranslation();
+export default function ItemCard({item, location, language}) {    
+    const { t } = useTranslation();       
 
     const makeDate = () => {
         // console.log("hi");
@@ -34,6 +34,9 @@ export default function ItemCard({item, location}) {
         return img
     }     
 
+    let title = `title_${language}`
+    let description = `description_${language}`
+
     return (
         <section className='item' >
             {
@@ -41,11 +44,11 @@ export default function ItemCard({item, location}) {
                 ?
                 <section className="blob-resources">
                     <img src={require('../assets/images/blue-blob.png')} className="blue-blob" alt=""/>
-                    <h4 className="response-title">{item.title}</h4>
+                    <h4 className="response-title">{item[title]}</h4>
                 </section>
                 :
                 <h4 className='item-title'>
-                    {markProgressive()}{item.title}
+                    {markProgressive()}{item[title]}
                 </h4>
             }
             {
@@ -59,7 +62,7 @@ export default function ItemCard({item, location}) {
                 :
                 null
             }
-            <p className="item-description">{item.description}
+            <p className="item-description">{item[description]}
             <br/><br/>
                 <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>{t("Read more")} <i className="gg-external" alt="external source icon"></i></span></a>
             </p>

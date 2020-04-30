@@ -138,6 +138,7 @@ function ItemsContainer(props) {
                             <ItemCard 
                                 item={item}
                                 location={props.location.pathname}
+                                language={props.language}
                             />
                         </li>)
                     }
