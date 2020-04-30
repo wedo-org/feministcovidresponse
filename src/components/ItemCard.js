@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { useTranslation } from "react-i18next";
 
-export default function ItemCard({item, location}) {
-
-    // console.log(item);
+export default function ItemCard({item, location, language}) {    
+    const { t } = useTranslation();       
 
     const makeDate = () => {
         // console.log("hi");
@@ -17,7 +17,6 @@ export default function ItemCard({item, location}) {
 
     const markProgressive = () => {
         let img;
-        console.log(item.progressive);
         switch (item.progressive) {
             case "progressive":
                 img = <img src={require('../assets/images/progressive.png')} className="tracker-doodles" alt="progressive action icon"/>
@@ -34,6 +33,9 @@ export default function ItemCard({item, location}) {
         return img
     }
 
+    let title = `title_${language}`
+    let description = `description_${language}`
+
     return (
         <section className='item' >
             {
@@ -41,37 +43,27 @@ export default function ItemCard({item, location}) {
                 ?
                 <section className="blob-resources">
                     <img src={require('../assets/images/blue-blob.png')} className="blue-blob" alt=""/>
-                    <h4 className="response-title">{item.title}</h4>
+                    <h4 className="response-title">{item[title]}</h4>
                 </section>
                 :
                 <h4 className='item-title'>
-                    {markProgressive()}{item.title}
+                    {markProgressive()}{item[title]}
                 </h4>
             }
             {
                 item.types
                 ?
                 <section className='type-section'>
-                    <p> Types of response:
-                        {item.types.map((type) => <span id='type' key={`${type}-${item.title}`}>{type}</span>)}
+                    <p> {t("Types of response")}:
+                        {item.types.map((type) => <span id='type' key={`${type}-${item.title}`}>{t(type)}</span>)}
                     </p>
                 </section>
                 :
                 null
             }
-            {/* {
-                location === "/online-dialogues"
-                ?
-                <>
-                    <strong> When: </strong>
-                    {makeDate()}
-                </>
-                :
-                null
-            } */}
-            <p className="item-description">{item.description}
+            <p className="item-description">{item[description]}
             <br/><br/>
-                <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>Read more <i className="gg-external" alt="external source icon"></i></span></a>
+                <a href={item.link} target="_blank" rel="noopener noreferrer"><span id='read-more'>{t("Read more")} <i className="gg-external" alt="external source icon"></i></span></a>
             </p>
         </section>
     )

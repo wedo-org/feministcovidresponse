@@ -5,7 +5,7 @@ import About from '../components/About'
 import NotFound from '../components/NotFound'
 import PrinciplesContainer from './PrinciplesContainer'
 
-export default function MainContainer() {
+export default function MainContainer({language}) {
 
     return (
         <main className='main-container'>
@@ -13,7 +13,8 @@ export default function MainContainer() {
                 <Route exact path="/" component={About} />
                 <Route path="/about" component={About} />
                 <Route path="/principles" component={PrinciplesContainer} />
-                <Route path="/(resources|online-dialogues|response-tracker)/" component={(props) => <ItemsContainer {...props} items={{/* some function or data */}}/>}  />
+                <Route path="/(resources|online-dialogues|response-tracker)/" 
+                    component={(props) => <ItemsContainer {...props} language={language}/>}  />
                 <Route component={NotFound} />
             </Switch>
         </main>

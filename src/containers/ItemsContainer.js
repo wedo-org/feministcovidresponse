@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
-import { fetchPage } from '../utils.js'
+import { fetchPage } from '../utils.js';
+import { useTranslation } from "react-i18next";
+
 
 function ItemsContainer(props) {
+
+    const { t } = useTranslation();
 
     const [ entries, updateEntries ] = useState([])
     const [ title, updateTitle ] = useState('')
@@ -85,12 +89,12 @@ function ItemsContainer(props) {
         <section className='ItemsContainer'>
           <section className='main-title'>
             <section>
-              <h1> {title} </h1>
+              <h1> {t(title)} </h1>
             </section>
             {
                 chosenCountry !== "All" || chosenCategory !== "All"
                 ?
-                <p className="filters-section"> filters applied:&nbsp;
+                <p className="filters-section"> {t("filters applied")}:&nbsp;
                         {chosenCountry !== "All" 
                         ? 
                         <span className="filter"
@@ -134,6 +138,7 @@ function ItemsContainer(props) {
                             <ItemCard 
                                 item={item}
                                 location={props.location.pathname}
+                                language={props.language}
                             />
                         </li>)
                     }

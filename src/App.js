@@ -1,14 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, Suspense} from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 import { fetchPing } from './utils.js'
+import NotFound from './components/NotFound';
 
 
 function App(props) {
 
+  const [language, updateLanguage] = useState('es')  
   const [pinged, updatePinged] = useState(false)
 
   console.log("pinged", pinged);
@@ -24,6 +26,10 @@ function App(props) {
       updatePinged(true)
     }
   }
+  
+  const handleLanguageChoice = (lg) => {    
+    updateLanguage(lg)
+  }
 
   return (
     <div className="App">
@@ -34,10 +40,13 @@ function App(props) {
         </Switch>
         :
         <section className='navbar-maincontainer'>
-          <NavBar />
-          <MainContainer/>
+          <Suspense fallback={NotFound()}>
+            <NavBar handleLanguageChoice={handleLanguageChoice}/>
+            <MainContainer language={language}/>
+          </Suspense>
         </section>
         }
+
     </div>
   );
 }
