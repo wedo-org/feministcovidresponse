@@ -2,10 +2,7 @@ import React from 'react'
 import {principles} from '../principles-content.js'
 import PrincipleCard from '../components/PrincipleCard.js'
 
-export default function PrinciplesContainer({language}) {
-
-    console.log("LANGUAGE", language);
-    
+export default function PrinciplesContainer({language}) {    
 
     return (
         <section className='main-content'>

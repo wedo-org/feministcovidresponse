@@ -17,6 +17,7 @@ function App(props) {
   
   useEffect( () => {
     pingHeroku()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const pingHeroku = async () => {

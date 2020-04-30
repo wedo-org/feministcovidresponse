@@ -18,6 +18,7 @@ function ItemsContainer(props) {
 
     useEffect( () => {
       sectionTitle()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const sectionTitle = () => {
