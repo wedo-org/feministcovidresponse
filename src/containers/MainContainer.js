@@ -12,7 +12,7 @@ export default function MainContainer({language}) {
             <Switch>
                 <Route exact path="/" component={About} />
                 <Route path="/about" component={About} />
-                <Route path="/principles" component={PrinciplesContainer} />
+                <Route path="/principles" component={(props) => <PrinciplesContainer language={language}/>} />
                 <Route path="/(resources|online-dialogues|response-tracker)/" 
                     component={(props) => <ItemsContainer {...props} language={language}/>}  />
                 <Route component={NotFound} />

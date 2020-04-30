@@ -41,8 +41,8 @@
 
 
 const axios = require('axios')
-// const BASE_URL = 'http://localhost:3000/api/v1'
-const BASE_URL = 'https://infinite-wave-91297.herokuapp.com/api/v1'
+const BASE_URL = 'http://localhost:3000/api/v1'
+// const BASE_URL = 'https://infinite-wave-91297.herokuapp.com/api/v1'
 const fetchEntries = async () => {
   const data = await axios(`${BASE_URL}/items/`);
 }
