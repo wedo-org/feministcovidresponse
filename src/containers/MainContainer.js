@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ItemsContainer from './ItemsContainer';
 import About from '../components/About'
