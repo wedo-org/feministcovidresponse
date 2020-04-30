@@ -40,7 +40,7 @@ export default function ItemCard({item, location, language}) {
                 :
                 <>
                 <h4 className='item-title'>
-                    {markProgressive()}{item[title]}
+                    {item[title]}
                 </h4>
                 </>
             }

@@ -78,6 +78,15 @@ span {
   height: 5rem;
 }
 
+#loader > img {
+  /* text-align: center;
+  vertical-align: middle; */
+  display: block;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto
+}
+
 span#read-more {
   font-size: 1.4rem;
   font-weight: 800;

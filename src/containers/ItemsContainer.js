@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ItemCard from '../components/ItemCard'
+import Loader from '../components/Loader'
 import ButtonsContainer from './ButtonsContainer';
 import { fetchPage } from '../utils.js';
 import { useTranslation } from "react-i18next";
@@ -9,6 +10,7 @@ function ItemsContainer(props) {
 
     const { t } = useTranslation();
 
+    const [ loaded, isLoaded ] = useState(false)
     const [ entries, updateEntries ] = useState([])
     const [ title, updateTitle ] = useState('')
     const [ countries, updateCountries ] = useState([])
@@ -38,13 +40,14 @@ function ItemsContainer(props) {
         }
 
         updateTitle(title)
-        getEntries()
+        getEntries();
         return title;
     }
 
     const getEntries = async () => {
         let location = props.location.pathname
         const data = await fetchPage(location);
+        data ? isLoaded(true)  : isLoaded(false);
         let entries = data.items
         updateEntries(entries)
         let categories = data.available_categories
@@ -136,18 +139,28 @@ function ItemsContainer(props) {
               </aside>
 
               <section id='policy-content'>
-                <ul>
+                {
+                  loaded
+
+                  ?
+
+                  <ul>
                     {
-                        filterEntriesByCategory(filterEntriesByCountry()).map((item)=>
-                        <li key={item.title} className="single-item">
-                            <ItemCard
-                                item={item}
-                                location={props.location.pathname}
-                                language={props.language}
-                            />
-                        </li>)
+                      filterEntriesByCategory(filterEntriesByCountry()).map((item)=>
+                      <li key={item.title} className="single-item">
+                      <ItemCard
+                      item={item}
+                      location={props.location.pathname}
+                      language={props.language}
+                      />
+                      </li>)
                     }
-                </ul>
+                  </ul>
+
+                  :
+
+                  <Loader />
+                }
               </section>
             </section>
 
