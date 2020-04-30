@@ -3,6 +3,7 @@ import ItemCard from '../components/ItemCard'
 import ButtonsContainer from './ButtonsContainer';
 import { fetchPage } from '../utils.js';
 import { useTranslation } from "react-i18next";
+import {response, online, resources} from '../assets/data/data-starter.js'
 
 
 function ItemsContainer(props) {
@@ -16,6 +17,9 @@ function ItemsContainer(props) {
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenCategory, updateChosenCategory ] = useState('All')
 
+    console.log("entreis", entries);
+    
+
     useEffect( () => {
       sectionTitle()
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -23,22 +27,29 @@ function ItemsContainer(props) {
 
     const sectionTitle = () => {
         let title;
+        let variable;
         switch (props.location.pathname) {
             case "/response-tracker":
-                title = "Response Tracker"
+                title = "Response Tracker";
+                variable = response;
                 break
             case "/online-dialogues":
                 title = "Online Dialogues"
+                variable = online;
                 break
             case "/resources":
                 title = "Resources"
+                variable = resources;
                 break
             default:
                 title = ""
         }
-
+        // console.log("title", title);
+        // let dataVarName = title.split(" ")[0].toLowerCase()
+        
+        updateEntries(variable)
         updateTitle(title)
-        getEntries()
+        getEntries()    
         return title;
     }
 
@@ -78,11 +89,6 @@ function ItemsContainer(props) {
         } else {
             finishedFilteredArr = filteredEntries
         }
-    //     if (props.location.pathname !== "Events"){
-    //         finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.sys.createdBy - b.sys.createdBy)
-    //     } else {
-    //         finishedFilteredArr = finishedFilteredArr.sort((a,b) => a.fields.date - b.fields.date)
-    //     }
         return finishedFilteredArr
     }
 
@@ -135,7 +141,7 @@ function ItemsContainer(props) {
                 <ul>
                     {
                         filterEntriesByCategory(filterEntriesByCountry()).map((item)=>
-                        <li key={item.title} className="single-item">
+                        <li key={item.title_en} className="single-item">
                             <ItemCard 
                                 item={item}
                                 location={props.location.pathname}
