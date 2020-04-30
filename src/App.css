@@ -95,7 +95,7 @@ span {
 
 .openFileLink > a {
   border: 1px solid rgb(32,68,81);
-  width: 150px;
+  width: 10rem;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -1088,6 +1088,10 @@ align-content: center;
     width: 3vw;
     height: 3vw;
     margin-right: 2%;
+  }
+
+  .openFileLink > a {
+    width: max-content;
   }
 
 }
