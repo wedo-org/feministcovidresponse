@@ -45,19 +45,18 @@ function ItemsContainer(props) {
         }
 
         updateEntries(data)
+        // console.log(data)
         updateTitle(title)
-        getEntries()
+        getEntries(data)
         return title;
     }
 
-    const getEntries = async () => {
+    const getEntries = async (cachedData) => {
         let location = props.location.pathname
         const data = await fetchPage(location);
         data ? isLoaded(true)  : isLoaded(false);
         let items = data.items
-        console.log(data.items);
-        console.log(entries);
-        updateEntries([...entries, ...items])
+        updateEntries([ ...cachedData, ...items])
         let categories = data.available_categories
         updateCategories(categories)
         let countries = data.available_countries
