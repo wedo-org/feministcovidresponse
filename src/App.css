@@ -253,8 +253,8 @@ nav > ul {
 .blob-resources > h4{
   display: inline;
   font-size: max(20px, 1.5vh);
-  color: rgb(230,153,89);
-  /* color: #214451; */
+  /* color: rgb(230,153,89); */
+  color: #214451;
   font-size: 1.1rem;
   letter-spacing: 2px;
   word-spacing: -2px;
@@ -397,8 +397,8 @@ li.single-item{
 
 /* --------------- PRINCIPLES ------------------- */
 .principles-subtitle{
-  color: rgb(230,153,89);
-  /* color: #214451; */
+  /* color: rgb(230,153,89); */
+  color: #214451;
   font-size: 125%;
   letter-spacing: 2px;
   word-spacing: -2px;
@@ -707,8 +707,8 @@ align-content: center;
 
   .blob-resources > h4{
     font-size: max(20px, 1.5vh);
-    color: rgb(230,153,89);
-    /* color: #214451; */
+    /* color: rgb(230,153,89); */
+    color: #214451;
     font-size: 1.7rem;
     letter-spacing: 2px;
     word-spacing: -2px;
@@ -1043,8 +1043,8 @@ align-content: center;
   } */
 
   .item-title {
-    color: rgb(230,153,89);
-    /* color: #214451; */
+    /* color: rgb(230,153,89); */
+    color: #214451;
     font-size: 1.7rem;
     letter-spacing: 2px;
     word-spacing: -2px;
@@ -1095,9 +1095,9 @@ align-content: center;
 
   .blob-resources > h4{
     display: inline;
-    color: rgb(230,153,89);
-    /* color: #214451; */
-    font-size: 1.8rem;
+    /* color: rgb(230,153,89); */
+    color: #214451;
+    font-size: max(35px, 1.8rem);
     letter-spacing: 2px;
     word-spacing: -2px;
     font-family: 'Anton', sans-serif;
