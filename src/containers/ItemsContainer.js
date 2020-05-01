@@ -21,6 +21,8 @@ function ItemsContainer(props) {
 
     useEffect( () => {
       sectionTitle()
+      updateCountries(["Algeria", "Anglophone Africa", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Bolivia", "Cambodia", "Canada", "Chile", "China", "Colombia", "Congo", "Costa Rica", "Cuba", "East Timor", "Ecuador", "Egypt", "El Salvador", "France", "Francophone Africa", "Ghana", "Global", "India", "Indonesia", "Iraq", "Jordan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Latin America and the Caribbean", "Lebanon", "Malaysia", "Mexico", "Middle East and North Africa", "Myanmar", "Nicaragua", "Nigeria", "Panama", "Paraguay", "Peru", "Philippines", "Russia", "Rwanda", "Singapore", "South Africa", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Turkey", "Turkmenistan", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam"])
+      updateCategories(["SRHR", "childcare", "digital surveillance", "disability", "economy", "education", "food", "gender-based violence", "gendered health impacts", "healthcare", "labor", "misinformation", "punitive", "race", "water"])
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -45,7 +47,7 @@ function ItemsContainer(props) {
         }
 
         updateEntries(data)
-        // console.log(data)
+        console.log(data)
         updateTitle(title)
         getEntries(data)
         return title;
