@@ -26,11 +26,11 @@ function Menu({handleLanguageChoice}) {
             changeLanguage(e.target.id)
             handleLanguageChoice(e.target.id)
           }}>
-            <span id="en">EN </span>
-            <span id="es"> / ES </span>
-            <span id="fr"> / FR </span>
+            <span id="en"> EN </span>
+            <span id="es"> ES </span>
+            <span id="fr"> FR </span>
         </section>
-{/*         
+{/*
           <footer id='footerBrowser'>
             <p>created by xyz </p>
             <p>thanks to xyz </p>

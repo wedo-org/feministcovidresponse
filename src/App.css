@@ -72,6 +72,13 @@ span {
   padding-right: 1rem;
 }
 
+.languages > span {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
 #logo {
   width: 5rem;
   height: 5rem;
@@ -1088,10 +1095,9 @@ align-content: center;
 
   .blob-resources > h4{
     display: inline;
-    font-size: max(20px, 1.5vh);
     color: rgb(230,153,89);
     /* color: #214451; */
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     letter-spacing: 2px;
     word-spacing: -2px;
     font-family: 'Anton', sans-serif;

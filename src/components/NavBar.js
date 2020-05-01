@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import hamburger from '../assets/images/hamburgerwhite.png'
 import logo from '../assets/images/logo.png'
@@ -18,6 +18,7 @@ export default function NavBar({handleLanguageChoice}) {
                 <img src={hamburger} className="hamburger-menu" alt="menu"  tabIndex="0"/>
               </Link>
             </section>
+
         </nav>
     )
 }
