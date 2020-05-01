@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
 function Menu({handleLanguageChoice}) {
+  const [selected, whichLanguage] = useState('en')
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
@@ -23,12 +24,14 @@ function Menu({handleLanguageChoice}) {
               </ul>
           </nav>
           <section className="languages" onClick={(e) => {
-            changeLanguage(e.target.id)
-            handleLanguageChoice(e.target.id)
+            changeLanguage(e.target.id);
+            handleLanguageChoice(e.target.id);
+            whichLanguage(e.target.id)
+
           }}>
-            <span id="en"> EN </span>
-            <span id="es"> ES </span>
-            <span id="fr"> FR </span>
+            <span style={{ backgroundColor: selected === 'en' ? 'white' : 'rgb(254,221,197)' }} id="en"> EN </span>
+            <span style={{ backgroundColor: selected === 'es' ? 'white' : 'rgb(254,221,197)' }} id="es"> ES </span>
+            <span style={{ backgroundColor: selected === 'fr' ? 'white' : 'rgb(254,221,197)' }} id="fr"> FR </span>
         </section>
 {/*
           <footer id='footerBrowser'>
