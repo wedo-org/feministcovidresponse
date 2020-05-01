@@ -13,7 +13,7 @@ function App(props) {
   const [language, updateLanguage] = useState('es')  
   const [pinged, updatePinged] = useState(false)
 
-  console.log("pinged", pinged);
+  // console.log("pinged", pinged);
   
   useEffect( () => {
     pingHeroku()

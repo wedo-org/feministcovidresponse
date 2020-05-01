@@ -19,6 +19,7 @@ function ItemsContainer(props) {
     const [ chosenCountry, updateChosenCountry ] = useState('All')
     const [ chosenCategory, updateChosenCategory ] = useState('All')
 
+
     useEffect( () => {
       sectionTitle()
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,25 +27,25 @@ function ItemsContainer(props) {
 
     const sectionTitle = () => {
         let title;
-        let variable;
+        let data;
         switch (props.location.pathname) {
             case "/response-tracker":
                 title = "Response Tracker";
-                variable = response;
+                data = response;
                 break
             case "/online-dialogues":
                 title = "Online Dialogues"
-                variable = online;
+                data = online;
                 break
             case "/resources":
                 title = "Resources"
-                variable = resources;
+                data = resources;
                 break
             default:
                 title = ""
         }
 
-        updateEntries(variable)
+        updateEntries(data)
         updateTitle(title)
         getEntries()
         return title;

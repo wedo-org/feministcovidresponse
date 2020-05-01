@@ -69,7 +69,6 @@
   "Burundi": "Burundi",
   "Cambodia": "Cambodge",
   "Cameroon": "Cameroun",
-
   "Canada": "Canada",
   "Cape Verde": "Cap-Vert",
   "Cayman Islands": "îles Caïmans",
@@ -107,7 +106,6 @@
   "Faroe Islands": "Îles Féroé",
   "Fiji Islands": "Îles Fidji",
   "Finland": "Finlande",
-
   "France": "France",
   "French Guiana": "Guyane française",
   "French Polynesia": "Polynésie française",
@@ -153,7 +151,6 @@
   "Kiribati": "Kiribati",
   "Kuwait": "Koweït",
   "Kyrgyzstan": "Kirghizistan",
-  
   "Laos": "Laos",
   "Latvia": "Lettonie",
   "Lebanon": "Liban",
@@ -204,7 +201,6 @@
   "Norway": "Norvège",
   "Oman": "Oman",
   "Pakistan": "Pakistan",
-
   "Palau": "Palau",
   "Palestine": "Palestine",
   "Panama": "Panama",
@@ -255,7 +251,6 @@
   "Syria": "Syrie",
   "Taiwan": "Taiwan",
   "Tajikistan": "Tadjikistan",
-
   "Tanzania": "Tanzania",
   "Thailand": "Thaïlande",
   "Timor-Leste": "Timor-Leste",
@@ -295,5 +290,4 @@
   "Europe": "Europe",
   "Latin America and the Caribbean": "Amérique latine et Caraïbes",
   "Middle East and North Africa": "Moyen-Orient et Afrique du Nord"
-
   }
