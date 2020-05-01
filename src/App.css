@@ -935,6 +935,7 @@ align-content: center;
   .main-content > h1, .main-title > section > h1 {
     grid-area: title;
     font-size: max(4rem, 6vh);
+    line-height: 1.1;
     margin: 0;
     text-align: left;
     font-weight: 800;
