@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import { useTranslation } from "react-i18next";
+import openFile from '../assets/images/open-file.png'
 
 export default function PrinciplesContainer({language}) {
 
@@ -43,7 +44,12 @@ export default function PrinciplesContainer({language}) {
             <h2 className="principles-subtitle">{t("Key Principles for Feminist Response to")}&nbsp; COVID-19&nbsp;</h2>
             <p className="principles-intro"><strong>{t("Cross-cutting to all these principles is the promotion, protection and fulfillment of human rights and gender equality")}.</strong> {t("Human rights and their fundamental principles, including the principles of universality, inalienability, interdependence, indivisiblity, equality, non-discrimination, non-derogation and accountability, must guide all actions taken in response to COVID-19")}. {t("This includes collective rights, such as the rights of Indigenous Peoples, migrant, displaced and refugee populations as well as labour rights")}. {t("While restrictions on some rights in the context of the current public health emergency may be warranted, any measures must be necessary, proportionate to the current risk, have a specific time and duration, and be applied in a non-discriminatory way")}. {t("Further, the current crisis must not be used to promote stigmatization, discrimination and hate speech, nor silence dissent or protest, attack human rights and environmental defenders, especially women human rights defenders, or undermine the exercise of other rights, like sexual and reproductive rights")}.  {t("The response to COVID-19 must be gender-responsive and advance gender equality, and must ensure the fulfillment of women’s human rights as recognized in international treaties and agreements")}.</p>
             {/* // eslint-disable-next-line */}
-            <a href={require(`../assets/files/principles-${language}.pdf`)} target="_blank" rel="noopener noreferrer">Download PDF</a>
+              <section className='openFileLink'>
+                <a href={require(`../assets/files/principles-${language}.pdf`)} target="_blank" rel="noopener noreferrer">
+                  <img id='openFile' src={openFile} alt='open-file-icon'/>
+                  <p>Open in PDF</p>
+                </a>
+              </section>
             <div className="accordion">
     {/******************************* FIRST PRINCIPLE ******************************* */}
                 <div className="accordion-item" onClick={()=>toggleClass(1)}>
