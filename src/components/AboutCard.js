@@ -15,7 +15,7 @@ export default function PrincipleCardTranslated() {
         <div className="accordion-item" onClick={()=>toggleClass()}>
             <section className="blob-principle">
               <img src={require('../assets/images/orange-blob.png')} className="orange-blob" alt=""/>
-              <a href='/#' className={`${isActive ? "active" : null}`}>{t("subtitle")}</a>
+              <a className={`${isActive ? "active" : null}`}>{t("subtitle")}</a>
             </section>
             <div className={`content ${isActive ? "active" : null}`}>
                <p className="principle-description"> {t("paragraph1")}</p>
