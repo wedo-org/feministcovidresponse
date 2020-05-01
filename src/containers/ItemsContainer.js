@@ -8,7 +8,6 @@ import {response, online, resources} from '../assets/data/data-starter.js'
 
 
 function ItemsContainer(props) {
-
     const { t } = useTranslation();
 
     const [ loaded, isLoaded ] = useState(false)
@@ -46,17 +45,18 @@ function ItemsContainer(props) {
         }
 
         updateEntries(data)
+        // console.log(data)
         updateTitle(title)
-        getEntries()
+        getEntries(data)
         return title;
     }
 
-    const getEntries = async () => {
+    const getEntries = async (cachedData) => {
         let location = props.location.pathname
         const data = await fetchPage(location);
         data ? isLoaded(true)  : isLoaded(false);
-        let entries = data.items
-        updateEntries(entries)
+        let items = data.items
+        updateEntries([ ...cachedData, ...items])
         let categories = data.available_categories
         updateCategories(categories)
         let countries = data.available_countries
@@ -141,10 +141,6 @@ function ItemsContainer(props) {
               </aside>
 
               <section id='policy-content'>
-                {
-                  loaded
-
-                  ?
 
                   <ul>
                     {
@@ -159,7 +155,12 @@ function ItemsContainer(props) {
                     }
                   </ul>
 
-                  :
+                  {
+                    loaded
+
+                    ?
+                    null
+                    :
 
                   <Loader />
                 }
