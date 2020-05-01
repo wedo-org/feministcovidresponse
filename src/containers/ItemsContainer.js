@@ -47,7 +47,6 @@ function ItemsContainer(props) {
         }
 
         updateEntries(data)
-        console.log(data)
         updateTitle(title)
         getEntries(data)
         return title;
