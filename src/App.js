@@ -10,25 +10,25 @@ import NotFound from './components/NotFound';
 
 function App(props) {
 
-  const [language, updateLanguage] = useState('es')  
+  const [language, updateLanguage] = useState('en')  
   const [pinged, updatePinged] = useState(false)
 
   // console.log("pinged", pinged);
-  
+
   useEffect( () => {
     pingHeroku()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const pingHeroku = async () => {
-    
+
     if (!pinged){
       await fetchPing()
       updatePinged(true)
     }
   }
-  
-  const handleLanguageChoice = (lg) => {    
+
+  const handleLanguageChoice = (lg) => {
     updateLanguage(lg)
   }
 

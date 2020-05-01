@@ -110,6 +110,10 @@ span {
   margin-right: 1rem;
 }
 
+.legend-ul > li {
+  list-style-type: circle;
+}
+
 
 span#read-more {
   font-size: 1.4rem;
