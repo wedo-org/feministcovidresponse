@@ -1112,9 +1112,9 @@ align-content: center;
 
   .blob-resources > h4{
     display: inline;
-    /* color: rgb(230,153,89);  */
+    /* color: rgb(230,153,89); */
     color: #214451;
-    font-size: 1.8rem;
+    font-size: max(35px, 1.8rem);
     letter-spacing: 2px;
     word-spacing: -2px;
     font-family: 'Anton', sans-serif;
