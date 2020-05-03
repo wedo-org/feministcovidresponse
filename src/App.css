@@ -960,7 +960,11 @@ align-content: center;
     padding-bottom: 3rem;
     margin-bottom: 0.2rem;
     min-height: 15vh;
-    height: 28vh;
+    height: 15vh;
+  }
+
+  .principles-title{
+    height: 28vh!important;
   }
 
   img.doodle-about {
@@ -1138,8 +1142,8 @@ align-content: center;
 }
 
 @media (min-width: 1300px){
-  .main-content > h1, .main-title > section > h1 {
-    height: 20vh;
+  .principles-title{
+    height: 20vh!important;
   }
 }
 
