@@ -1151,3 +1151,39 @@ align-content: center;
 }
 
 /* display: -webkit-inline-box; */
+
+@media (min-width: 1850px){
+
+  .item-description{
+    font-size: 2rem;
+  }
+
+  .item-title {
+    font-size: 2.5rem;
+  }
+
+
+  .blob-resources > h4{
+    font-size: max(35px, 2.5rem);
+  }
+
+  .type-section > p, p.filters-section{
+    font-size: 1.8rem;
+  }
+
+  #type{
+    font-size: 1.6rem;
+  }
+
+  #read-more{
+  font-size: 1.6rem;
+  }
+
+  .policyOption{
+    font-size:2rem;
+  }
+
+  .main-content > p, .accordion .content .principle-description, li.principle-item, .accordion a.active, .openFileLink > a, .legend-menu-button{
+    font-size: 2rem;
+  }
+}
