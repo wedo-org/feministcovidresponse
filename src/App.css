@@ -960,7 +960,7 @@ align-content: center;
     padding-bottom: 3rem;
     margin-bottom: 0.2rem;
     min-height: 15vh;
-    height: 15vh;
+    height: 28vh;
   }
 
   img.doodle-about {
@@ -1137,19 +1137,15 @@ align-content: center;
 
 }
 
-@media (min-width: 1050px) and (max-width: 1440px){
-  .main-content>h1, .main-title>section>h1{
-    height: 25vh;
+@media (min-width: 1300px){
+  .main-content > h1, .main-title > section > h1 {
+    height: 20vh;
   }
 }
 
 @media (min-width: 1440px){
   .main-container {
     min-width: 68vw;
-  }
-
-  .main-content>h1, .main-title>section>h1{
-    height: 20vh;
   }
 
   #logo {
