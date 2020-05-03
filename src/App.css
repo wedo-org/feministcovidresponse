@@ -15,6 +15,7 @@ html {
   background-image: url('./assets/images/Background2.png');
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #e69652;
   /* background-size: cover; */
 }
 
@@ -253,8 +254,8 @@ nav > ul {
 .blob-resources > h4{
   display: inline;
   font-size: max(20px, 1.5vh);
-  color: rgb(230,153,89);
-  /* color: #214451; */
+  /* color: rgb(230,153,89); */
+  color: #214451;
   font-size: 1.1rem;
   letter-spacing: 2px;
   word-spacing: -2px;
@@ -312,7 +313,7 @@ nav > ul {
   color: #737373;
   text-align: left;
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 
@@ -325,7 +326,7 @@ nav > ul {
   font-size: 1rem;
   letter-spacing: 1px;
   margin-block-end: 0px;
-  margin-block-start: 0px;
+  margin-block-start: 5px;
   padding-bottom: 0px;
 }
 
@@ -397,8 +398,8 @@ li.single-item{
 
 /* --------------- PRINCIPLES ------------------- */
 .principles-subtitle{
-  color: rgb(230,153,89);
-  /* color: #214451; */
+  /* color: rgb(230,153,89); */
+  color: #214451;
   font-size: 125%;
   letter-spacing: 2px;
   word-spacing: -2px;
@@ -707,8 +708,8 @@ align-content: center;
 
   .blob-resources > h4{
     font-size: max(20px, 1.5vh);
-    color: rgb(230,153,89);
-    /* color: #214451; */
+    /* color: rgb(230,153,89); */
+    color: #214451;
     font-size: 1.7rem;
     letter-spacing: 2px;
     word-spacing: -2px;
@@ -808,8 +809,14 @@ align-content: center;
   }
 
   img.doodle-about {
-    width: 28%;
+    width: 200px;
+    height: 400px;
     margin-left: 0;
+  }
+
+  .item-description{
+    line-height: 1.4;
+    font-size: 1.6rem;
   }
 }
 
@@ -951,11 +958,17 @@ align-content: center;
     padding-top: 1rem;
     padding-left: 2rem;
     padding-bottom: 3rem;
-    margin-bottom: 1vh;
+    margin-bottom: 0.2rem;
     min-height: 15vh;
     height: 15vh;
   }
 
+  img.doodle-about {
+    margin-left: 0;
+    width: 300px;
+    max-height: 400px;
+    /* max-width: 200px; */
+  }
 
   .buttons-and-items {
     grid-area: content;
@@ -970,7 +983,6 @@ align-content: center;
   #policy-content {
     grid-area: items;
     padding: 0 1vh;
-    text-align: justify;
     border-right: 1.3vw solid transparent;
     border-image: url('./assets/images/divider.png') 40 stretch;
     border-image-outset: 5px;
@@ -980,6 +992,7 @@ align-content: center;
 
   #policy-content > ul {
     padding: 0;
+    text-align: left;
   }
 
   .policyButtons {
@@ -1035,6 +1048,10 @@ align-content: center;
 
   }
 
+  .item-description{
+    font-size: 1.6rem;
+  }
+
   /* .item > p {
     font-size: large;
     font-family: 'Amiko', sans-serif;
@@ -1043,8 +1060,8 @@ align-content: center;
   } */
 
   .item-title {
-    color: rgb(230,153,89);
-    /* color: #214451; */
+    /* color: rgb(230,153,89); */
+    color: #214451;
     font-size: 1.7rem;
     letter-spacing: 2px;
     word-spacing: -2px;
@@ -1078,11 +1095,11 @@ align-content: center;
     font-weight: bolder;
   }
 
-  img.doodle-about{
+  /* img.doodle-about{
     margin-left: 0;
     width: 11rem;
     max-width: 15rem;
-  }
+  } */
 
   .about-section{
     display: flex;
@@ -1095,8 +1112,8 @@ align-content: center;
 
   .blob-resources > h4{
     display: inline;
-    color: rgb(230,153,89);
-    /* color: #214451; */
+    /* color: rgb(230,153,89);  */
+    color: #214451;
     font-size: 1.8rem;
     letter-spacing: 2px;
     word-spacing: -2px;
