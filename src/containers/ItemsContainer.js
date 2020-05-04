@@ -99,8 +99,6 @@ function ItemsContainer(props) {
         return finishedFilteredArr
     }
 
-    console.log(entries);
-    
     return (
         <section className='ItemsContainer'>
           <section className='main-title'>
