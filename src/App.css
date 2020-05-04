@@ -122,8 +122,16 @@ span {
   list-style-type: circle;
 }
 
+.about-section a {
+  font-size: max(17px, 1vh);
+  color: #010101;
+  border-bottom: 2px solid transparent;
+  border-image: url('./assets/images/orange-link-highlighter.png') 40 stretch;
+  padding-right: 0;
+}
 
-span#read-more, .about-section a {
+
+span#read-more {
   font-size: 1.4rem;
   font-weight: 800;
   color: #010101;
@@ -698,7 +706,7 @@ align-content: center;
   }
 
   .main-content > h1 {
-    font-size: max(50px, 3vh);
+        font-size: max(55px, 3vh);
   }
 
   .blob-principle > a, .accordion a.active {
@@ -947,7 +955,7 @@ align-content: center;
 
   .main-content > h1, .main-title > section > h1 {
     grid-area: title;
-    font-size: max(4rem, 6vh);
+    font-size: max(4rem, 4.5vh);
     line-height: 1.1;
     margin: 0;
     text-align: left;
@@ -958,12 +966,12 @@ align-content: center;
     padding-left: 2rem;
     padding-bottom: 3rem;
     margin-bottom: 0.2rem;
-    min-height: 15vh;
-    height: 17vh;
+    min-height: 10vh;
+    height: 13vh;
   }
 
   .principles-title{
-    height: 28vh!important;
+    min-height: 18rem!important;
   }
 
   img.doodle-about {
