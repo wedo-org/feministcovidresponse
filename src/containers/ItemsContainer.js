@@ -47,9 +47,8 @@ function ItemsContainer(props) {
         updateEntries(data)
         updateTitle(title)
         getEntries(data)
-        console.log('here are the entries in online', data);
 
-        updateCountries(["Algeria", "Anglophone Africa", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Bolivia", "Cambodia", "Canada", "Chile", "China", "Colombia", "Congo", "Costa Rica", "Cuba", "East Timor", "Ecuador", "Egypt", "El Salvador", "France", "Francophone Africa", "Ghana", "Global", "India", "Indonesia", "Iraq", "Jordan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Latin America and the Caribbean", "Lebanon", "Malaysia", "Mexico", "Middle East and North Africa", "Myanmar", "Nicaragua", "Nigeria", "Panama", "Paraguay", "Peru", "Philippines", "Russia", "Rwanda", "Singapore", "South Africa", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Turkey", "Turkmenistan", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam"])
+        updateCountries(["Anglophone Africa", "Argentina", "Australia", "Austria", "Bahrain", "Bangladesh", "Belgium", "Bolivia", "Cambodia", "Canada", "Chile", "China", "Colombia", "Congo", "Costa Rica", "Cuba", "East Timor", "Ecuador", "Egypt", "El Salvador", "France", "Francophone Africa", "Ghana", "Global", "India", "Indonesia", "Iraq", "Jordan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Latin America and the Caribbean", "Lebanon", "Malaysia", "Mexico", "Middle East and North Africa", "Myanmar", "Nicaragua", "Nigeria", "Panama", "Paraguay", "Peru", "Philippines", "Russia", "Rwanda", "Singapore", "South Africa", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Turkey", "Turkmenistan", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam"])
         updateCategories(["SRHR", "childcare", "digital surveillance", "disability", "economy", "education", "food", "gender-based violence", "gendered health impacts", "healthcare", "labor", "misinformation", "punitive", "race", "water"])
 
         return title;
@@ -61,8 +60,6 @@ function ItemsContainer(props) {
         data ? isLoaded(true)  : isLoaded(false);
         let items = data.items
         updateEntries(entries.concat(items))
-        console.log('then it become this', data.items );
-        localStorage.data = JSON.stringify(data.items)
         let categories = data.available_categories
         updateCategories(categories)
         let countries = data.available_countries
