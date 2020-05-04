@@ -960,7 +960,7 @@ align-content: center;
     padding-bottom: 3rem;
     margin-bottom: 0.2rem;
     min-height: 15vh;
-    height: 15vh;
+    height: 17vh;
   }
 
   .principles-title{
@@ -1172,6 +1172,9 @@ align-content: center;
     font-size: 2.5rem;
   }
 
+  .about-intro{
+    font-size: max(27px, 2vw);
+  }
 
   .blob-resources > h4{
     font-size: max(35px, 2.5rem);

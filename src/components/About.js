@@ -12,6 +12,9 @@ export default function About(props){
             <p className="about-intro">{t("intro")} </p>
             <img className="doodle-about" src={require('../assets/images/doodle-about.png')} alt=""/>
           </div>
+          <div className="about-section">
+            <p className="about-intro">{t("second-intro")} </p>
+          </div>
           <div className="accordion">
               <AboutCard />
             </div>
