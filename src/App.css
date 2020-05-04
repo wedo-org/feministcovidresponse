@@ -1146,6 +1146,10 @@ align-content: center;
     width: max-content;
   }
 
+  .about-section a {
+    font-size: max(27px, 2vw);
+  }
+
 }
 
 @media (min-width: 1300px){
