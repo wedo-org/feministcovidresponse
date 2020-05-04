@@ -123,7 +123,7 @@ span {
 }
 
 
-span#read-more {
+span#read-more, .about-section a {
   font-size: 1.4rem;
   font-weight: 800;
   color: #010101;
@@ -132,7 +132,7 @@ span#read-more {
   padding-right: 0;
 }
 
-span#read-more:hover {
+span#read-more:hover, .about-section a:hover {
   color: #feddc5;
   background-color: #204451;
 }
@@ -578,7 +578,6 @@ li.principle-item {
 display: flex;
 align-content: center;
 }
-
 
 
 /* @media (min-width: 2024px) {} */

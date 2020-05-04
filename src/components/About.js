@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutCard from './AboutCard.js'
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function About(props){
     const { t } = useTranslation(["about"]);
@@ -13,7 +13,11 @@ export default function About(props){
             <img className="doodle-about" src={require('../assets/images/doodle-about.png')} alt=""/>
           </div>
           <div className="about-section">
-            <p className="about-intro">{t("second-intro")} </p>
+            <p className="about-intro">
+            <Trans i18nKey="about:second-intro">
+              Read below to find a short analysis of the current crisis as well as a list of individuals and organizations who have been involved in this collective reflection. If you are interested in submitting resources to this website, please email <a href='mailto:feministresponse@wedo.org'>feministresponse[at]wedo.org</a>. In the coming weeks, submissions will be able to be made directly via this website. We also hope to continually add new information to best amplify the actions of networks around the world.
+            </Trans>
+            </p>
           </div>
           <div className="accordion">
               <AboutCard />
