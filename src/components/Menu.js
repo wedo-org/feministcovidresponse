@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
 function Menu({handleLanguageChoice}) {
+  console.log(handleLanguageChoice);
   const [selected, whichLanguage] = useState('en')
   const { t } = useTranslation();
 

@@ -10,7 +10,7 @@ import NotFound from './components/NotFound';
 
 function App(props) {
 
-  const [language, updateLanguage] = useState('en')  
+  const [language, updateLanguage] = useState('en')
   const [pinged, updatePinged] = useState(false)
 
   // console.log("pinged", pinged);
@@ -37,7 +37,9 @@ function App(props) {
         { props.location.pathname === "/menu"
         ?
         <Switch>
-                <Route exact path="/menu" component={Menu} />
+                <Route exact path="/menu">
+                    <Menu handleLanguageChoice={handleLanguageChoice} />
+                </Route>
         </Switch>
         :
         <section className='navbar-maincontainer'>
