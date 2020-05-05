@@ -151,7 +151,7 @@ export default function PrinciplesContainer({language}) {
                         <p className="principle-description">{t("sixth-description")}</p>
                             <ul>
                                 <li className="principle-item">{t("sixth-1")}</li>
-                                <li className="principle-item">{t("sixt-2")}</li>
+                                <li className="principle-item">{t("sixth-2")}</li>
                                 <li className="principle-item">{t("sixth-3")}</li>
                             </ul>
                     </div>
