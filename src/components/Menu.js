@@ -28,7 +28,7 @@ function Menu({handleLanguageChoice}) {
             changeLanguage(e.target.id);
             handleLanguageChoice(e.target.id);
             whichLanguage(e.target.id)
-
+            localStorage.setItem('language', JSON.stringify(e.target.id))
           }}>
             <span style={{ backgroundColor: selected === 'en' ? 'white' : 'rgb(254,221,197)' }} id="en"> EN </span>
             <span style={{ backgroundColor: selected === 'es' ? 'white' : 'rgb(254,221,197)' }} id="es"> ES </span>

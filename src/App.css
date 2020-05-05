@@ -16,6 +16,8 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #e69652;
+  overflow-x: hidden;
+  overflow-y: hidden;
   /* background-size: cover; */
 }
 
@@ -47,7 +49,7 @@ button {
 }
 
 li {
-  list-style-type: none
+  list-style-type: none;
 }
 
 h1 {
@@ -183,13 +185,24 @@ img.doodle-about{
 
 
 /* --MAIN CONTAINER-- */
+
+.ItemsContainer {
+  overflow: hidden;
+  height: 75vh;
+  max-height: 75vh;
+}
+
 .main-container {
   padding: 0 .5rem;
-  height: 86.5vh;
+  height: 78.5vh;
   min-height: 75.5vh;
   background-color: white;
   margin-bottom: 1rem;
   overflow: scroll;
+}
+
+.single-item:last-child{
+  margin-bottom: 6rem;
 }
 
 .main-content > p {
@@ -226,9 +239,10 @@ img.doodle-about{
   background-color: black;
   color: white;
   font-size: 2em;
-  line-height: 11.5vh;
+  line-height: min(7rem, 25vh);
   text-align: center;
   font-weight: bold;
+  /* font-size: max(4rem, 4.5vh); */
 }
 
 nav > ul {
@@ -239,7 +253,7 @@ nav > ul {
   color:rgb(32,68,81);
   font-size: 3vh;
   text-align: center;
-  line-height: 2vh;
+  line-height: 2rem;
   bottom: 1.8rem;
   padding-bottom: 1rem;
   margin-top: 3rem;
@@ -280,11 +294,12 @@ nav > ul {
 .main-title > section > h1 {
   margin-bottom: 1rem;
   margin-top: 1rem;
+  font-size: max(7vw, 45px);
 }
 
 .policyButtons {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   font-size: 20px;
   align-items: center;
@@ -299,7 +314,7 @@ nav > ul {
 
 .policyOption {
   background-color: rgb(230,150,83);
-  padding: 4%;
+  padding: 2%;
   font-size: 18px;
   width: 15rem;
   text-align: center;
@@ -309,11 +324,25 @@ nav > ul {
   white-space: pre-wrap;
   letter-spacing: 2px;
   cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .policyOption:nth-of-type(2){
   background-color: rgb(187,117,28);
-  margin-top: 3%;
+  /* margin-top: 3%; */
+}
+
+@media (min-width: 436px) {
+  .policyButtons{
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 547px) {
+  .policyButtons{
+    flex-direction: row;
+  }
 }
 
 .item-description{
@@ -323,6 +352,10 @@ nav > ul {
   line-height: 1.4;
   font-size: 1rem;
   letter-spacing: 1px;
+}
+
+.item-description:last-child{
+  /* margin-bottom: 12rem; */
 }
 
 .type-section > p, p.filters-section {
@@ -437,6 +470,7 @@ li.single-item{
 
 .accordion-item{
   padding-left: 1rem;
+  margin-bottom: 5rem;
 }
 
 .accordion a {
@@ -459,8 +493,10 @@ li.single-item{
 }
 
 .orange-blob {
-  width: 1vw;
-  height: 1vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  max-width: 1rem;
+  max-height: 1rem;
 }
 
 .tracker-doodles {
@@ -683,7 +719,7 @@ align-content: center;
   }
 
   .main-title > section > h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem
   }
 
@@ -745,8 +781,8 @@ align-content: center;
   }
 
   .menu-list {
-    font-size: 3em;
-    line-height: 8.5rem;
+    font-size: min(3em, 50px);
+    line-height: max(6.5rem, 2vh);
   }
 
   .accordion .content .principle-description {
@@ -869,6 +905,8 @@ align-content: center;
     line-height: max(60px, 3rem);
     padding-top: 0.1em;
     /* font-size: 8rem; */
+    /* font-size: max(6rem, 8.5vh); */
+    font-size: max(4rem, 4.5vh);
   }
 
   nav > ul {
@@ -881,7 +919,13 @@ align-content: center;
     text-transform: uppercase;
     /* font-size: max(30px, 2rem); */
     font-size: max(25px, 2vw);
+    margin-bottom: 50px;
     color:rgb(32,68,81);
+    line-height: 2;
+  }
+
+  .accordion a {
+    font-size: max(27px, 2vw);
   }
 
   select {
@@ -930,10 +974,10 @@ align-content: center;
     /* font-size: max(30px, 1.5rem); */
     font-size: max(32px, 1.5vw);
     text-align: left;
-    line-height: 2vh;
+    /* line-height: 2vh; */
     bottom: 1.8rem;
     padding-bottom: 1rem;
-    margin-top: max(40px, 8rem);
+    /* margin-top: max(40px, 8rem); */
   }
 
 
@@ -966,13 +1010,16 @@ align-content: center;
     padding-left: 2rem;
     padding-bottom: 3rem;
     margin-bottom: 0.2rem;
-    min-height: 10vh;
-    height: 13vh;
+    /* height: 13vh; */
   }
 
-  .principles-title{
-    min-height: 18rem!important;
+  .main-content > h1 {
+    min-height: 13rem;
   }
+
+  /* .principles-title{
+    min-height: 18rem!important;
+  } */
 
   img.doodle-about {
     margin-left: 0;
@@ -1150,12 +1197,20 @@ align-content: center;
     font-size: max(27px, 2vw);
   }
 
+  .legend-section > span{
+    padding-bottom: 6vw;
+  }
+
 }
 
 @media (min-width: 1300px){
-  .principles-title{
-    height: 20vh!important;
+  .main-content > h1, .main-title > section > h1 {
+    min-height: 10rem;
   }
+
+  /* .menu-list {
+    line-height: max(180px, 8rem)
+  } */
 }
 
 @media (min-width: 1440px){
@@ -1176,7 +1231,7 @@ align-content: center;
 @media (min-width: 1850px){
 
   .item-description{
-    font-size: 2rem;
+    font-size: max(2rem, 1.8vw);
   }
 
   .item-title {
@@ -1211,3 +1266,7 @@ align-content: center;
     font-size: 2rem;
   }
 }
+
+/* @media (min-width: 2800px){
+  .item
+} */
