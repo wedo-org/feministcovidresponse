@@ -239,7 +239,7 @@ img.doodle-about{
   background-color: black;
   color: white;
   font-size: 2em;
-  line-height: min(7rem, 25vh);
+  line-height: min(3.4rem, 25vh);
   text-align: center;
   font-weight: bold;
   /* font-size: max(4rem, 4.5vh); */
@@ -294,7 +294,7 @@ nav > ul {
 .main-title > section > h1 {
   margin-bottom: 1rem;
   margin-top: 1rem;
-  font-size: max(7vw, 45px);
+  font-size: max(7vw, 35px);
 }
 
 .policyButtons {
@@ -316,7 +316,8 @@ nav > ul {
   background-color: rgb(230,150,83);
   padding: 2%;
   font-size: 18px;
-  width: 15rem;
+  /* width: 15rem; */
+  width: 7rem;
   text-align: center;
   font-family: 'Anton', sans-serif;
   color: white;
@@ -921,7 +922,7 @@ align-content: center;
     font-size: max(25px, 2vw);
     margin-bottom: 50px;
     color:rgb(32,68,81);
-    line-height: 2;
+    line-height: 1;
   }
 
   .accordion a {
@@ -941,6 +942,7 @@ align-content: center;
   .navbar-maincontainer {
     display:flex;
     margin: 40px;
+    margin-top: 0;
     margin-bottom: 0;
     flex-direction: row;
     /* justify-content: space-around; */
@@ -972,7 +974,7 @@ align-content: center;
   .menu-list > .languages {
     color:rgb(32,68,81);
     /* font-size: max(30px, 1.5rem); */
-    font-size: max(32px, 1.5vw);
+    font-size: max(25px, 2vw);
     text-align: left;
     /* line-height: 2vh; */
     bottom: 1.8rem;
