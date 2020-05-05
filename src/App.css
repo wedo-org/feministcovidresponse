@@ -55,7 +55,7 @@ li {
 h1 {
   text-align: center;
   font-style: normal;
-  font-size: 36px;
+  font-size: max(25px, 2vw);
   color: rgb(32,68,81);
   letter-spacing: 1px;
 }
@@ -312,11 +312,17 @@ nav > ul {
   display: none;
 }
 
+@media (min-width: 370px){
+  .policyOption {
+    width: 15rem!important;
+    font-size: 18px;
+  }
+}
+
 .policyOption {
   background-color: rgb(230,150,83);
   padding: 2%;
-  font-size: 18px;
-  /* width: 15rem; */
+  font-size: 9px;
   width: 7rem;
   text-align: center;
   font-family: 'Anton', sans-serif;
@@ -580,7 +586,9 @@ li.principle-item {
   /* height: 23vw; */
   height: 16vw;
   min-height: 19rem;
+  padding-bottom: min(10vh, 60px);
 }
+
 
 .legend-tracker-doodles{
   width: 4vh;
