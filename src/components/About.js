@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutCard from './AboutCard.js'
 import { Trans, useTranslation } from "react-i18next";
+import {orgs, coordination, database} from "../assets/data/appreciation.js"
 
 export default function About(props){
     const { t } = useTranslation(["about"]);
@@ -12,13 +13,31 @@ export default function About(props){
             <p className="about-intro">{t("intro")} </p>
             <img className="doodle-about" src={require('../assets/images/feminism-blob.png')} alt=""/>
           </div>
-          {/* <div className="about-section">
-            <p className="about-intro">
-            <Trans i18nKey="about:second-intro">
-              Read below to find a short analysis of the current crisis as well as a list of individuals and organizations who have been involved in this collective reflection. If you are interested in submitting resources to this website, please email feministresponse[at]wedo.org. In the coming weeks, submissions will be able to be made directly via this website. We also hope to continually add new information to best amplify the actions of networks around the world.
-            </Trans>
-            </p>
-          </div> */}
+          <p>{t("second-intro")} </p>
+          <p>{t("app-intro")} </p>
+          <ul>
+            <h2>{t("devs")}</h2>
+            <li><a href="https://github.com/sylwiavargas" target="_blank" rel="noopener noreferrer">Sylwia Vargas</a></li>
+            <li><a href="https://github.com/luanesouza" target="_blank" rel="noopener noreferrer">Annie Souza</a></li>
+          </ul>
+          <ul>
+            <h2>{t("database")}</h2>
+            {
+              database.map((d) => <li key={d}>{d}</li>)
+            }
+          </ul>
+          <ul>
+            <h2>{t("coordinators")}</h2>
+            {
+              coordination.map((c) => <li key={c}>{c}</li>)
+            }
+          </ul>
+          <ul>
+            <h2>{t("organizations")}</h2>
+            {
+              orgs.map((o) => <li key={o}>{o}</li>)
+            }
+          </ul>
           <div className="accordion">
               <AboutCard />
             </div>
