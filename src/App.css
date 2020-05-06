@@ -312,18 +312,21 @@ nav > ul {
   display: none;
 }
 
-@media (min-width: 370px){
+@media (max-width: 374px){
+
   .policyOption {
-    width: 15rem!important;
-    font-size: 18px;
+    width: 77px!important;
+    font-size: 9px!important;
+    height: 45px;
   }
 }
 
 .policyOption {
   background-color: rgb(230,150,83);
   padding: 2%;
-  font-size: 9px;
-  width: 7rem;
+
+  font-size: 18px;
+  width: 8rem;
   text-align: center;
   font-family: 'Anton', sans-serif;
   color: white;
@@ -751,7 +754,7 @@ align-content: center;
   }
 
   .main-content > h1 {
-        font-size: max(55px, 3vh);
+    font-size: max(55px, 3vh);
   }
 
   .blob-principle > a, .accordion a.active {
@@ -1009,7 +1012,7 @@ align-content: center;
 
   .main-content > h1, .main-title > section > h1 {
     grid-area: title;
-    font-size: max(4rem, 4.5vh);
+    font-size: min(4rem, 5.5vh);
     line-height: 1.1;
     margin: 0;
     text-align: left;
@@ -1024,7 +1027,7 @@ align-content: center;
   }
 
   .main-content > h1 {
-    min-height: 13rem;
+    min-height: 10rem;
   }
 
   /* .principles-title{
