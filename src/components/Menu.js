@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
 function Menu({handleLanguageChoice}) {
-  console.log(handleLanguageChoice);
-  const [selected, whichLanguage] = useState('en')
+
+  const [selected, whichLanguage] = useState(localStorage.getItem('i18nextLng') || 'en')
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
@@ -28,7 +28,7 @@ function Menu({handleLanguageChoice}) {
             changeLanguage(e.target.id);
             handleLanguageChoice(e.target.id);
             whichLanguage(e.target.id)
-            localStorage.setItem('language', JSON.stringify(e.target.id))
+            // localStorage.setItem('language', JSON.stringify(e.target.id))
           }}>
             <span style={{ backgroundColor: selected === 'en' ? 'white' : 'rgb(254,221,197)' }} id="en"> EN </span>
             <span style={{ backgroundColor: selected === 'es' ? 'white' : 'rgb(254,221,197)' }} id="es"> ES </span>

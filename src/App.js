@@ -10,7 +10,7 @@ import NotFound from './components/NotFound';
 
 function App(props) {
 
-  const [language, updateLanguage] = useState('en')
+  const [language, updateLanguage] = useState(localStorage.getItem('i18nextLng') || 'en')
   const [pinged, updatePinged] = useState(false)
 
   // console.log("pinged", pinged);
@@ -37,9 +37,11 @@ function App(props) {
         { props.location.pathname === "/menu"
         ?
         <Switch>
+              <Suspense fallback={NotFound()}>
                 <Route exact path="/menu">
                     <Menu handleLanguageChoice={handleLanguageChoice} />
                 </Route>
+              </Suspense>
         </Switch>
         :
         <section className='navbar-maincontainer'>
