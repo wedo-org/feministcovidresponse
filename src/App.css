@@ -87,6 +87,10 @@ span {
   height: 5rem;
 }
 
+.thanks {
+  margin-bottom: 60px;
+}
+
 #loader > img {
   /* text-align: center;
   vertical-align: middle; */
@@ -189,8 +193,8 @@ img.doodle-about{
 
 .appreciation-section > ul > li, .appreciation-section > ul > li > a {
   font-family: 'Amiko', sans-serif;
-  font-weight: normal!important;
-  padding-bottom: 8px;
+  padding-bottom: 15px;
+  list-style: disc;
 }
 
 .appreciation-section > ul > li > a {
@@ -496,7 +500,7 @@ li.single-item{
 /* ------------- ACCORDION -------------- */
 
 .accordion {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .accordion-item{
@@ -523,12 +527,15 @@ li.single-item{
 }
 
 .accordion > a:last-child{
-  
+}
+
+.organizations li:last-child {
+  margin-bottom: 50px;
 }
 
 .dev-link{
   font-size: max(29px, 1.8rem);
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding: 0!important;
   border-bottom: 0px solid transparent!important;
 }
