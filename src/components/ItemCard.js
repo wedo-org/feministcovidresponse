@@ -24,8 +24,16 @@ export default function ItemCard({item, location, language}) {
         return img
     }
 
-    let title = `title_${language}`
-    let description = `description_${language}`
+    const setDefaultLanguage = () => {
+      if( language === 'es' || language === 'fr' || language === 'en'){
+        return language;
+      } else {
+        return 'en';
+      }
+    }
+
+    let title = `title_${setDefaultLanguage()}`
+    let description = `description_${setDefaultLanguage()}`
 
     return (
         <section className='item' >
