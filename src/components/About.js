@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AboutCard from './AboutCard.js'
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import {orgs, coordination, database} from "../assets/data/appreciation.js"
 
 export default function About(props){
