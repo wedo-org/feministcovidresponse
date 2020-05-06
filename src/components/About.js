@@ -10,7 +10,7 @@ export default function About(props){
           <h1>{t("title")}</h1>
           <div className="about-section">
             <p className="about-intro">{t("intro")} </p>
-            <img className="doodle-about" src={require('../assets/images/doodle-about.png')} alt=""/>
+            <img className="doodle-about" src={require('../assets/images/feminism-blob.png')} alt=""/>
           </div>
           {/* <div className="about-section">
             <p className="about-intro">
