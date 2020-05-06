@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AboutCard from './AboutCard.js'
 import { Trans, useTranslation } from "react-i18next";
 import {orgs, coordination, database} from "../assets/data/appreciation.js"
 
 export default function About(props){
     const { t } = useTranslation(["about"]);
+
+    const [isActive, updateIsActive] = useState(false)
+
+    const toggleClass = () => {
+        updateIsActive(!isActive)
+    }
 
     return (
       <section className='main-content'>
@@ -14,7 +20,19 @@ export default function About(props){
             <img className="doodle-about" src={require('../assets/images/feminism-blob.png')} alt=""/>
           </div>
           <p className="about-intro intro-small">{t("second-intro")} </p>
-          <p className="about-intro">{t("app-intro")} </p>
+{/* FIRST BULLET POINT  */}
+          <div className="accordion">
+              <AboutCard />
+          </div>
+{/* SECOND BULLET POINT  */}
+          <div className="accordion">
+            <div className="accordion-item" onClick={()=>toggleClass()}>
+              <section className="blob-principle">
+                <img src={require('../assets/images/orange-blob.png')} className="orange-blob" alt=""/>
+                <a className={`${isActive ? "active" : null}`}>{t("thanks")}</a>
+              </section>
+              <div className={`content ${isActive ? "active" : null}`}>
+              <p className="about-intro">{t("app-intro")} </p>
           <section className='appreciation-section'>
             <ul>
               <h2>{t("devs")}</h2>
@@ -40,9 +58,9 @@ export default function About(props){
               }
             </ul>
           </section>
-          <div className="accordion">
-              <AboutCard />
-            </div>
+              </div>
+        </div>
+          </div>
       </section>
   )
 }
