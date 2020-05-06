@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 export default function ItemCard({item, location, language}) {
     const { t } = useTranslation();
 
-    console.log(language);
     const markProgressive = () => {
         let img;
 

@@ -10,10 +10,9 @@ import NotFound from './components/NotFound';
 
 function App(props) {
 
-  const [language, updateLanguage] = useState(localStorage.getItem('i18nextLng') || 'en')
+  const [language, updateLanguage] = useState(localStorage.getItem('i18nextLng'))
   const [pinged, updatePinged] = useState(false)
 
-  // console.log("pinged", pinged);
 
   useEffect( () => {
     pingHeroku()
