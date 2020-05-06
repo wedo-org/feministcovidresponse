@@ -5,7 +5,7 @@ import MainContainer from './containers/MainContainer';
 import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 import { fetchPing } from './utils.js'
-import NotFound from './components/NotFound';
+import Loader from './components/Loader';
 
 
 function App(props) {
@@ -37,7 +37,7 @@ function App(props) {
         { props.location.pathname === "/menu"
         ?
         <Switch>
-              <Suspense fallback={NotFound()}>
+              <Suspense fallback={Loader()}>
                 <Route exact path="/menu">
                     <Menu handleLanguageChoice={handleLanguageChoice} />
                 </Route>
@@ -45,7 +45,7 @@ function App(props) {
         </Switch>
         :
         <section className='navbar-maincontainer'>
-          <Suspense fallback={NotFound()}>
+          <Suspense fallback={Loader()}>
             <NavBar handleLanguageChoice={handleLanguageChoice}/>
             <MainContainer language={language}/>
           </Suspense>

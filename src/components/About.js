@@ -13,31 +13,33 @@ export default function About(props){
             <p className="about-intro">{t("intro")} </p>
             <img className="doodle-about" src={require('../assets/images/feminism-blob.png')} alt=""/>
           </div>
-          <p>{t("second-intro")} </p>
-          <p>{t("app-intro")} </p>
-          <ul>
-            <h2>{t("devs")}</h2>
-            <li><a href="https://github.com/sylwiavargas" target="_blank" rel="noopener noreferrer">Sylwia Vargas</a></li>
-            <li><a href="https://github.com/luanesouza" target="_blank" rel="noopener noreferrer">Annie Souza</a></li>
-          </ul>
-          <ul>
-            <h2>{t("database")}</h2>
-            {
-              database.map((d) => <li key={d}>{d}</li>)
-            }
-          </ul>
-          <ul>
-            <h2>{t("coordinators")}</h2>
-            {
-              coordination.map((c) => <li key={c}>{c}</li>)
-            }
-          </ul>
-          <ul>
-            <h2>{t("organizations")}</h2>
-            {
-              orgs.map((o) => <li key={o}>{o}</li>)
-            }
-          </ul>
+          <p className="about-intro intro-small">{t("second-intro")} </p>
+          <p className="about-intro">{t("app-intro")} </p>
+          <section className='appreciation-section'>
+            <ul>
+              <h2>{t("devs")}</h2>
+              <li><a href="https://github.com/luanesouza" target="_blank" rel="noopener noreferrer">Annie Souza</a></li>
+              <li><a href="https://github.com/sylwiavargas" target="_blank" rel="noopener noreferrer">Sylwia Vargas</a></li>
+            </ul>
+            <ul>
+              <h2>{t("database")}</h2>
+              {
+                database.map((d) => <li key={d}>{d}</li>)
+              }
+            </ul>
+            <ul>
+              <h2>{t("coordinators")}</h2>
+              {
+                coordination.map((c) => <li key={c}>{c}</li>)
+              }
+            </ul>
+            <ul>
+              <h2>{t("organizations")}</h2>
+              {
+                orgs.map((o) => <li key={o}>{o}</li>)
+              }
+            </ul>
+          </section>
           <div className="accordion">
               <AboutCard />
             </div>
