@@ -185,7 +185,6 @@ img.doodle-about{
   display: block;
   width: 5rem;
   margin-left: 60vw;
-  border-radius: 30%;
 }
 
 .appreciation-section > ul > li, .appreciation-section > ul > li > a {
@@ -502,7 +501,6 @@ li.single-item{
 
 .accordion-item{
   padding-left: 1rem;
-  margin-bottom: 5rem;
 }
 
 .accordion a {
@@ -522,6 +520,17 @@ li.single-item{
   font-size: 95%;
   font-weight: 400;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion > a:last-child{
+  
+}
+
+.dev-link{
+  font-size: max(29px, 1.8rem);
+  margin-bottom: 20px;
+  padding: 0!important;
+  border-bottom: 0px solid transparent!important;
 }
 
 .orange-blob {

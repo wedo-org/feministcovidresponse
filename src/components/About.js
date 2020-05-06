@@ -36,8 +36,8 @@ export default function About(props){
           <section className='appreciation-section'>
             <ul>
               <h2>{t("devs")}</h2>
-              <li><a href="https://github.com/luanesouza" target="_blank" rel="noopener noreferrer">Annie Souza</a></li>
-              <li><a href="https://github.com/sylwiavargas" target="_blank" rel="noopener noreferrer">Sylwia Vargas</a></li>
+              <li><a href="https://github.com/luanesouza" target="_blank" rel="noopener noreferrer" className="dev-link">Annie Souza</a></li>
+              <li><a href="https://github.com/sylwiavargas" target="_blank" rel="noopener noreferrer" className="dev-link">Sylwia Vargas</a></li>
             </ul>
             <ul>
               <h2>{t("database")}</h2>
