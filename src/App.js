@@ -4,8 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import NavBar from './components/NavBar';
 import Menu from './components/Menu';
-import { fetchPing } from './utils.js'
+import { fetchPing } from './utils.js';
 import Loader from './components/Loader';
+import ReactGA from 'react-ga';
 
 
 function App(props) {
@@ -17,6 +18,7 @@ function App(props) {
 
   useEffect( () => {
     pingHeroku()
+    initializeReactGA()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -31,6 +33,11 @@ function App(props) {
   const handleLanguageChoice = (lg) => {
     updateLanguage(lg)
   }
+
+  function initializeReactGA() {
+    ReactGA.initialize(process.env.REACT_APP_GA);
+    ReactGA.pageview(window.location.pathname);
+}
 
   return (
     <div className="App">

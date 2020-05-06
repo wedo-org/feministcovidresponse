@@ -40,7 +40,7 @@ export default function PrinciplesContainer({language}) {
 
     return (
         <section className="main-content">
-            <h1 class="principles-title">{t("title")}</h1>
+            <h1 className="principles-title">{t("title")}</h1>
             <p className="principles-intro"><strong>{t("intro-strong")}</strong> {t("intro")}</p>
             {/* // eslint-disable-next-line */}
               <section className='openFileLink'>

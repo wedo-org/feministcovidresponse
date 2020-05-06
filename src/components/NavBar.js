@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import hamburger from '../assets/images/hamburgerwhite.png'
 import logo from '../assets/images/logo.png'
