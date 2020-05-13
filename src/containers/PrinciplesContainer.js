@@ -38,16 +38,31 @@ export default function PrinciplesContainer({language}) {
             }
         }
 
+        const getUrl = () => {
+          if(language === 'es' || language === 'en' || language === 'fr' || language === 'en-US' ) {
+            return (
+            <a href={require(`../assets/files/principles-${language}.pdf`)} target="_blank" rel="noopener noreferrer">
+                <img id='openFile' src={openFile} alt='open-file-icon'/>
+                <p>Open in PDF</p>
+            </a>
+            )
+          } else {
+            return (
+            <a href={require(`../assets/files/principles-en.pdf`)} target="_blank" rel="noopener noreferrer">
+              <img id='openFile' src={openFile} alt='open-file-icon'/>
+              <p>Open in PDF</p>
+            </a>
+          )
+          }
+        }
+
     return (
         <section className="main-content">
             <h1 className="principles-title">{t("title")}</h1>
             <p className="principles-intro"><strong>{t("intro-strong")}</strong> {t("intro")}</p>
             {/* // eslint-disable-next-line */}
               <section className='openFileLink'>
-                <a href={require(`../assets/files/principles-${language}.pdf`)} target="_blank" rel="noopener noreferrer">
-                  <img id='openFile' src={openFile} alt='open-file-icon'/>
-                  <p>Open in PDF</p>
-                </a>
+              { getUrl()}
               </section>
             <div className="accordion">
     {/******************************* FIRST PRINCIPLE ******************************* */}

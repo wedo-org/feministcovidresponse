@@ -27,7 +27,7 @@ export default function About(props){
 {/* SECOND BULLET POINT  */}
           <div className="accordion">
             <div className="accordion-item" onClick={()=>toggleClass()}>
-              <section className="blob-principle">
+              <section className="blob-principle thanks">
                 <img src={require('../assets/images/orange-blob.png')} className="orange-blob" alt=""/>
                 <a className={`${isActive ? "active" : null}`}>{t("thanks")}</a>
               </section>
@@ -51,7 +51,7 @@ export default function About(props){
                 coordination.map((c) => <li key={c}>{c}</li>)
               }
             </ul>
-            <ul>
+            <ul className='organizations'>
               <h2>{t("organizations")}</h2>
               {
                 orgs.map((o) => <li key={o}>{o}</li>)
