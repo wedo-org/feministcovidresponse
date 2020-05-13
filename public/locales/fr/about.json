@@ -1,6 +1,6 @@
 {
     "title": "La réponse féministe au COVID19",
-    "intro": "En tant qu’organisations et activistes féministes travaillant au sein de mouvements mondiaux centrés sur les droits de l’homme, le développement durable, la justice économique et sociale, nous nous sommes réunies pour définir les principes clés d’une reprise résiliente face à l’actuelle pandémie mondiale, trouver des réponses et encourager l’action collective des féministes du monde entier.",
+    "intro": "Nous, organisations et activistes féministes agissant au sein de mouvements mondiaux centrés sur les droits humains, le développement durable, la justice économique et sociale, avons uni nos forces pour définir collectivement les principes clés d’une reprise résiliente face à l’actuelle pandémie mondiale. Nous observons les mesures prises, et encourageons l’action collective des féministes du monde entier.",
     "second-intro": "Lisez ci-dessous pour trouver une brève analyse de la crise actuelle ainsi qu'une liste des individus et des organisations qui ont été impliqués dans cette réflexion collective. Si vous êtes intéressé à soumettre des ressources sur ce site, veuillez envoyer un e-mail à feministresponse [at] wedo.org. Dans les semaines à venir, des soumissions pourront être faites directement via ce site Web. Nous espérons également ajouter continuellement de nouvelles informations pour amplifier au mieux les actions des réseaux à travers le monde.",
     "subtitle": "La crise actuelle",
     "paragraph1": "La pandémie du COVID-19* est en train de bouleverser les économies, de modifier les schémas de mobilité, de perturber les réseaux sociaux, de transformer les lieux de travail, les économies formelles et informelles, de redéfinir le concept d’emploi essentiel et le profil de ceux qui l’exercent. Les mesures apportées dans les domaines de la santé publique et de la sécurité ont des répercussions profondes, elles peuvent amplifier les crises humanitaires, sociales, économiques et politiques actuelles. Elles reflètent les injustices et les inégalités structurelles profondément enracinées dans nos sociétés et systèmes qui prospèrent sur l’exclusion, engendrent la domination des entreprises, la concentration des richesses et exploitent la majeure partie de la population, et plus particulièrement les classes les plus marginalisées et les plus démunies politiquement.",
@@ -10,5 +10,6 @@
     "devs": "Développeuses Web",
     "database": "Volontaires de base de données",
     "coordinators": "Coordinateurs des volontaires",
-    "organizations": "Organisations et individus"
+    "organizations": "Organisations et individus",
+    "thanks": "Merci"
 }

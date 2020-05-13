@@ -4,8 +4,9 @@ import { Switch, Route } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import NavBar from './components/NavBar';
 import Menu from './components/Menu';
-import { fetchPing } from './utils.js'
-import NotFound from './components/NotFound';
+import { fetchPing } from './utils.js';
+import Loader from './components/Loader';
+import ReactGA from 'react-ga';
 
 
 function App(props) {
@@ -16,6 +17,7 @@ function App(props) {
 
   useEffect( () => {
     pingHeroku()
+    initializeReactGA()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -31,12 +33,17 @@ function App(props) {
     updateLanguage(lg)
   }
 
+  function initializeReactGA() {
+    ReactGA.initialize(process.env.REACT_APP_GA);
+    ReactGA.pageview(window.location.pathname);
+}
+
   return (
     <div className="App">
         { props.location.pathname === "/menu"
         ?
         <Switch>
-              <Suspense fallback={NotFound()}>
+              <Suspense fallback={Loader()}>
                 <Route exact path="/menu">
                     <Menu handleLanguageChoice={handleLanguageChoice} />
                 </Route>
@@ -44,7 +51,7 @@ function App(props) {
         </Switch>
         :
         <section className='navbar-maincontainer'>
-          <Suspense fallback={NotFound()}>
+          <Suspense fallback={Loader()}>
             <NavBar handleLanguageChoice={handleLanguageChoice}/>
             <MainContainer language={language}/>
           </Suspense>

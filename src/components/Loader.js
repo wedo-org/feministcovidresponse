@@ -5,7 +5,7 @@ export default function Loader(){
 
   return(
     <section id='loader'>
-      <img src={loader} />
+      <img src={loader} alt=""/>
     </section>
   )
 }

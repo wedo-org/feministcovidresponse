@@ -32,7 +32,7 @@ export default function ButtonsContainer({countries, categories, updateChosenCou
                 className='legend-menu-button'
                 onClick={ () => displayLegend(!legend) }>
                   See legend
-                <img src={question}/>
+                <img src={question} alt="question icon"/>
               </button>
               :
               null
