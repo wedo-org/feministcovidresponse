@@ -1278,6 +1278,11 @@ align-content: center;
     min-height: 10rem;
   }
 
+
+  nav > ul > li {
+    margin-bottom: min(2.5rem, 1.5vw);
+  }
+
   /* .menu-list {
     line-height: max(180px, 8rem)
   } */
