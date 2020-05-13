@@ -907,7 +907,7 @@ align-content: center;
   }
 
   img.doodle-about {
-    width: 200px;
+    width: 250px;
     height: 400px;
     margin-left: 0;
   }
@@ -957,11 +957,11 @@ align-content: center;
     /* line-height: max(175px, 3rem); */
     height: auto;
     max-height: fit-content;
-    line-height: max(60px, 3rem);
+    line-height: max(50px, 3rem);
     padding-top: 0.1em;
     /* font-size: 8rem; */
     /* font-size: max(6rem, 8.5vh); */
-    font-size: max(4rem, 4.5vh);
+    font-size: max(3rem, 4.5vh);
   }
 
   nav > ul {
@@ -976,7 +976,7 @@ align-content: center;
     font-size: max(25px, 2vw);
     margin-bottom: 50px;
     color:rgb(32,68,81);
-    line-height: 1;
+    /* line-height: 1; */
   }
 
   .accordion a {
@@ -1079,15 +1079,15 @@ align-content: center;
 
   img.doodle-about {
     margin-left: 0;
-    width: 300px;
-    max-height: 400px;
+    width: 250px;
+    max-height: 375px;
     /* max-width: 200px; */
   }
 
   .buttons-and-items {
     grid-area: content;
     display: grid;
-    grid-template-columns: 68% 20%;
+    grid-template-columns: 65% 30%;
     grid-template-areas:
     "items buttons";
     /* flex-direction: row-reverse;
@@ -1111,6 +1111,7 @@ align-content: center;
 
   .policyButtons {
     margin-top: 1.8vh;
+    margin-right: 3rem;
   }
 
   .policyButtons > p {
@@ -1143,12 +1144,20 @@ align-content: center;
     width: 16vw;
     text-transform: lowercase;
     height: 80px;
-    margin-left: 3vw;
+    margin-left: min(5vw, 8rem);
     font-family: 'Anton', sans-serif;
     color: white;
     word-break: break-word;
     white-space: pre-wrap;
   }
+  /* _:-ms-lang(x), _:-webkit-full-screen, .policyOption {
+    margin-left: 7vw;
+  } */
+  /* _:-ms-lang(x), _:-webkit-full-screen, .policyButtons {
+    width: 5rem;
+  } */
+
+
 
   .policyOption:nth-of-type(2){
     background-color: rgb(187,117,28);
