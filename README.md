@@ -245,7 +245,7 @@ Visit [issues](https://github.com/wedo-org/feministcovidresponse/issues) section
             <a href="https://github.com/wedo-org/feministcovidresponse/commits?author=luanesouza" title="Code">💻</a> 
             <a href="https://github.com/wedo-org/feministcovidresponse/issues?q=is%3Aissue+luanesouza+" title="Bug reports">🐛</a>
             <a href="#infra-annie" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> 
-            <a href="#ideas-sruti" title="Ideas, Planning, & Feedback">💡</a>
+            <a href="#ideas-annie" title="Ideas, Planning, & Feedback">💡</a>
         </td>
     </tr>
 </table>
