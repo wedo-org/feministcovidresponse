@@ -94,12 +94,12 @@ Also, be sure to have `git` available in your PATH, `npm` might need it.
 ---
 ## What are you trying to do?
 This section is entirely devoted to the folks who are not developers or are not used to working with JS frameworks. So, what are you trying to do:
-    - [Change the wording of 'About' section](#change-about-section)
-    - [Change the Thank Yous](#change-thank-yous)
-    - [Change the pdfs](#change-pdfs)
-    - [Change the wording of 'Principles' section](#change-principles-section)
-    - [Update the wording of 'Legend' on response tracker](#update-legend)
-    - [Update the wording of 'Menu' items, types, categories or countries](#update-other-text)
+- [Change the wording of 'About' section](#change-about-section)
+- [Change the Thank Yous](#change-thank-yous)
+- [Change the pdfs](#change-pdfs)
+- [Change the wording of 'Principles' section](#change-principles-section)
+- [Update the wording of 'Legend' on response tracker](#update-legend)
+- [Update the wording of 'Menu' items, types, categories or countries](#update-other-text)
 
 ### Change About Section
 In order to change "About" Section, please navigate to `src/components/About.js`. You will see that in the place of a standard paragraph, we have the `i18next` syntax, for example:
