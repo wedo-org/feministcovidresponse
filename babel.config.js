@@ -1,3 +1,3 @@
 module.exports = {
-  presets: ["react-app"],
+  presets: ["es2015", "react-app"],
 };
