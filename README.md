@@ -1,68 +1,256 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Feminist Covid-19 Response
 
-## Available Scripts
+A volunteer online data repository of information on feminist principles and actions, as well as policy responses to the COVID crisis.
 
-In the project directory, you can run:
+Explore online: <http://feministcovidresponse.com/>
 
-### `yarn start`
+***
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of contents
+- [Getting Started](#getting-started)
+    - [Node Installation on OS X](#node-installation-on-os-x)
+    - [Node Installation on Linux](#node-installation-on-linux)
+    - [Node Installation on Windows](#node-installation-on-windows)
+- [Installation](#installation)
+- [Start and Watch](#start-and-watch)
+- [Component hierarchy](#component-hierarchy)
+- [Languages and tools](#languages-and-tools)
+    - [Frontend framework: React](#react)
+    - [Localization: i18next](#i18next)
+    - [Analytics: react-ga ](#react-ga)
+- [What are you trying to do?](#what-are-you-trying-to-do)
+    - [Change the wording of 'About' section](#change-about-section)
+    - [Change the wording of 'Principles' section](#change-principles-section)
+    - [Update the wording of 'Legend' on response tracker](#update-legend)
+    - [Update the wording of 'Menu' items, types, categories or countries](#update-translation)
+- [Contributing](#contributing)
+    - [Known Issues](#known-issues)
+- [License](#license)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## Getting Started
+For development, you will only need [Node.js](http://nodejs.org/) installed on your environement. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Node installation on OS X
 
-### `yarn build`
+You will need to use a Terminal. On OS X, you can find the default terminal in
+`/Applications/Utilities/Terminal.app`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If everything when fine, you should run
 
-### `yarn eject`
+    brew install node
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Node installation on Linux
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    sudo apt-get install python-software-properties
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Node installation on Windows
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Just go on [official Node.js website](http://nodejs.org/) & grab the installer.
+Also, be sure to have `git` available in your PATH, `npm` might need it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+    $ git clone https://github.com/sruti/covid19-riskfactors-app.git
+    $ cd covid19-riskfactors-app
+    $ npm install
+```
 
-### Code Splitting
+## Start and Watch
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```
+    $ npm start
+```
+---
 
-### Analyzing the Bundle Size
+## Component Hierarchy 
+![Component hierarchy graph](component-hierarchy.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+---
+## Languages and Tools
 
-### Making a Progressive Web App
+### React
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- [Create React App](https://github.com/facebook/create-react-app).
 
-### Advanced Configuration
+### i18next
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- [React-i18next](https://react.i18next.com/)
 
-### Deployment
+### react-ga
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- [React-i18next](https://github.com/react-ga/react-ga)
 
-### `yarn build` fails to minify
+---
+## What are you trying to do?
+This section is entirely devoted to the folks who are not developers or are not used to working with JS frameworks. So, what are you trying to do:
+- [Change the wording of 'About' section](#change-about-section)
+- [Change the Thank Yous](#change-thank-yous)
+- [Change the pdfs](#change-pdfs)
+- [Change the wording of 'Principles' section](#change-principles-section)
+- [Update the wording of 'Legend' on response tracker](#update-legend)
+- [Update the wording of 'Menu' items, types, categories or countries](#update-other-text)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Change About Section
+In order to change "About" Section, please navigate to `src/components/About.js`. You will see that in the place of a standard paragraph, we have the `i18next` syntax, for example:
+
+```html
+   <p className="about-intro">{t("intro")} </p>
+```
+
+This site was built with localization in mind, meaning, it is available in three language versions. In order to change this paragraph, you will work with any or all of these three files, each one is responsible for a different language version: 
+- `public/locales/en/about.json`, 
+- `public/locales/es/about.json`, and 
+- `public/locales/fr/about.json`. 
+
+Next, look for the key `intro` and make changes in the corresponding value.
+
+If you want to add additional text on the page, follow this steps:
+0. Change the branch to `dev`;
+1. Add the html tag in `About.js`;
+2. Instead of pasting the contents in the tag itself, use a descriptive key and write it in the `i18next` syntax: `{t("your-key")}`;
+3. Navigate to the three files and add the key, together with the text you want it to denote as the key's value -- order does not matter, you can just put it at the end or in the middle;
+**_Remember_**: If you add only the English translations, then in the French and Spanish version of the page the English paragraph will be rendered.
+4. Update the files (either on github, or if you are a developer, then just push a commit) and inform the maintainer about the change.
+
+### Change Principles Section
+In order to change "Thank you" list (that appears in the About section), follow these steps:
+
+0. Change the branch to `dev`;
+1. Navigate to `scr/assets/data/appreciation.js`. You will see three variables:
+- `database` - these are the database volunteers;
+- `coordination` - these are the coordinators;
+- `orgs` - these are the NGOs and individuals.
+2. Add the name to the appropriate variable following the pattern you see:
+- it needs to be in the quotation marks (""),
+- if there's another name before it or after it, **remember to add the comma (,)**. 
+_NOTE_: The order matters!
+3. Update the files (either on github, or if you are a developer, then just push a commit) and inform the maintainer about the change.
+
+### Change PDFs
+In order to change the PDFs (that appear in the Principles section), follow these steps:
+0. Change the branch to `dev`;
+1. Navigate to `scr/assets/files`;
+2. Copy the name and delete the file you no longer need;
+3. Add the new file -- make sure to name it exactly the same as the deleted file;
+3. If you are a developer, then just push a commit, and inform the maintainer about the change.
+
+### Change Principles Section
+In order to change "Principles" Section, please navigate to `src/containers/PrincipleContainer.js`. You will see that in the place of a standard paragraph, we have the `i18next` syntax, for example:
+
+```html
+   <h1 className="principles-title">{t("title")}</h1>
+```
+
+This site was built with localization in mind, meaning, it is available in three language versions. In order to change this paragraph, you will work with any or all of these three files, each one is responsible for a different language version: 
+- `public/locales/en/princ.json`, 
+- `public/locales/es/princ.json`, and 
+- `public/locales/fr/princ.json`. 
+
+Next, look for the key `title` and make changes in the corresponding value.
+
+If you want to add additional text on the page, follow this steps:
+0. Change the branch to `dev`;
+1. Add the html tag in `PrinciplesContainer.js`;
+2. Instead of pasting the contents in the tag itself, use a descriptive key and write it in the `i18next` syntax: `{t("your-key")}`;
+3. Navigate to the three files and add the key, together with the text you want it to denote as the key's value -- order does not matter, you can just put it at the end or in the middle;
+**_Remember_**: If you add only the English translations, then in the French and Spanish version of the page the English paragraph will be rendered.
+4. Update the files (either on github, or if you are a developer, then just push a commit) and inform the maintainer about the change.
+
+### Update the legend
+
+In order to change "Legend" section on the Response Tracker, please navigate to `src/components/Legend.js`. You will see that in the place of a standard paragraph, we have the `i18next` syntax, for example:
+
+```html
+   <p className="legend-types-p">{t("TYPES")}:</p>
+```
+
+This site was built with localization in mind, meaning, it is available in three language versions. In order to change this paragraph, you will work with any or all of these three files, each one is responsible for a different language version: 
+- `public/locales/en/legend.json`, 
+- `public/locales/es/legend.json`, and 
+- `public/locales/fr/legend.json`. 
+
+Next, look for the key `TYPES` and make changes in the corresponding value.
+
+If you want to add additional text on the page, follow this steps:
+0. Change the branch to `dev`;
+1. Add the html tag in `Legend.js`;
+2. Instead of pasting the contents in the tag itself, use a descriptive key and write it in the `i18next` syntax: `{t("your-key")}`;
+3. Navigate to the three files and add the key, together with the text you want it to denote as the key's value -- order does not matter, you can just put it at the end or in the middle;
+**_Remember_**: If you add only the English translations, then in the French and Spanish version of the page the English paragraph will be rendered.
+4. Update the files on github (or if you are a developer, then just push a commit) and inform the maintainer about the change.
+
+### Update other text
+
+In order to change any other text, please navigate to its component file. You will see that in the place of a standard paragraph, we have the `i18next` syntax, for example:
+
+```html
+   <p className="legend-types-p">{t("TYPES")}:</p>
+```
+
+This site was built with localization in mind, meaning, it is available in three language versions. In order to change this paragraph, you will work with any or all of these three files, each one is responsible for a different language version: 
+- `public/locales/en/translation.json`, 
+- `public/locales/es/translation.json`, and 
+- `public/locales/fr/translation.json`. 
+
+Next, look for the `TYPES` key and make changes in the corresponding value.
+
+If you want to add additional text on the page, follow this steps:
+0. Change the branch to `dev`;
+1. Add the html tag in the correct component;
+2. Instead of pasting the contents in the tag itself, use a descriptive key and write it in the `i18next` syntax: `{t("your-key")}`;
+3. Navigate to the three files and add the key, together with the text you want it to denote as the key's value -- order does not matter, you can just put it at the end or in the middle;
+**_Remember_**: If you add only the English translations, then in the French and Spanish version of the page the English paragraph will be rendered.4. Update the files (either on github, or if you are a developer, then just push a commit) and inform the maintainer about the change.
+
+--- 
+
+## Contributing
+Pull requests are welcome. Please make sure that your PR is [well-scoped](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/).
+For major changes, please open an issue first to discuss what you would like to change. 
+
+### Known issues
+Visit [issues](https://github.com/wedo-org/feministcovidresponse/issues) section.
+
+### Contributors
+<table>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/sylwiavargas">
+                <img src="https://avatars2.githubusercontent.com/u/45401242?s=460&u=2efe4366e8a6c7e8732daaaf8373250e7c8cfdd9&v=4" width="200px;" alt=""/>
+                <br />
+                <sub><b>Sylwia Vargas</b></sub>
+            </a><br />
+            <a href="https://github.com/wedo-org/feministcovidresponse/commits?author=sylwiavargas" title="Code">💻</a> 
+            <a href="https://github.com/wedo-org/feministcovidresponse/issues?q=is%3Aissue+author%3Asylwiavargas+" title="Bug reports">🐛</a>
+            <a href="https://github.com/sruti/covid19-riskfactors-app/commits/master/README.md" title="Documentation">📖</a>
+            <a href="#ideas-sylwia" title="Ideas, Planning, & Feedback">💡</a>
+        </td>
+        <td></td>
+        <td align="center">
+            <a href="http://sruti.me/">
+                <img src="https://avatars1.githubusercontent.com/u/43556847?s=460&u=f486596a5bfedd9ebd4190c7af9a3d28f0183812&v=4" width="200px;" alt=""/>
+                <br />
+                <sub><b>Annie Souza</b></sub>
+            </a><br />
+            <a href="https://github.com/wedo-org/feministcovidresponse/commits?author=luanesouza" title="Code">💻</a> 
+            <a href="https://github.com/wedo-org/feministcovidresponse/issues?q=is%3Aissue+luanesouza+" title="Bug reports">🐛</a>
+            <a href="#infra-annie" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> 
+            <a href="#ideas-annie" title="Ideas, Planning, & Feedback">💡</a>
+        </td>
+    </tr>
+</table>
+
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
